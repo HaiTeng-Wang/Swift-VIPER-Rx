@@ -1,12 +1,81 @@
 PODS:
+  - Alamofire (3.5.1)
+  - Cell+Rx (1.1):
+    - RxSwift (~> 2.5)
+  - Kingfisher (3.2.4)
+  - Moya (7.0.4):
+    - Moya/Core (= 7.0.4)
+  - Moya-ObjectMapper (1.4):
+    - Moya-ObjectMapper/Core (= 1.4)
+  - Moya-ObjectMapper/Core (1.4):
+    - Moya (~> 7.0.2)
+    - ObjectMapper (~> 1.4)
+  - Moya/Core (7.0.4):
+    - Alamofire (~> 3.5)
+    - Result (~> 2.0)
+  - Moya/RxSwift (7.0.4):
+    - Moya/Core
+    - RxSwift (~> 2.0)
+  - ObjectMapper (1.5.0)
+  - Result (2.1.3)
+  - RxAlamofire (2.5):
+    - RxAlamofire/Core (= 2.5)
+  - RxAlamofire/Core (2.5):
+    - Alamofire (~> 3.4)
+    - RxSwift (~> 2.5)
+  - RxCocoa (2.6.1):
+    - RxSwift (~> 2.6)
+  - RxColor (1.0.1):
+    - RxCocoa (~> 2.6)
+    - RxSwift (~> 2.6)
+  - RxDataSources (0.9):
+    - RxCocoa (~> 2.2)
+    - RxSwift (~> 2.2)
+  - RxOptional (3.1.3):
+    - RxCocoa
+    - RxSwift
+  - RxResult (1.0.2):
+    - Result (~> 2.1.3)
+    - RxSwift (~> 2.6)
+  - RxSwift (2.6.1)
+  - RxTimer (1.0):
+    - RxSwift (~> 2.6)
   - SnapKit (3.1.2)
 
 DEPENDENCIES:
+  - Cell+Rx
+  - Kingfisher
+  - Moya
+  - Moya-ObjectMapper
+  - Moya/RxSwift
+  - Result
+  - RxAlamofire
+  - RxColor
+  - RxDataSources
+  - RxOptional
+  - RxResult
+  - RxSwift
+  - RxTimer
   - SnapKit
 
 SPEC CHECKSUMS:
+  Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
+  Cell+Rx: c8cdcc85ee5ee947042005d1fdb04e4ede3e45b2
+  Kingfisher: 8d80f39da403cd9c9ee11984e1655f4d6a566cdb
+  Moya: d309d994aa096916c4d95bc2a162789b4745d7cb
+  Moya-ObjectMapper: a50b96426316be8892fe20dfe02cf8bc947e657d
+  ObjectMapper: 386645adca9d9d23b95eda43090b09d66444cf14
+  Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
+  RxAlamofire: b4572a077b6b2410c8732a27266299df4c00736e
+  RxCocoa: 3bb2820fd2a1ba48a70d38926bec0803838ae802
+  RxColor: cb71bd9d6f9324ba8868f8c05d1f93168fb45652
+  RxDataSources: e169bba94a7be584df7c1e1487fa56edc8753ae6
+  RxOptional: b97b59183af80d1e729ac9e51d09a10be668d6a8
+  RxResult: 627b7572a50293c33ad11fdc3f058f0a922e4833
+  RxSwift: 0147fbf94e65c6085da9540de92848189ac1c3f6
+  RxTimer: f3acacf6e2071a10b8bc1528fadc21d62fd038b4
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
 
-PODFILE CHECKSUM: df462ff431b2bc95c331e8e235e17724ce955ccd
+PODFILE CHECKSUM: c1a1a41cf75deca654225b3eca0d9d6b77b1985d
 
 COCOAPODS: 1.1.1

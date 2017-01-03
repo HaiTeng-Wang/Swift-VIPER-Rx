@@ -7,6 +7,20 @@ target 'xjf-ios-mvvm' do
 
   # Pods for xjf-ios-mvvm
 
-  pod 'SnapKit'
+    pod 'RxSwift'
+    pod 'Moya/RxSwift'
+    pod 'Cell+Rx'
+    pod 'RxOptional'
+    pod 'RxDataSources'
+    pod 'RxTimer'
+    pod 'RxResult'
+    pod 'RxColor'
+    pod 'Moya'
+    pod 'Moya-ObjectMapper'
+    pod 'Result'
+    pod 'RxAlamofire'
+    pod 'Kingfisher'
+    pod 'SnapKit'
+    
 
 end

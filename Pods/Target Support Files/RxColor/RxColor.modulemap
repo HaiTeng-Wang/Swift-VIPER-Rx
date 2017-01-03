@@ -1,0 +1,6 @@
+framework module RxColor {
+  umbrella header "RxColor-umbrella.h"
+
+  export *
+  module * { export * }
+}

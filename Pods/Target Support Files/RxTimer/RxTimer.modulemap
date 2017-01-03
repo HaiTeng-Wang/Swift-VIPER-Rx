@@ -1,0 +1,6 @@
+framework module RxTimer {
+  umbrella header "RxTimer-umbrella.h"
+
+  export *
+  module * { export * }
+}
