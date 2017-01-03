@@ -1,0 +1,6 @@
+framework module Pods_xjf_ios_mvvm {
+  umbrella header "Pods-xjf-ios-mvvm-umbrella.h"
+
+  export *
+  module * { export * }
+}
