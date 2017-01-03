@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A9750B31456024722C03ADA /* Pods_xjf_ios_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */; };
-		EC9277531E1B90A800D12F0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9277521E1B90A800D12F0B /* AppDelegate.swift */; };
+		EC3745351E1BB15C00794A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3745341E1BB15C00794A81 /* AppDelegate.swift */; };
 		EC9277551E1B90A800D12F0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9277541E1B90A800D12F0B /* ViewController.swift */; };
 		EC92775A1E1B90A800D12F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9277591E1B90A800D12F0B /* Assets.xcassets */; };
 		EC92775D1E1B90A800D12F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92775B1E1B90A800D12F0B /* LaunchScreen.storyboard */; };
@@ -18,8 +18,8 @@
 		0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xjf_ios_mvvm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103FD5FA7E3467A92CC1C64C /* Pods-xjf-ios-mvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.release.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.release.xcconfig"; sourceTree = "<group>"; };
 		971528448CD937E3281DDC1F /* Pods-xjf-ios-mvvm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.debug.xcconfig"; sourceTree = "<group>"; };
+		EC3745341E1BB15C00794A81 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC92774F1E1B90A800D12F0B /* xjf-ios-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xjf-ios-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC9277521E1B90A800D12F0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC9277541E1B90A800D12F0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC9277591E1B90A800D12F0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC92775C1E1B90A800D12F0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +55,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EC3745331E1BB15C00794A81 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EC3745341E1BB15C00794A81 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		EC9277461E1B90A700D12F0B = {
 			isa = PBXGroup;
 			children = (
@@ -76,7 +84,7 @@
 		EC9277511E1B90A800D12F0B /* xjf-ios-mvvm */ = {
 			isa = PBXGroup;
 			children = (
-				EC9277521E1B90A800D12F0B /* AppDelegate.swift */,
+				EC3745331E1BB15C00794A81 /* App */,
 				EC9277541E1B90A800D12F0B /* ViewController.swift */,
 				EC9277591E1B90A800D12F0B /* Assets.xcassets */,
 				EC92775B1E1B90A800D12F0B /* LaunchScreen.storyboard */,
@@ -207,8 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC3745351E1BB15C00794A81 /* AppDelegate.swift in Sources */,
 				EC9277551E1B90A800D12F0B /* ViewController.swift in Sources */,
-				EC9277531E1B90A800D12F0B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +370,7 @@
 				EC9277631E1B90A800D12F0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
