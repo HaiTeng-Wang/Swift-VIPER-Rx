@@ -1,6 +1,0 @@
-framework module RxResult {
-  umbrella header "RxResult-umbrella.h"
-
-  export *
-  module * { export * }
-}
