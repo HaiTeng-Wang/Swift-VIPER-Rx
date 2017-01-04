@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '8.0'
 
 target 'xjf-ios-mvvm' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -7,20 +7,20 @@ target 'xjf-ios-mvvm' do
 
   # Pods for xjf-ios-mvvm
 
-    pod 'RxSwift'
-    pod 'Moya/RxSwift'
-    pod 'Cell+Rx'
-    pod 'RxOptional'
-    pod 'RxDataSources'
-    pod 'RxTimer'
-    pod 'RxResult'
-    pod 'RxColor'
-    pod 'Moya'
-    pod 'Moya-ObjectMapper'
-    pod 'Result'
-    pod 'RxAlamofire'
-    pod 'Kingfisher'
-    pod 'SnapKit'
+    pod 'RxSwift', '~> 3.0'
+    pod 'RxCocoa', '~> 3.0'
+    pod 'Moya/RxSwift', '~> 8.0.0-beta.1'
+    pod 'Cell+Rx', '~> 1.2.1'
+    pod 'RxOptional', '~> 3.1.3'
+    # pod 'RxDataSources'
+    # pod 'RxTimer'
+    pod 'RxResult', '~> 2.0.3'
+    # pod 'RxColor'
+    pod 'Moya-ObjectMapper', '~> 2.2.1'
+    pod 'Result', '~> 3.1.0'
+    pod 'RxAlamofire', '~> 3.0.2'
+    pod 'Kingfisher', '~> 3.2.4'
+    pod 'SnapKit', '~> 3.1.2'
     
 
 end
