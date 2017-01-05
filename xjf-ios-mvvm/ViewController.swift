@@ -8,8 +8,12 @@
 
 import UIKit
 import SnapKit
+import RxCocoa
+import RxSwift
 
 class ViewController: UIViewController {
+    
+    let disposebag = DisposeBag()
     
     private lazy var button:UIButton = {
     let a = UIButton(type: .custom)
@@ -28,6 +32,15 @@ class ViewController: UIViewController {
             make.center.equalTo(view)
         }
         button.setTitle("haha", for:UIControlState.normal)
+        
+        Network.request(target: .banner("app-home-carousel"))
+        .observeOn(MainScheduler.instance)
+        .subscribe(
+            onNext: { (string) in
+           print(string)
+        })
+        .addDisposableTo(disposebag)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
