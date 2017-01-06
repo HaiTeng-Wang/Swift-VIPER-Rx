@@ -33,6 +33,7 @@ PODS:
     - RxSwift (= 3.0.0)
   - RxSwift (3.0.0)
   - SnapKit (3.1.2)
+  - SwiftLint (0.15.0)
 
 DEPENDENCIES:
   - Cell+Rx (~> 1.2.1)
@@ -46,6 +47,7 @@ DEPENDENCIES:
   - RxResult (~> 2.0.3)
   - RxSwift (~> 3.0)
   - SnapKit (~> 3.1.2)
+  - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
@@ -61,7 +63,8 @@ SPEC CHECKSUMS:
   RxResult: c3722c0210700531c020dc35a743d8b777807fa5
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+  SwiftLint: d73999f81682ab8114d6408c89f83177b2c197d7
 
-PODFILE CHECKSUM: 704cac664d9354312144dd11e3942b2c526affc0
+PODFILE CHECKSUM: 4a7b05d0576b9b698d591e1da5cea9bd020a6a32
 
 COCOAPODS: 1.1.1

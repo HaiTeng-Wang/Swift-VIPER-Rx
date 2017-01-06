@@ -6,7 +6,7 @@ target 'xjf-ios-mvvm' do
   use_frameworks!
 
   # Pods for xjf-ios-mvvm
-
+    pod 'SwiftLint'
     pod 'RxSwift', '~> 3.0'
     pod 'RxCocoa', '~> 3.0'
     pod 'Moya/RxSwift', '~> 8.0.0-beta.1'
