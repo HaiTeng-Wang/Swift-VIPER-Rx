@@ -128,6 +128,7 @@
 				EC92774D1E1B90A700D12F0B /* Resources */,
 				D2C276562F469E95E1EE20DA /* [CP] Embed Pods Frameworks */,
 				A28543F29B5CBE6C9E1D5AB1 /* [CP] Copy Pods Resources */,
+				EC29E2721E1F4A4A00A9C818 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -229,6 +230,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		EC29E2721E1F4A4A00A9C818 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
