@@ -17,6 +17,11 @@ PODS:
     - Moya/Core
     - RxSwift (~> 3.0)
   - ObjectMapper (2.2.1)
+  - Realm (2.1.2):
+    - Realm/Headers (= 2.1.2)
+  - Realm/Headers (2.1.2)
+  - RealmSwift (2.1.2):
+    - Realm (= 2.1.2)
   - Result (3.1.0)
   - RxAlamofire (3.0.2):
     - RxAlamofire/Core (= 3.0.2)
@@ -40,6 +45,7 @@ DEPENDENCIES:
   - Kingfisher (~> 3.2.4)
   - Moya-ObjectMapper (~> 2.2.1)
   - Moya/RxSwift (~> 8.0.0-beta.1)
+  - RealmSwift
   - Result (~> 3.1.0)
   - RxAlamofire (~> 3.0.2)
   - RxCocoa (~> 3.0)
@@ -56,6 +62,8 @@ SPEC CHECKSUMS:
   Moya: a29e2503a0c5067d462ba2f07cc6b6b1f3fc172d
   Moya-ObjectMapper: b0d3d84d5f771044cc592af02b04a7bb2839b878
   ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
+  Realm: efe855f4d977c8ce5a82d3116d9f1ff155a6550c
+  RealmSwift: 17d6ee30b6f9df86364408c2197492e33bfea567
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
   RxAlamofire: bc53604b29fd2d220cfaa490c736cc4500819f34
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
@@ -65,6 +73,6 @@ SPEC CHECKSUMS:
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SwiftLint: d73999f81682ab8114d6408c89f83177b2c197d7
 
-PODFILE CHECKSUM: 4a7b05d0576b9b698d591e1da5cea9bd020a6a32
+PODFILE CHECKSUM: 9bb76a6b6af4b951094855c147867d5a05cd112b
 
 COCOAPODS: 1.1.1

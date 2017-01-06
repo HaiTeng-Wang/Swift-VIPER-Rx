@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A9750B31456024722C03ADA /* Pods_xjf_ios_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */; };
+		EC29E2761E1F7DE000A9C818 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2751E1F7DE000A9C818 /* Account.swift */; };
+		EC29E2781E1F7E0F00A9C818 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2771E1F7E0F00A9C818 /* Credential.swift */; };
+		EC29E27A1E1F7E2400A9C818 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2791E1F7E2400A9C818 /* User.swift */; };
 		EC3745351E1BB15C00794A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3745341E1BB15C00794A81 /* AppDelegate.swift */; };
 		EC5B07061E1E209200151690 /* XijinfaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B07051E1E209200151690 /* XijinfaApi.swift */; };
 		EC5B07081E1E258500151690 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B07071E1E258500151690 /* Network.swift */; };
@@ -20,6 +23,9 @@
 		0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xjf_ios_mvvm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103FD5FA7E3467A92CC1C64C /* Pods-xjf-ios-mvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.release.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.release.xcconfig"; sourceTree = "<group>"; };
 		971528448CD937E3281DDC1F /* Pods-xjf-ios-mvvm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.debug.xcconfig"; sourceTree = "<group>"; };
+		EC29E2751E1F7DE000A9C818 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		EC29E2771E1F7E0F00A9C818 /* Credential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		EC29E2791E1F7E2400A9C818 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EC3745341E1BB15C00794A81 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC5B07051E1E209200151690 /* XijinfaApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XijinfaApi.swift; sourceTree = "<group>"; };
 		EC5B07071E1E258500151690 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -57,6 +63,24 @@
 				0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC29E2731E1F7CDF00A9C818 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				EC29E2741E1F7CDF00A9C818 /* Models */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		EC29E2741E1F7CDF00A9C818 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC29E2751E1F7DE000A9C818 /* Account.swift */,
+				EC29E2771E1F7E0F00A9C818 /* Credential.swift */,
+				EC29E2791E1F7E2400A9C818 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EC3745331E1BB15C00794A81 /* App */ = {
@@ -105,6 +129,7 @@
 		EC9277511E1B90A800D12F0B /* xjf-ios-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				EC29E2731E1F7CDF00A9C818 /* Database */,
 				EC5B07031E1E205C00151690 /* Networking */,
 				EC3745331E1BB15C00794A81 /* App */,
 				EC9277541E1B90A800D12F0B /* ViewController.swift */,
@@ -251,10 +276,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC29E2761E1F7DE000A9C818 /* Account.swift in Sources */,
 				EC3745351E1BB15C00794A81 /* AppDelegate.swift in Sources */,
 				EC5B07061E1E209200151690 /* XijinfaApi.swift in Sources */,
 				EC5B07081E1E258500151690 /* Network.swift in Sources */,
+				EC29E2781E1F7E0F00A9C818 /* Credential.swift in Sources */,
 				EC9277551E1B90A800D12F0B /* ViewController.swift in Sources */,
+				EC29E27A1E1F7E2400A9C818 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
