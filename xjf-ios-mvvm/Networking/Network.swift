@@ -12,15 +12,10 @@ import RxSwift
 
 let endpointClosure = { (target: XijinfaApi) -> Endpoint<XijinfaApi> in
     let url = target.baseURL.appendingPathComponent(target.path).absoluteString
-    return Endpoint(url: url
-        , sampleResponseClosure: {.networkResponse(200, target.sampleData)}
-        , method: target.method
-        , parameters: target.parameters
-        , parameterEncoding: target.parameterEncoding
-        , httpHeaderFields: target.headers)
+    return Endpoint(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters, parameterEncoding: target.parameterEncoding, httpHeaderFields: target.headers)
 }
 
-class Network{
+class Network {
     fileprivate static var provider = RxMoyaProvider<XijinfaApi>(endpointClosure: endpointClosure, plugins: [NetworkLoggerPlugin(verbose: true)])
 }
 

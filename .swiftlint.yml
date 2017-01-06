@@ -1,0 +1,4 @@
+excluded:
+  - xjf-ios-mvvm/Resources
+  - Pods
+  - fastlane

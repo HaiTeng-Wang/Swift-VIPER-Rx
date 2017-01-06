@@ -9,7 +9,6 @@
 import Foundation
 import Moya
 
-
 private func JSONResponseDataFormatter(_ data: Data) -> Data {
     do {
         let dataAsJSON = try JSONSerialization.jsonObject(with: data)
@@ -20,55 +19,54 @@ private func JSONResponseDataFormatter(_ data: Data) -> Data {
     }
 }
 
-
 private extension String {
     var urlEscaped: String {
         return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
 }
 
-enum XijinfaApi{
+enum XijinfaApi {
 
     case banner(String)
 }
 
 extension XijinfaApi: TargetType {
-    
+
     var baseURL: URL {
         return URL(string: "https://api.rc.xijinfa.com/api/")!
     }
-    
+
     var path: String {
         switch self {
         case .banner(let path):
             return "banner/\(path.urlEscaped)"
         }
     }
-    
+
     var method: Moya.Method {
         return .get
     }
-    
+
     var parameters: [String: Any]? {
         return nil
     }
-    
+
     public var parameterEncoding: ParameterEncoding {
         return URLEncoding.default
     }
-    
+
     public var task: Task {
         return .request
     }
-    
+
     var headers: [String: String]? {
-        return ["Authorization": "bearer \(token)","Accept": "application/json"]
+        return ["Authorization": "bearer \(token)", "Accept": "application/json"]
     }
-    
+
     var token: String? {
         return nil
     }
-    
+
     public var validate: Bool {
         switch self {
         case .banner:
@@ -77,13 +75,12 @@ extension XijinfaApi: TargetType {
             return false
         }
     }
-    
+
     public var sampleData: Data {
         switch self {
         case .banner(let path):
             return "{\"login\": \"\(path)\", \"id\": 100}".data(using: String.Encoding.utf8)!
         }
     }
-    
-}
 
+}
