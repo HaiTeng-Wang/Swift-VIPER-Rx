@@ -34,14 +34,16 @@ class ViewController: UIViewController {
         button.setTitle("Banner", for:UIControlState.normal)
 
         button.rx.tap.subscribe(onNext: { _ in
-            self.getBannerData()
+            self.getHomeBannerData()
         })
         .addDisposableTo(disposebag)
 
     }
 
-    private func getBannerData() {
-        Network.request(target: .banner("app-home-carousel"))
+    private func getHomeBannerData() {
+        let bannerRequest = Network.request(target: .banner(token:"dasdasda", path:"app-home-carousel"))
+
+            bannerRequest
             .observeOn(MainScheduler.instance)
             .subscribe(
                 onNext: { (string) in

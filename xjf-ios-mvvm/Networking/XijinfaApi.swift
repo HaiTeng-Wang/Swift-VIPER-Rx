@@ -26,8 +26,7 @@ private extension String {
 }
 
 enum XijinfaApi {
-
-    case banner(String)
+    case banner(token:String, path:String)
 }
 
 extension XijinfaApi: TargetType {
@@ -38,7 +37,7 @@ extension XijinfaApi: TargetType {
 
     var path: String {
         switch self {
-        case .banner(let path):
+        case .banner(_, let path):
             return "banner/\(path.urlEscaped)"
         }
     }
@@ -60,11 +59,19 @@ extension XijinfaApi: TargetType {
     }
 
     var headers: [String: String]? {
+        guard let token = token else {
+            return ["Authorization": "bearer ", "Accept": "application/json"]
+        }
         return ["Authorization": "bearer \(token)", "Accept": "application/json"]
     }
 
     var token: String? {
-        return nil
+        switch self {
+        case .banner(let token, _):
+            return token
+        default:
+            return nil
+        }
     }
 
     public var validate: Bool {
