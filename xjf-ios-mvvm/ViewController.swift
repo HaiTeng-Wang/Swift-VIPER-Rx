@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         view.addSubview(button)
 
         button.snp.makeConstraints { make in
-           make.width.equalTo(200)
+            make.width.equalTo(200)
             make.height.equalTo(200)
             make.center.equalTo(view)
         }
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         .observeOn(MainScheduler.instance)
         .subscribe(
             onNext: { (string) in
-           print(string)
+            print(string)
         })
         .addDisposableTo(disposebag)
 
