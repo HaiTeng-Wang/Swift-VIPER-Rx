@@ -31,22 +31,27 @@ class ViewController: UIViewController {
             make.height.equalTo(200)
             make.center.equalTo(view)
         }
-        button.setTitle("haha", for:UIControlState.normal)
+        button.setTitle("Banner", for:UIControlState.normal)
 
-        Network.request(target: .banner("app-home-carousel"))
-        .observeOn(MainScheduler.instance)
-        .subscribe(
-            onNext: { (string) in
-            print(string)
+        button.rx.tap.subscribe(onNext: { _ in
+            self.getBannerData()
         })
         .addDisposableTo(disposebag)
 
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    private func getBannerData() {
+        Network.request(target: .banner("app-home-carousel"))
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onNext: { (string) in
+                    print(string)
+            })
+            .addDisposableTo(disposebag)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }
