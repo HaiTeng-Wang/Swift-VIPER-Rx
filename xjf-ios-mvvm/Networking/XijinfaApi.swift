@@ -85,9 +85,19 @@ extension XijinfaApi: TargetType {
 
     public var sampleData: Data {
         switch self {
-        case .banner(let path):
-            return "{\"login\": \"\(path)\", \"id\": 100}".data(using: String.Encoding.utf8)!
+        case .banner(_):
+            return stubbedResponse("Banner")
+        default:
+            return Data()
         }
+    }
+
+    func stubbedResponse(_ filename: String) -> Data! {
+        @objc class TestClass: NSObject { }
+
+        let bundle = Bundle(for: TestClass.self)
+        let path = bundle.path(forResource: filename, ofType: "json")
+        return (try? Data(contentsOf: URL(fileURLWithPath: path!)))
     }
 
 }

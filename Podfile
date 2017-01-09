@@ -22,6 +22,7 @@ target 'xjf-ios-mvvm' do
     pod 'Kingfisher', '~> 3.2.4'
     pod 'SnapKit', '~> 3.1.2'
     pod 'RealmSwift'
+    pod "Carlos"
     
     post_install do |installer|
         installer.pods_project.targets.each do |target|

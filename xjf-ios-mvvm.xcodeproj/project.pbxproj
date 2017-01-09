@@ -17,6 +17,8 @@
 		EC9277551E1B90A800D12F0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9277541E1B90A800D12F0B /* ViewController.swift */; };
 		EC92775A1E1B90A800D12F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9277591E1B90A800D12F0B /* Assets.xcassets */; };
 		EC92775D1E1B90A800D12F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92775B1E1B90A800D12F0B /* LaunchScreen.storyboard */; };
+		ECB3BF801E235E72009703DF /* Banner.json in Resources */ = {isa = PBXBuildFile; fileRef = ECB3BF7F1E235E72009703DF /* Banner.json */; };
+		ECB3BF821E236668009703DF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3BF811E236668009703DF /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		EC9277591E1B90A800D12F0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC92775C1E1B90A800D12F0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC92775E1E1B90A800D12F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECB3BF7F1E235E72009703DF /* Banner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Banner.json; sourceTree = "<group>"; };
+		ECB3BF811E236668009703DF /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +98,11 @@
 		EC5B07031E1E205C00151690 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				ECB3BF7E1E235E56009703DF /* SampleData */,
 				EC5B07041E1E205C00151690 /* Models */,
 				EC5B07051E1E209200151690 /* XijinfaApi.swift */,
 				EC5B07071E1E258500151690 /* Network.swift */,
+				ECB3BF811E236668009703DF /* DataManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -138,6 +144,14 @@
 				EC92775E1E1B90A800D12F0B /* Info.plist */,
 			);
 			path = "xjf-ios-mvvm";
+			sourceTree = "<group>";
+		};
+		ECB3BF7E1E235E56009703DF /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				ECB3BF7F1E235E72009703DF /* Banner.json */,
+			);
+			path = SampleData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB3BF801E235E72009703DF /* Banner.json in Resources */,
 				EC92775D1E1B90A800D12F0B /* LaunchScreen.storyboard in Resources */,
 				EC92775A1E1B90A800D12F0B /* Assets.xcassets in Resources */,
 			);
@@ -277,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC29E2761E1F7DE000A9C818 /* Account.swift in Sources */,
+				ECB3BF821E236668009703DF /* DataManager.swift in Sources */,
 				EC3745351E1BB15C00794A81 /* AppDelegate.swift in Sources */,
 				EC5B07061E1E209200151690 /* XijinfaApi.swift in Sources */,
 				EC5B07081E1E258500151690 /* Network.swift in Sources */,

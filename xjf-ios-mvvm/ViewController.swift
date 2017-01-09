@@ -37,11 +37,20 @@ class ViewController: UIViewController {
             self.getHomeBannerData()
         })
         .addDisposableTo(disposebag)
-
+        
+        DataManager.getDataFromCache(path: "haha")
+        .observeOn(MainScheduler.instance)
+        .subscribe(onNext: { (nsdata) in
+            print("onNext I found \(nsdata)!")
+        }, onError: { (error) in
+            print("onError I found \(error)!")
+        }, onCompleted: {
+            print("onCompleted")
+        }).addDisposableTo(disposebag)
     }
 
     private func getHomeBannerData() {
-        let bannerRequest = Network.request(target: .banner(token:"dasdasda", path:"app-home-carousel"))
+        let bannerRequest = DataManager.getBanner(path: "app-home-carousel")
 
             bannerRequest
             .observeOn(MainScheduler.instance)
