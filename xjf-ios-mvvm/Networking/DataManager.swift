@@ -11,26 +11,19 @@ import Carlos
 import Moya
 import RxSwift
 
-class DataManager {
+class DataManager {    let disposebag = DisposeBag()
 
     static let cache = MemoryCacheLevel<String, NSData>().compose(DiskCacheLevel())
 
-    public static func getBanner(path: String) ->Observable<Response> {
-        return Network.request(target: .banner(token:"dasdasda", path:"app-home-carousel"))
-        .flatMap { (responce) -> Observable<Response> in
-            self.cache.set(responce.data as NSData, forKey: path)
-            return Observable.just(responce)
-        }.flatMap({ (responce) -> Observable<Response> in
-            self.cache.get(path)
-                .onSuccess { value in
-                    print("I found \(value)!")
-                }
-                .onFailure { error in
-                    print("An error occurred :( \(error)")
-            }
-            return Observable.just(responce)
-        })
+    public static func getBanner(path: String) ->Observable<NSData> {
 
+        return Observable.concat(
+            [self.getDataFromCache(path: path),
+             Network.request(target: .banner(token:self.getAccessToken(), path:"app-home-carousel"))])
+    }
+
+    public static func getAccessToken() -> String {
+        return "accessToken"
     }
 
     public static func getDataFromCache(path: String)->Observable<NSData> {

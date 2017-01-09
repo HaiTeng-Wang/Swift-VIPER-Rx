@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             self.getHomeBannerData()
         })
         .addDisposableTo(disposebag)
-        
+
         DataManager.getDataFromCache(path: "haha")
         .observeOn(MainScheduler.instance)
         .subscribe(onNext: { (nsdata) in

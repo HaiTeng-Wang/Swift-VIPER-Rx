@@ -27,7 +27,11 @@ class Network {
 }
 
 extension Network {
-    static func request(target: XijinfaApi) -> Observable<Response> {
+    static func request(target: XijinfaApi) -> Observable<NSData> {
         return provider.request(target)
+            .flatMap({ (responce) -> Observable<NSData> in
+            let data = NSData.init(data: responce.data)
+            return Observable.just(data)
+        })
     }
 }
