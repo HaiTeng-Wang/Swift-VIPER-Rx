@@ -19,6 +19,11 @@
 		EC92775D1E1B90A800D12F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92775B1E1B90A800D12F0B /* LaunchScreen.storyboard */; };
 		ECB3BF801E235E72009703DF /* Banner.json in Resources */ = {isa = PBXBuildFile; fileRef = ECB3BF7F1E235E72009703DF /* Banner.json */; };
 		ECB3BF821E236668009703DF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3BF811E236668009703DF /* DataManager.swift */; };
+		ECC704AB1E24A46E00C257D4 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704AA1E24A46E00C257D4 /* CacheManager.swift */; };
+		ECC704B21E24AFD000C257D4 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704AF1E24AFD000C257D4 /* Banner.swift */; };
+		ECC704B31E24AFD000C257D4 /* BannerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704B01E24AFD000C257D4 /* BannerData.swift */; };
+		ECC704B41E24AFD000C257D4 /* BannerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704B11E24AFD000C257D4 /* BannerResult.swift */; };
+		ECC704B61E24AFD900C257D4 /* Cover.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704B51E24AFD900C257D4 /* Cover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		EC92775E1E1B90A800D12F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECB3BF7F1E235E72009703DF /* Banner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Banner.json; sourceTree = "<group>"; };
 		ECB3BF811E236668009703DF /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		ECC704AA1E24A46E00C257D4 /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		ECC704AF1E24AFD000C257D4 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		ECC704B01E24AFD000C257D4 /* BannerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerData.swift; sourceTree = "<group>"; };
+		ECC704B11E24AFD000C257D4 /* BannerResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerResult.swift; sourceTree = "<group>"; };
+		ECC704B51E24AFD900C257D4 /* Cover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,20 +108,14 @@
 		EC5B07031E1E205C00151690 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				ECC704AC1E24AF4500C257D4 /* Models */,
 				ECB3BF7E1E235E56009703DF /* SampleData */,
-				EC5B07041E1E205C00151690 /* Models */,
 				EC5B07051E1E209200151690 /* XijinfaApi.swift */,
 				EC5B07071E1E258500151690 /* Network.swift */,
 				ECB3BF811E236668009703DF /* DataManager.swift */,
+				ECC704AA1E24A46E00C257D4 /* CacheManager.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		EC5B07041E1E205C00151690 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		EC9277461E1B90A700D12F0B = {
@@ -152,6 +156,33 @@
 				ECB3BF7F1E235E72009703DF /* Banner.json */,
 			);
 			path = SampleData;
+			sourceTree = "<group>";
+		};
+		ECC704AC1E24AF4500C257D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECC704AE1E24AF7200C257D4 /* Cover */,
+				ECC704AD1E24AF6D00C257D4 /* Banner */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECC704AD1E24AF6D00C257D4 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				ECC704AF1E24AFD000C257D4 /* Banner.swift */,
+				ECC704B01E24AFD000C257D4 /* BannerData.swift */,
+				ECC704B11E24AFD000C257D4 /* BannerResult.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		ECC704AE1E24AF7200C257D4 /* Cover */ = {
+			isa = PBXGroup;
+			children = (
+				ECC704B51E24AFD900C257D4 /* Cover.swift */,
+			);
+			path = Cover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,12 +323,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC29E2761E1F7DE000A9C818 /* Account.swift in Sources */,
+				ECC704B31E24AFD000C257D4 /* BannerData.swift in Sources */,
+				ECC704AB1E24A46E00C257D4 /* CacheManager.swift in Sources */,
 				ECB3BF821E236668009703DF /* DataManager.swift in Sources */,
 				EC3745351E1BB15C00794A81 /* AppDelegate.swift in Sources */,
 				EC5B07061E1E209200151690 /* XijinfaApi.swift in Sources */,
+				ECC704B61E24AFD900C257D4 /* Cover.swift in Sources */,
 				EC5B07081E1E258500151690 /* Network.swift in Sources */,
 				EC29E2781E1F7E0F00A9C818 /* Credential.swift in Sources */,
+				ECC704B21E24AFD000C257D4 /* Banner.swift in Sources */,
 				EC9277551E1B90A800D12F0B /* ViewController.swift in Sources */,
+				ECC704B41E24AFD000C257D4 /* BannerResult.swift in Sources */,
 				EC29E27A1E1F7E2400A9C818 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

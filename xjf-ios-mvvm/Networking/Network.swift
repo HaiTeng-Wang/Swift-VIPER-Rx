@@ -27,11 +27,11 @@ class Network {
 }
 
 extension Network {
-    static func request(target: XijinfaApi) -> Observable<NSData> {
+    static func request(target: XijinfaApi) -> Observable<NSString> {
         return provider.request(target)
-            .flatMap({ (responce) -> Observable<NSData> in
-            let data = NSData.init(data: responce.data)
-            return Observable.just(data)
+            .flatMap({ (responce) -> Observable<NSString> in
+            let string = String(data:responce.data, encoding: .utf8)
+            return Observable.just(string! as NSString)
         })
     }
 }

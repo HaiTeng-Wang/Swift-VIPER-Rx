@@ -37,28 +37,20 @@ class ViewController: UIViewController {
             self.getHomeBannerData()
         })
         .addDisposableTo(disposebag)
-
-        DataManager.getDataFromCache(path: "haha")
-        .observeOn(MainScheduler.instance)
-        .subscribe(onNext: { (nsdata) in
-            print("onNext I found \(nsdata)!")
-        }, onError: { (error) in
-            print("onError I found \(error)!")
-        }, onCompleted: {
-            print("onCompleted")
-        }).addDisposableTo(disposebag)
     }
 
     private func getHomeBannerData() {
-        let bannerRequest = DataManager.getBanner(path: "app-home-carousel")
+            DataManager.getBanner(path: "app-home-carousel")
+                .observeOn(MainScheduler.instance)
+                .subscribe(onNext: { (banner) in
+                    print("onNext I found \(banner.result?.data?[0].title)!")
+                }, onError: { (error) in
+                    print("onError I found \(error)!")
+                }, onCompleted: {
+                    print("onCompleted")
+                }).addDisposableTo(disposebag)
+        print("clicked")
 
-            bannerRequest
-            .observeOn(MainScheduler.instance)
-            .subscribe(
-                onNext: { (string) in
-                    print(string)
-            })
-            .addDisposableTo(disposebag)
     }
 
     override func didReceiveMemoryWarning() {

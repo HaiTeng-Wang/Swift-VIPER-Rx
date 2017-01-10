@@ -7,41 +7,38 @@
 //
 
 import Foundation
-import Carlos
 import Moya
 import RxSwift
+import AwesomeCache
+import ObjectMapper
 
-class DataManager {    let disposebag = DisposeBag()
+class DataManager {
 
-    static let cache = MemoryCacheLevel<String, NSData>().compose(DiskCacheLevel())
-
-    public static func getBanner(path: String) ->Observable<NSData> {
+    public static func getBanner(path: String) ->Observable<Banner> {
+        let banner = XijinfaApi.banner(token:self.getAccessToken(), path:"app-home-carousel")
+        let key = banner.path
+        let netObservable =
+            Network.request(target: banner)
+                .flatMap { (nstring) -> Observable<NSString> in
+                    return CacheManager.writeDataToDisk(key: key, data: nstring)
+                }
 
         return Observable.concat(
-            [self.getDataFromCache(path: path),
-             Network.request(target: .banner(token:self.getAccessToken(), path:"app-home-carousel"))])
+            [CacheManager.readDataFromCache(key: key), netObservable])
+            .filter({ (string) -> Bool in
+                return !string.isEqual(to: "")
+            }).take(1)
+            .flatMap({ (string) -> Observable<Banner> in
+//                let data = string as String
+//                let uData = data.data(using: .utf8)
+//                let any = JSONSerialization.jsonObject(with: uData, options: .mutableContainers)
+                let banner = Mapper<Banner>().map(JSONString: string as String)
+                return Observable.just(banner!)
+            })
     }
 
     public static func getAccessToken() -> String {
         return "accessToken"
-    }
-
-    public static func getDataFromCache(path: String)->Observable<NSData> {
-        return Observable.create { subscribe in
-            let request = self.cache.get(path)
-            request
-            .onSuccess { value in
-                print("I found \(value)!")
-                subscribe.on(.next(value))
-                subscribe.on(.completed)
-            }
-            .onFailure { error in
-                print("An error occurred :( \(error)")
-                subscribe.on(.error(error))
-            }
-
-            return Disposables.create(with: request.cancel)
-        }
     }
 
 }
