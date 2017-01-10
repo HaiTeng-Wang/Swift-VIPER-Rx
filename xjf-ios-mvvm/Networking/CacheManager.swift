@@ -17,7 +17,6 @@ class CacheManager {
 
     public static func readDataFromCache(key: String)->Observable<NSString> {
         return Observable.create { subscribe in
-            print("readDataFromCache :)")
             do {
                 let cache = try Cache<NSString>(name: CACHE)
                 if let data = cache[key] as? String {
