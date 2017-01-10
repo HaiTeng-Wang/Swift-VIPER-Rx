@@ -11,8 +11,13 @@ import Moya
 import RxSwift
 import AwesomeCache
 import ObjectMapper
+import Moya_ObjectMapper
 
 class DataManager {
+
+    public static func getAccessToken() -> String {
+        return "accessToken"
+    }
 
     public static func getBanner(path: String) ->Observable<Banner> {
         let banner = XijinfaApi.banner(token:self.getAccessToken(), path:path)
@@ -28,13 +33,17 @@ class DataManager {
             })
             .take(1)
             .flatMap({ (string) -> Observable<Banner> in
-                let banner = Mapper<Banner>().map(JSONString: string as String)
-                return Observable.just(banner!)
+                let data = Mapper<Banner>().map(JSONString: string as String)
+                return Observable.just(data!)
             })
     }
 
-    public static func getAccessToken() -> String {
-        return "accessToken"
+    public static func getScureCode() ->Observable<Secure> {
+        return Network.request(target: .secureCode)
+                .flatMap({ (string) -> Observable<Secure> in
+                    let data = Mapper<Secure>().map(JSONString: string as String)
+                    return Observable.just(data!)
+                })
     }
 
 }

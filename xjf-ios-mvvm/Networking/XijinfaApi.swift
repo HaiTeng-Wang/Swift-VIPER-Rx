@@ -27,6 +27,9 @@ private extension String {
 
 enum XijinfaApi {
     case banner(token:String, path:String)
+    case secureCode
+    case login(udid:String, version:String, client:String, pushChannel:String,
+        userName:String, passwd:String, secureCode:String, secureKey:String)
 }
 
 extension XijinfaApi: TargetType {
@@ -39,19 +42,37 @@ extension XijinfaApi: TargetType {
         switch self {
         case .banner(_, let path):
             return "banner/\(path.urlEscaped)"
+        case .secureCode:
+            return "auth/get-secure-code"
+        case .login:
+            return "auth/login"
         }
     }
 
     var method: Moya.Method {
-        return .get
+        switch self {
+        case .login:
+            return .post
+        default:
+            return .get
+        }
     }
 
     var parameters: [String: Any]? {
-        return nil
+        switch self {
+        case .login(_, _, _, _, let userName, let passwd, let secureCode, let secureKey):
+           return [
+                "username": userName,
+                "password": passwd,
+                "secure_key": secureKey,
+                "secure_code": secureCode]
+        default:
+            return nil
+        }
     }
 
     public var parameterEncoding: ParameterEncoding {
-        return URLEncoding.default
+        return method == .get ? URLEncoding.default : JSONEncoding.default
     }
 
     public var task: Task {
@@ -60,9 +81,9 @@ extension XijinfaApi: TargetType {
 
     var headers: [String: String]? {
         guard let token = token else {
-            return ["Authorization": "bearer ", "Accept": "application/json"]
+            return ["Accept": "application/json", "Cache-Control": "no-cache"]
         }
-        return ["Authorization": "bearer \(token)", "Accept": "application/json"]
+        return ["Authorization": "bearer \(token)", "Accept": "application/json", "Cache-Control": "no-cache"]
     }
 
     var token: String? {
@@ -94,7 +115,6 @@ extension XijinfaApi: TargetType {
 
     func stubbedResponse(_ filename: String) -> Data! {
         @objc class TestClass: NSObject { }
-
         let bundle = Bundle(for: TestClass.self)
         let path = bundle.path(forResource: filename, ofType: "json")
         return (try? Data(contentsOf: URL(fileURLWithPath: path!)))
