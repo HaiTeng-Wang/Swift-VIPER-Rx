@@ -15,7 +15,7 @@ import ObjectMapper
 class DataManager {
 
     public static func getBanner(path: String) ->Observable<Banner> {
-        let banner = XijinfaApi.banner(token:self.getAccessToken(), path:"app-home-carousel")
+        let banner = XijinfaApi.banner(token:self.getAccessToken(), path:path)
         let key = banner.path
         let netObservable =
             Network.request(target: banner)
@@ -29,9 +29,6 @@ class DataManager {
                 return !string.isEqual(to: "")
             }).take(1)
             .flatMap({ (string) -> Observable<Banner> in
-//                let data = string as String
-//                let uData = data.data(using: .utf8)
-//                let any = JSONSerialization.jsonObject(with: uData, options: .mutableContainers)
                 let banner = Mapper<Banner>().map(JSONString: string as String)
                 return Observable.just(banner!)
             })
