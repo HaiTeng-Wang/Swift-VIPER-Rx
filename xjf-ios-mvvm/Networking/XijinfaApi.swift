@@ -23,13 +23,21 @@ private extension String {
     var urlEscaped: String {
         return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
+    static var udid: String {
+        return (UIDevice.current.identifierForVendor?.uuidString)!
+    }
+    static var client: String {
+        return UIDevice.current.name
+    }
+    static var bundleVersion: String {
+        return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+    }
 }
 
 enum XijinfaApi {
     case banner(token:String, path:String)
     case secureCode
-    case login(udid:String, version:String, client:String, pushChannel:String,
-        userName:String, passwd:String, secureCode:String, secureKey:String)
+    case login(userName:String, passwd:String, secureCode:String, secureKey:String)
 }
 
 extension XijinfaApi: TargetType {
@@ -60,7 +68,7 @@ extension XijinfaApi: TargetType {
 
     var parameters: [String: Any]? {
         switch self {
-        case .login(_, _, _, _, let userName, let passwd, let secureCode, let secureKey):
+        case .login(let userName, let passwd, let secureCode, let secureKey):
            return [
                 "username": userName,
                 "password": passwd,
@@ -80,10 +88,19 @@ extension XijinfaApi: TargetType {
     }
 
     var headers: [String: String]? {
-        guard let token = token else {
-            return ["Accept": "application/json", "Cache-Control": "no-cache"]
+        switch self {
+        case .login:
+            return ["X-XJF-UDID": String.udid,
+                    "X-XJF-PLATFORM": "ios",
+                    "X-XJF-VERSION": String.bundleVersion,
+                    "X-XJF-CLIENT": String.client,
+                    "X-XJF-PUSH-CHANNEL": "xiaomi"]
+        default:
+            guard let token = token else {
+                return ["Accept": "application/json", "Cache-Control": "no-cache"]
+            }
+            return ["Authorization": "bearer \(token)", "Accept": "application/json", "Cache-Control": "no-cache"]
         }
-        return ["Authorization": "bearer \(token)", "Accept": "application/json", "Cache-Control": "no-cache"]
     }
 
     var token: String? {
