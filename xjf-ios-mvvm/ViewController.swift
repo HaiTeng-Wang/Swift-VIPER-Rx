@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         button1.setTitle("Login", for:UIControlState.normal)
 
         button1.rx.tap.subscribe(onNext: { _ in
-            self.login()
+            self.login(userName:"13651999507", passwd:"123456")
         })
             .addDisposableTo(disposebag)
 
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         button2.setTitle("Logout", for:UIControlState.normal)
 
         button2.rx.tap.subscribe(onNext: { _ in
-            self.getHomeBannerData()
+            self.logout()
         })
             .addDisposableTo(disposebag)
 
@@ -84,20 +84,41 @@ class ViewController: UIViewController {
                 }).addDisposableTo(disposebag)
     }
 
-    private func login() {
-
+    private func login(userName: String, passwd: String) {
         DataManager.getScureCode()
             .flatMap({ (secure) -> Observable<Login> in
-                let userName = "13651999507"
-                let passwd = "123456"
                 let secureKey = secure.result?.secureKey
                 let secureCode = secure.result?.secureCode
                 return DataManager.login(userName: userName, passwd: passwd, secureCode: secureCode!, secureKey: secureKey!)
             })
+            .flatMap({ (login) -> Observable<AccountRealm> in
+                let account = AccountRealm()
+                account.credential = AccountDataMapper.mapLoginCredentialToCredentialRealm(credential: login.result!.credential!)
+                account.user = AccountDataMapper.mapUserToUserRealm(user: login.result!.user!)
+                return DatabaseManager.writeAccountToRealm(account: account)
+            })
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { (login) in
-                print("onNext I found name \(login.result?.user?.name)!")
-                print("onNext I found nickname \(login.result?.user?.nickname)!")
+            .subscribe(onNext: { (account) in
+                print("onNext I found credential \(account.credential?.bearer)!")
+            }, onError: { (error) in
+                print("onError I found \(error)!")
+            }, onCompleted: {
+                print("onCompleted")
+            }).addDisposableTo(disposebag)
+    }
+
+    private func logout() {
+        DatabaseManager.readAccountFromRealm()
+            .flatMap { (account) -> Observable<AccountRealm> in
+                print("readAccountFromRealm credential \(account.credential?.bearer)!")
+                return Observable.just(account)
+            }
+            .flatMap({ (_) -> Observable<AccountRealm> in
+                return DatabaseManager.deleteAccountFromRealm()
+            })
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { (account) in
+                print("deleteAccountFromRealm credential \(account.credential?.bearer)!")
             }, onError: { (error) in
                 print("onError I found \(error)!")
             }, onCompleted: {
