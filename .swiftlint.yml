@@ -1,3 +1,5 @@
+disable-rule:
+  - force-cast
 excluded:
   - xjf-ios-mvvm/Resources
   - Pods
