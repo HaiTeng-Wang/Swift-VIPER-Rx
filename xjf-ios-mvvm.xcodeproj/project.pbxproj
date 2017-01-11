@@ -32,6 +32,7 @@
 		ECC704C51E25DB7800C257D4 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704C21E25DB7800C257D4 /* LoginResult.swift */; };
 		ECC704C71E25F79C00C257D4 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704C61E25F79C00C257D4 /* DatabaseManager.swift */; };
 		ECC704CA1E25F8E600C257D4 /* AccountDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704C91E25F8E600C257D4 /* AccountDataMapper.swift */; };
+		ECC704D01E262D2600C257D4 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704CF1E262D2600C257D4 /* AccountManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		ECC704C21E25DB7800C257D4 /* LoginResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		ECC704C61E25F79C00C257D4 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		ECC704C91E25F8E600C257D4 /* AccountDataMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDataMapper.swift; sourceTree = "<group>"; };
+		ECC704CF1E262D2600C257D4 /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		EC9277511E1B90A800D12F0B /* xjf-ios-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				ECC704CE1E262D1C00C257D4 /* Account */,
 				EC29E2731E1F7CDF00A9C818 /* Database */,
 				EC5B07031E1E205C00151690 /* Networking */,
 				EC3745331E1BB15C00794A81 /* App */,
@@ -239,6 +242,14 @@
 				ECC704C91E25F8E600C257D4 /* AccountDataMapper.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		ECC704CE1E262D1C00C257D4 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				ECC704CF1E262D2600C257D4 /* AccountManager.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECC704C41E25DB7800C257D4 /* LoginCredential.swift in Sources */,
+				ECC704D01E262D2600C257D4 /* AccountManager.swift in Sources */,
 				EC29E2761E1F7DE000A9C818 /* AccountRealm.swift in Sources */,
 				ECC704C31E25DB7800C257D4 /* Login.swift in Sources */,
 				ECC704B31E24AFD000C257D4 /* BannerData.swift in Sources */,

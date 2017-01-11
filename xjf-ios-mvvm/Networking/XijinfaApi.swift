@@ -89,7 +89,7 @@ extension XijinfaApi: TargetType {
     }
 
     var token: String? {
-        return nil
+        return AccountManager.sharedInstance.getAccessToken()
     }
 
     public var validate: Bool {

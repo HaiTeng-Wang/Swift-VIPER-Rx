@@ -38,7 +38,7 @@ class DataManager {
             })
     }
 
-    public static func getScureCode() ->Observable<Secure> {
+    public static func getSecureCode() ->Observable<Secure> {
         return Network.request(target: .secureCode)
                 .flatMap({ (string) -> Observable<Secure> in
                     let data = Mapper<Secure>().map(JSONString: string as String)

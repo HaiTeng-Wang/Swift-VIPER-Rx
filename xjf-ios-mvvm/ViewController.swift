@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     }
 
     private func login(userName: String, passwd: String) {
-        DataManager.getScureCode()
+        DataManager.getSecureCode()
             .flatMap({ (secure) -> Observable<Login> in
                 let secureKey = secure.result?.secureKey
                 let secureCode = secure.result?.secureCode
@@ -99,6 +99,8 @@ class ViewController: UIViewController {
             })
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { (account) in
+                AccountManager.sharedInstance.setUser(user: account.user!)
+                AccountManager.sharedInstance.setCredential(credential: account.credential!)
                 print("onNext I found credential \(account.credential?.bearer)!")
             }, onError: { (error) in
                 print("onError I found \(error)!")
@@ -108,22 +110,7 @@ class ViewController: UIViewController {
     }
 
     private func logout() {
-        DatabaseManager.readAccountFromRealm()
-            .flatMap { (account) -> Observable<AccountRealm> in
-                print("readAccountFromRealm credential \(account.credential?.bearer)!")
-                return Observable.just(account)
-            }
-            .flatMap({ (_) -> Observable<AccountRealm> in
-                return DatabaseManager.deleteAccountFromRealm()
-            })
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { (account) in
-                print("deleteAccountFromRealm credential \(account.credential?.bearer)!")
-            }, onError: { (error) in
-                print("onError I found \(error)!")
-            }, onCompleted: {
-                print("onCompleted")
-            }).addDisposableTo(disposebag)
+        AccountManager.sharedInstance.logout()
     }
 
     override func didReceiveMemoryWarning() {

@@ -15,13 +15,10 @@ class DatabaseManager {
     public static func writeAccountToRealm(account: AccountRealm)->Observable<AccountRealm> {
        return Observable.create { subscribe in
             let realm = try! Realm()
-            print("writeAccountToRealm credential \(account.credential?.bearer)!")
             let accountCopy = account.clone()
-
             realm.beginWrite()
             realm.add(account, update: true)
             try! realm.commitWrite()
-
             subscribe.on(.next(accountCopy))
             subscribe.on(.completed)
             return Disposables.create()

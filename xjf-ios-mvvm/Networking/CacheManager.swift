@@ -13,7 +13,7 @@ import AwesomeCache
 class CacheManager {
 
     static let CACHE = "xijinfa_cache"
-    static let STALES = 60 as TimeInterval
+    static let STALES = 10 as TimeInterval
 
     public static func readDataFromCache(key: String)->Observable<NSString> {
         return Observable.create { subscribe in
@@ -40,6 +40,21 @@ class CacheManager {
                 let cache = try Cache<NSString>(name: CACHE)
                 cache.setObject(data, forKey: key, expires: .seconds(STALES))
                 subscribe.on(.next(data))
+                subscribe.on(.completed)
+            } catch _ {
+                print("Something went wrong :(")
+            }
+
+            return Disposables.create()
+        }
+    }
+
+    public static func clearCache()->Observable<NSString> {
+        return Observable.create { subscribe in
+            do {
+                let cache = try Cache<NSString>(name: CACHE)
+                cache.removeAllObjects()
+                subscribe.on(.next(""))
                 subscribe.on(.completed)
             } catch _ {
                 print("Something went wrong :(")
