@@ -15,10 +15,6 @@ import Moya_ObjectMapper
 
 class DataManager {
 
-    public static func getAccessToken() -> String {
-        return "accessToken"
-    }
-
     public static func getBanner(path: String) ->Observable<Banner> {
         let banner = XijinfaApi.banner(path:path)
         let key = banner.path
