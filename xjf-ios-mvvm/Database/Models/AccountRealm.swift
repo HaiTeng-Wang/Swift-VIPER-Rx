@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Account: Object {
-    dynamic var user: User?
-    dynamic var credential: Credential?
+class AccountRealm: Object {
+    dynamic var user: UserRealm?
+    dynamic var credential: CredentialRealm?
 }

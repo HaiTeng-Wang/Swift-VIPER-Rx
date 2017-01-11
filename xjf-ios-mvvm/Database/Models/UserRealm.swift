@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class User: Object {
+class UserRealm: Object {
      dynamic var id: Int64=0
      dynamic var nickname=""
      dynamic var memo=""

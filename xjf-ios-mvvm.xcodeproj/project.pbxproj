@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A9750B31456024722C03ADA /* Pods_xjf_ios_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */; };
-		EC29E2761E1F7DE000A9C818 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2751E1F7DE000A9C818 /* Account.swift */; };
-		EC29E2781E1F7E0F00A9C818 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2771E1F7E0F00A9C818 /* Credential.swift */; };
-		EC29E27A1E1F7E2400A9C818 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2791E1F7E2400A9C818 /* User.swift */; };
+		EC29E2761E1F7DE000A9C818 /* AccountRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */; };
+		EC29E2781E1F7E0F00A9C818 /* CredentialRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */; };
+		EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2791E1F7E2400A9C818 /* UserRealm.swift */; };
 		EC3745351E1BB15C00794A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3745341E1BB15C00794A81 /* AppDelegate.swift */; };
 		EC5B07061E1E209200151690 /* XijinfaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B07051E1E209200151690 /* XijinfaApi.swift */; };
 		EC5B07081E1E258500151690 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B07071E1E258500151690 /* Network.swift */; };
@@ -26,15 +26,19 @@
 		ECC704B61E24AFD900C257D4 /* Cover.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704B51E24AFD900C257D4 /* Cover.swift */; };
 		ECC704BA1E24E47B00C257D4 /* Secure.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704B81E24E47B00C257D4 /* Secure.swift */; };
 		ECC704BB1E24E47B00C257D4 /* SecureResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704B91E24E47B00C257D4 /* SecureResult.swift */; };
+		ECC704BE1E25DB7100C257D4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704BD1E25DB7100C257D4 /* User.swift */; };
+		ECC704C31E25DB7800C257D4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704C01E25DB7800C257D4 /* Login.swift */; };
+		ECC704C41E25DB7800C257D4 /* LoginCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704C11E25DB7800C257D4 /* LoginCredential.swift */; };
+		ECC704C51E25DB7800C257D4 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704C21E25DB7800C257D4 /* LoginResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xjf_ios_mvvm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103FD5FA7E3467A92CC1C64C /* Pods-xjf-ios-mvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.release.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.release.xcconfig"; sourceTree = "<group>"; };
 		971528448CD937E3281DDC1F /* Pods-xjf-ios-mvvm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.debug.xcconfig"; sourceTree = "<group>"; };
-		EC29E2751E1F7DE000A9C818 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		EC29E2771E1F7E0F00A9C818 /* Credential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
-		EC29E2791E1F7E2400A9C818 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRealm.swift; sourceTree = "<group>"; };
+		EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialRealm.swift; sourceTree = "<group>"; };
+		EC29E2791E1F7E2400A9C818 /* UserRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
 		EC3745341E1BB15C00794A81 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC5B07051E1E209200151690 /* XijinfaApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XijinfaApi.swift; sourceTree = "<group>"; };
 		EC5B07071E1E258500151690 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -52,6 +56,10 @@
 		ECC704B51E24AFD900C257D4 /* Cover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cover.swift; sourceTree = "<group>"; };
 		ECC704B81E24E47B00C257D4 /* Secure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secure.swift; sourceTree = "<group>"; };
 		ECC704B91E24E47B00C257D4 /* SecureResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureResult.swift; sourceTree = "<group>"; };
+		ECC704BD1E25DB7100C257D4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ECC704C01E25DB7800C257D4 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		ECC704C11E25DB7800C257D4 /* LoginCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCredential.swift; sourceTree = "<group>"; };
+		ECC704C21E25DB7800C257D4 /* LoginResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +102,9 @@
 		EC29E2741E1F7CDF00A9C818 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EC29E2751E1F7DE000A9C818 /* Account.swift */,
-				EC29E2771E1F7E0F00A9C818 /* Credential.swift */,
-				EC29E2791E1F7E2400A9C818 /* User.swift */,
+				EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */,
+				EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */,
+				EC29E2791E1F7E2400A9C818 /* UserRealm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +173,8 @@
 		ECC704AC1E24AF4500C257D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ECC704BF1E25DB7800C257D4 /* Login */,
+				ECC704BC1E25DB7100C257D4 /* User */,
 				ECC704B71E24E47B00C257D4 /* Secure */,
 				ECC704AE1E24AF7200C257D4 /* Cover */,
 				ECC704AD1E24AF6D00C257D4 /* Banner */,
@@ -197,6 +207,24 @@
 				ECC704B91E24E47B00C257D4 /* SecureResult.swift */,
 			);
 			path = Secure;
+			sourceTree = "<group>";
+		};
+		ECC704BC1E25DB7100C257D4 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				ECC704BD1E25DB7100C257D4 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		ECC704BF1E25DB7800C257D4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				ECC704C01E25DB7800C257D4 /* Login.swift */,
+				ECC704C11E25DB7800C257D4 /* LoginCredential.swift */,
+				ECC704C21E25DB7800C257D4 /* LoginResult.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,21 +364,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC29E2761E1F7DE000A9C818 /* Account.swift in Sources */,
+				ECC704C41E25DB7800C257D4 /* LoginCredential.swift in Sources */,
+				EC29E2761E1F7DE000A9C818 /* AccountRealm.swift in Sources */,
+				ECC704C31E25DB7800C257D4 /* Login.swift in Sources */,
 				ECC704B31E24AFD000C257D4 /* BannerData.swift in Sources */,
 				ECC704AB1E24A46E00C257D4 /* CacheManager.swift in Sources */,
 				ECB3BF821E236668009703DF /* DataManager.swift in Sources */,
+				ECC704BE1E25DB7100C257D4 /* User.swift in Sources */,
 				ECC704BA1E24E47B00C257D4 /* Secure.swift in Sources */,
 				ECC704BB1E24E47B00C257D4 /* SecureResult.swift in Sources */,
 				EC3745351E1BB15C00794A81 /* AppDelegate.swift in Sources */,
 				EC5B07061E1E209200151690 /* XijinfaApi.swift in Sources */,
 				ECC704B61E24AFD900C257D4 /* Cover.swift in Sources */,
 				EC5B07081E1E258500151690 /* Network.swift in Sources */,
-				EC29E2781E1F7E0F00A9C818 /* Credential.swift in Sources */,
+				EC29E2781E1F7E0F00A9C818 /* CredentialRealm.swift in Sources */,
 				ECC704B21E24AFD000C257D4 /* Banner.swift in Sources */,
 				EC9277551E1B90A800D12F0B /* ViewController.swift in Sources */,
 				ECC704B41E24AFD000C257D4 /* BannerResult.swift in Sources */,
-				EC29E27A1E1F7E2400A9C818 /* User.swift in Sources */,
+				EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */,
+				ECC704C51E25DB7800C257D4 /* LoginResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

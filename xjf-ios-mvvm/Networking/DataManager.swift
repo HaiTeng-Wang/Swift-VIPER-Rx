@@ -20,7 +20,7 @@ class DataManager {
     }
 
     public static func getBanner(path: String) ->Observable<Banner> {
-        let banner = XijinfaApi.banner(token:self.getAccessToken(), path:path)
+        let banner = XijinfaApi.banner(path:path)
         let key = banner.path
         let netObservable = Network.request(target: banner)
             .flatMap { (nstring) -> Observable<NSString> in
@@ -42,6 +42,14 @@ class DataManager {
         return Network.request(target: .secureCode)
                 .flatMap({ (string) -> Observable<Secure> in
                     let data = Mapper<Secure>().map(JSONString: string as String)
+                    return Observable.just(data!)
+                })
+    }
+
+    public static func login(userName: String, passwd: String, secureCode: String, secureKey: String) ->Observable<Login> {
+        return Network.request(target: .login(userName: userName, passwd: passwd, secureCode: secureCode, secureKey: secureKey))
+                .flatMap({ (string) -> Observable<Login> in
+                    let data = Mapper<Login>().map(JSONString: string as String)
                     return Observable.just(data!)
                 })
     }

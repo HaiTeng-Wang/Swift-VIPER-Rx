@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Credential: Object {
+class CredentialRealm: Object {
     dynamic var bearer = ""
     dynamic var expiredAt = ""
 }

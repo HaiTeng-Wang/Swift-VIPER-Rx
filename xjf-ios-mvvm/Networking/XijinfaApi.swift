@@ -15,27 +15,12 @@ private func JSONResponseDataFormatter(_ data: Data) -> Data {
         let prettyData =  try JSONSerialization.data(withJSONObject: dataAsJSON, options: .prettyPrinted)
         return prettyData
     } catch {
-        return data // fallback to original data if it can't be serialized.
-    }
-}
-
-private extension String {
-    var urlEscaped: String {
-        return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-    }
-    static var udid: String {
-        return (UIDevice.current.identifierForVendor?.uuidString)!
-    }
-    static var client: String {
-        return UIDevice.current.name
-    }
-    static var bundleVersion: String {
-        return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        return data
     }
 }
 
 enum XijinfaApi {
-    case banner(token:String, path:String)
+    case banner(path:String)
     case secureCode
     case login(userName:String, passwd:String, secureCode:String, secureKey:String)
 }
@@ -48,8 +33,8 @@ extension XijinfaApi: TargetType {
 
     var path: String {
         switch self {
-        case .banner(_, let path):
-            return "banner/\(path.urlEscaped)"
+        case .banner(let path):
+            return "banner/\(path)"
         case .secureCode:
             return "auth/get-secure-code"
         case .login:
@@ -90,10 +75,10 @@ extension XijinfaApi: TargetType {
     var headers: [String: String]? {
         switch self {
         case .login:
-            return ["X-XJF-UDID": String.udid,
+            return ["X-XJF-UDID": udid,
                     "X-XJF-PLATFORM": "ios",
-                    "X-XJF-VERSION": String.bundleVersion,
-                    "X-XJF-CLIENT": String.client,
+                    "X-XJF-VERSION": bundleVersion,
+                    "X-XJF-CLIENT": client,
                     "X-XJF-PUSH-CHANNEL": "xiaomi"]
         default:
             guard let token = token else {
@@ -104,12 +89,7 @@ extension XijinfaApi: TargetType {
     }
 
     var token: String? {
-        switch self {
-        case .banner(let token, _):
-            return token
-        default:
-            return nil
-        }
+        return nil
     }
 
     public var validate: Bool {
@@ -137,4 +117,18 @@ extension XijinfaApi: TargetType {
         return (try? Data(contentsOf: URL(fileURLWithPath: path!)))
     }
 
+    var udid: String {
+        return (UIDevice.current.identifierForVendor?.uuidString)!
+    }
+
+    var client: String {
+        return UIDevice.current.name
+    }
+
+    var bundleVersion: String {
+        if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
+            return version
+        }
+        return ""
+    }
 }

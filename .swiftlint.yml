@@ -1,5 +1,6 @@
-disable-rule:
-  - force-cast
+disabled_rules: # rule identifiers to exclude from running
+  - cyclomatic_complexity
+  - line_length
 excluded:
   - xjf-ios-mvvm/Resources
   - Pods
