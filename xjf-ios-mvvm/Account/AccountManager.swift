@@ -34,14 +34,7 @@ class AccountManager {
     }
 
     public func isLogin() -> Bool {
-        if isInitialed() {
-            if let bearer = self.credential?.bearer {
-                if bearer.length > 0 {
-                       return true
-                }
-            }
-        }
-        return false
+        return isInitialed() && ((self.credential?.bearer ?? "").length) > 0
     }
 
     public func setCredential(credential: CredentialRealm) {
@@ -53,12 +46,7 @@ class AccountManager {
     }
 
     public func getAccessToken() -> String {
-        if isLogin() {
-            if let bearer = self.credential?.bearer {
-                return bearer
-            }
-        }
-        return ""
+        return isLogin() ? (self.credential?.bearer ?? "") : ""
     }
 
     public func isInitialed() -> Bool {

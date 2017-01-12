@@ -23,6 +23,8 @@ target 'xjf-ios-mvvm' do
     pod 'SnapKit', '~> 3.1.2'
     pod 'RealmSwift'
     pod 'AwesomeCache', '~> 5.0'
+    pod 'Fabric'
+    pod 'Crashlytics'
     
     post_install do |installer|
         installer.pods_project.targets.each do |target|

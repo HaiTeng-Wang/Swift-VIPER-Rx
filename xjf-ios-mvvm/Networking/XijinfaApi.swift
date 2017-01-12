@@ -9,16 +9,6 @@
 import Foundation
 import Moya
 
-private func JSONResponseDataFormatter(_ data: Data) -> Data {
-    do {
-        let dataAsJSON = try JSONSerialization.jsonObject(with: data)
-        let prettyData =  try JSONSerialization.data(withJSONObject: dataAsJSON, options: .prettyPrinted)
-        return prettyData
-    } catch {
-        return data
-    }
-}
-
 enum XijinfaApi {
     case banner(path:String)
     case secureCode
@@ -64,11 +54,11 @@ extension XijinfaApi: TargetType {
         }
     }
 
-    public var parameterEncoding: ParameterEncoding {
+    var parameterEncoding: ParameterEncoding {
         return method == .get ? URLEncoding.default : JSONEncoding.default
     }
 
-    public var task: Task {
+    var task: Task {
         return .request
     }
 
@@ -92,7 +82,7 @@ extension XijinfaApi: TargetType {
         return AccountManager.sharedInstance.getAccessToken()
     }
 
-    public var validate: Bool {
+    var validate: Bool {
         switch self {
         case .banner:
             return true
@@ -101,7 +91,7 @@ extension XijinfaApi: TargetType {
         }
     }
 
-    public var sampleData: Data {
+    var sampleData: Data {
         switch self {
         case .banner(_):
             return stubbedResponse("Banner")

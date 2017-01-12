@@ -3,6 +3,9 @@ PODS:
   - AwesomeCache (5.0)
   - Cell+Rx (1.2.1):
     - RxSwift (~> 3.0.0)
+  - Crashlytics (3.8.3):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
   - Kingfisher (3.2.4)
   - Moya (8.0.0-beta.6):
     - Moya/Core (= 8.0.0-beta.6)
@@ -44,6 +47,8 @@ PODS:
 DEPENDENCIES:
   - AwesomeCache (~> 5.0)
   - Cell+Rx (~> 1.2.1)
+  - Crashlytics
+  - Fabric
   - Kingfisher (~> 3.2.4)
   - Moya-ObjectMapper (~> 2.2.1)
   - Moya/RxSwift (~> 8.0.0-beta.1)
@@ -61,6 +66,8 @@ SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   AwesomeCache: d8906955242173357caa0be0214d5e77dec32cc5
   Cell+Rx: 76da8ebbbeb3553ce18b9e1d550447d999b9cac8
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   Kingfisher: 8d80f39da403cd9c9ee11984e1655f4d6a566cdb
   Moya: a29e2503a0c5067d462ba2f07cc6b6b1f3fc172d
   Moya-ObjectMapper: b0d3d84d5f771044cc592af02b04a7bb2839b878
@@ -76,6 +83,6 @@ SPEC CHECKSUMS:
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SwiftLint: d73999f81682ab8114d6408c89f83177b2c197d7
 
-PODFILE CHECKSUM: 99cf2aea3693c0e6c2b2ef957cc8596c7827d086
+PODFILE CHECKSUM: dcfda84ebfdb43d83d833bbe2f45721b5a272260
 
 COCOAPODS: 1.1.1

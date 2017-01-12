@@ -380,7 +380,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n\"${PODS_ROOT}/Fabric/run\" 2821f0259f86b934d7b684195c05e9f4fcfddd53 e63a7b855f00704356cc49844a5ec77da5c52028d9e87ddfc7e814f639d87019";
 		};
 /* End PBXShellScriptBuildPhase section */
 
