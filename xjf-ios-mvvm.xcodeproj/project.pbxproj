@@ -288,7 +288,8 @@
 				TargetAttributes = {
 					EC92774E1E1B90A700D12F0B = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = EAAM7UUL52;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -524,10 +525,14 @@
 			baseConfigurationReference = 971528448CD937E3281DDC1F /* Pods-xjf-ios-mvvm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = EAAM7UUL52;
 				INFOPLIST_FILE = "xjf-ios-mvvm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xijinfa.portal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xijinfa.odyssey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fed51548-4ab6-4ff1-a88b-534e7ab46683";
+				PROVISIONING_PROFILE_SPECIFIER = "xijinfa odyssey ad hoc";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -537,10 +542,14 @@
 			baseConfigurationReference = 103FD5FA7E3467A92CC1C64C /* Pods-xjf-ios-mvvm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = EAAM7UUL52;
 				INFOPLIST_FILE = "xjf-ios-mvvm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xijinfa.portal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xijinfa.odyssey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4ab6688e-1e8b-4f0e-be15-2d4d68459566";
+				PROVISIONING_PROFILE_SPECIFIER = "xijinfa odyssey appstore";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
