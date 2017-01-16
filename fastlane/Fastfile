@@ -15,6 +15,8 @@ fastlane_version "2.3.0"
 
 default_platform :ios
 
+build_number = Time.now.utc.strftime("%y%m%d.%H%M")
+
 platform :ios do
   before_all do
     ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
@@ -70,7 +72,6 @@ platform :ios do
   end
 
   private_lane :update_build_number do
-    build_number = Time.now.utc.strftime("%y%m%d.%H%M")
     increment_build_number build_number: build_number
   end
 end
