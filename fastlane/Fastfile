@@ -30,7 +30,12 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
-    # match(type: "appstore") # more information: https://codesigning.guide
+    match(type: "appstore")
+    ensure_git_status_clean
+    update_build_number
+    commit_version_bump(xcodeproj: "xjf-ios-mvvm.xcodeproj")
+    add_git_tag
+    push_to_git_remote
     gym(scheme: "xjf-ios-mvvm") # Build your app - more options available
     pilot
 
@@ -63,6 +68,11 @@ platform :ios do
        message: exception.message,
        success: false
      )
+  end
+
+  private_lane :update_build_number do
+    build_number = Time.now.utc.strftime("%y%m%d.%H%M")
+    increment_build_number build_number: build_number
   end
 end
 
