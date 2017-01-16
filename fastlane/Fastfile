@@ -32,7 +32,7 @@ platform :ios do
   lane :beta do
     ensure_git_status_clean
     update_build_number
-    commit_version_bump(xcodeproj: "xjf-ios-mvvm.xcodeproj")
+    commit_version_bump message: "Deploying version."
     add_git_tag
     push_to_git_remote
     gym(scheme: "xjf-ios-mvvm") # Build your app - more options available
