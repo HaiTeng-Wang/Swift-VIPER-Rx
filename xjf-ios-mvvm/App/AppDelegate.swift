@@ -43,7 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      }
 
     func initRealm() {
-        print("initRealm")
         let config = Realm.Configuration(
             // Set the new schema version. This must be greater than the previously used
             // This must be greater than the previously used, migration will execute, or not

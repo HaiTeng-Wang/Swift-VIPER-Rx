@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A9750B31456024722C03ADA /* Pods_xjf_ios_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */; };
+		390B4F1F1E2CB75400E72F1B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B4F1D1E2CB75400E72F1B /* Logger.swift */; };
+		390B4F201E2CB75400E72F1B /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B4F1E1E2CB75400E72F1B /* LogLevel.swift */; };
 		EC29E2761E1F7DE000A9C818 /* AccountRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */; };
 		EC29E2781E1F7E0F00A9C818 /* CredentialRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */; };
 		EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2791E1F7E2400A9C818 /* UserRealm.swift */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xjf_ios_mvvm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103FD5FA7E3467A92CC1C64C /* Pods-xjf-ios-mvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.release.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.release.xcconfig"; sourceTree = "<group>"; };
+		390B4F1D1E2CB75400E72F1B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		390B4F1E1E2CB75400E72F1B /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		971528448CD937E3281DDC1F /* Pods-xjf-ios-mvvm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.debug.xcconfig"; sourceTree = "<group>"; };
 		EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRealm.swift; sourceTree = "<group>"; };
 		EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialRealm.swift; sourceTree = "<group>"; };
@@ -87,6 +91,23 @@
 				103FD5FA7E3467A92CC1C64C /* Pods-xjf-ios-mvvm.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		390B4F1B1E2CB72A00E72F1B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				390B4F1C1E2CB73F00E72F1B /* Logger */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		390B4F1C1E2CB73F00E72F1B /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				390B4F1D1E2CB75400E72F1B /* Logger.swift */,
+				390B4F1E1E2CB75400E72F1B /* LogLevel.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		CE06A9BB7222D81AED949303 /* Frameworks */ = {
@@ -163,6 +184,7 @@
 				EC29E2731E1F7CDF00A9C818 /* Database */,
 				EC5B07031E1E205C00151690 /* Networking */,
 				EC3745331E1BB15C00794A81 /* App */,
+				390B4F1B1E2CB72A00E72F1B /* Helpers */,
 				EC9277541E1B90A800D12F0B /* ViewController.swift */,
 				EC9277591E1B90A800D12F0B /* Assets.xcassets */,
 				EC92775B1E1B90A800D12F0B /* LaunchScreen.storyboard */,
@@ -399,6 +421,7 @@
 				ECB3BF821E236668009703DF /* DataManager.swift in Sources */,
 				ECC704BE1E25DB7100C257D4 /* User.swift in Sources */,
 				ECC704BA1E24E47B00C257D4 /* Secure.swift in Sources */,
+				390B4F1F1E2CB75400E72F1B /* Logger.swift in Sources */,
 				ECC704BB1E24E47B00C257D4 /* SecureResult.swift in Sources */,
 				EC3745351E1BB15C00794A81 /* AppDelegate.swift in Sources */,
 				EC5B07061E1E209200151690 /* XijinfaApi.swift in Sources */,
@@ -408,6 +431,7 @@
 				ECC704CA1E25F8E600C257D4 /* AccountDataMapper.swift in Sources */,
 				EC29E2781E1F7E0F00A9C818 /* CredentialRealm.swift in Sources */,
 				ECC704B21E24AFD000C257D4 /* Banner.swift in Sources */,
+				390B4F201E2CB75400E72F1B /* LogLevel.swift in Sources */,
 				EC9277551E1B90A800D12F0B /* ViewController.swift in Sources */,
 				ECC704B41E24AFD000C257D4 /* BannerResult.swift in Sources */,
 				EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */,

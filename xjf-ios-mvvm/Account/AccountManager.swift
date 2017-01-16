@@ -28,7 +28,7 @@ class AccountManager {
                 self.credential = account.credential
                 self.user = account.user
             }, onError: { (error) in
-                print("loadUserData onError I found \(error)!")
+                Logger.logError(message: "loadUserData onError I found \(error)!")
             }, onCompleted: {
             }).addDisposableTo(DisposeBag())
     }
@@ -56,7 +56,7 @@ class AccountManager {
     public func logout() {
         DatabaseManager.deleteAccountFromRealm()
             .flatMap({ (account) -> Observable<NSString> in
-                print("\(account.user?.id) logout")
+                Logger.logInfo(message: "\(account.user?.id) logout")
                 self.credential = nil
                 self.user = nil
                 return CacheManager.clearCache()
@@ -67,9 +67,8 @@ class AccountManager {
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { (_) in
             }, onError: { (error) in
-                print("onError I found \(error)!")
-            }, onCompleted: {
-                print("logout onCompleted")
-            }).addDisposableTo(DisposeBag())
+                Logger.logError(message: "onError I found \(error)!")
+            })
+            .addDisposableTo(DisposeBag())
     }
 }

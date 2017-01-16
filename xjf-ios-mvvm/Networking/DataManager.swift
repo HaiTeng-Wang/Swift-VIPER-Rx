@@ -41,7 +41,6 @@ extension ObservableType where E == NSString {
 
     public func mapObject<T: BaseMappable>(_ type: T.Type) -> Observable<T> {
         return self.flatMap { (string) -> Observable<T> in
-            print("map object")
             let data = Mapper<T>().map(JSONString: string as String)
             return Observable.just(data!)
         }
@@ -63,8 +62,7 @@ extension ObservableType where E == NSString {
             .flatMap { data -> Observable<NSString> in
                 return CacheManager.writeDataToWeeklyDisk(key: key, data: data)
             }
-            .catchError({ (error) -> Observable<NSString> in
-                print("network error: &\(error)")
+            .catchError({ (_) -> Observable<NSString> in
                 return CacheManager.readDataFromWeeklyCache(key: key)
             })
         }

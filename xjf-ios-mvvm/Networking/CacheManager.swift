@@ -31,7 +31,7 @@ class CacheManager {
                     subscribe.on(.completed)
                 }
             } catch _ {
-                print("Something went wrong :(")
+                Logger.logError(message: "Cache error")
             }
             return Disposables.create()
         }
@@ -54,7 +54,7 @@ class CacheManager {
                 subscribe.on(.next(""))
                 subscribe.on(.completed)
             } catch _ {
-                print("Something went wrong :(")
+                Logger.logError(message: "Cache error")
             }
 
             return Disposables.create()
@@ -73,7 +73,7 @@ class CacheManager {
                 }
                 observer.on(.completed)
             } catch _ {
-                print("Something went wrong :(")
+                Logger.logError(message: "Cache error")
             }
 
             return Disposables.create()
@@ -94,7 +94,7 @@ class CacheManager {
             let cache = try Cache<NSString>(name: CACHE_WEEKLY)
             cache.setObject(data, forKey: key, expires: .seconds(STALES_WEEKLY))
         } catch _ {
-            print("Something went wrong :(")
+            Logger.logError(message: "Cache error")
         }
 
     }
@@ -107,7 +107,7 @@ class CacheManager {
                 subscribe.on(.next(""))
                 subscribe.on(.completed)
             } catch _ {
-                print("Something went wrong :(")
+                Logger.logError(message: "Cache error")
             }
 
             return Disposables.create()
