@@ -12,7 +12,11 @@ class Logger: NSObject {
 
   fileprivate static let tag = "Localizable"
 
-  static var logLevel = LogLevel.Info
+#if DEBUG
+    static var logLevel = LogLevel.Info
+#else
+    static var logLevel = LogLevel.Warning
+#endif
 
   class func logHttp(message: String) {
     log(message: message, logLevel: .Http)
