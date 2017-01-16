@@ -532,8 +532,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xijinfa.odyssey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fed51548-4ab6-4ff1-a88b-534e7ab46683";
-				PROVISIONING_PROFILE_SPECIFIER = "xijinfa odyssey ad hoc";
+				PROVISIONING_PROFILE = "4ab6688e-1e8b-4f0e-be15-2d4d68459566";
+				PROVISIONING_PROFILE_SPECIFIER = "xijinfa odyssey appstore";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
