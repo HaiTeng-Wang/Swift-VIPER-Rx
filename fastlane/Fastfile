@@ -38,6 +38,9 @@ platform :ios do
     commit_version_bump message: "Deploying version #{build_number}."
     add_git_tag
     push_to_git_remote
+
+    cert
+    sigh
     gym(scheme: "xjf-ios-mvvm") # Build your app - more options available
     pilot
 
