@@ -15,6 +15,9 @@ class CacheManager {
     static let CACHE = "xijinfa_cache"
     static let STALES = 10 as TimeInterval
 
+    static let CACHE_WEEKLY = "xijinfa_cache_weekyly"
+    static let STALES_WEEKLY = 60*60*24*7 as TimeInterval
+
     public static func readDataFromCache(key: String)->Observable<NSString> {
         return Observable.create { subscribe in
             do {
@@ -36,10 +39,19 @@ class CacheManager {
 
     public static func writeDataToDisk(key: String, data: NSString)->Observable<NSString> {
         return Observable.create { subscribe in
+            writeCache(cacheName: CACHE, interval: STALES, key:key, data:data)
+            subscribe.on(.next(data))
+            subscribe.on(.completed)
+            return Disposables.create()
+        }
+    }
+
+    public static func clearCache()->Observable<NSString> {
+        return Observable.create { subscribe in
             do {
                 let cache = try Cache<NSString>(name: CACHE)
-                cache.setObject(data, forKey: key, expires: .seconds(STALES))
-                subscribe.on(.next(data))
+                cache.removeAllObjects()
+                subscribe.on(.next(""))
                 subscribe.on(.completed)
             } catch _ {
                 print("Something went wrong :(")
@@ -49,10 +61,48 @@ class CacheManager {
         }
     }
 
-    public static func clearCache()->Observable<NSString> {
+    public static func readDataFromWeeklyCache(key: String) -> Observable<NSString> {
+        return Observable.create { observer in
+            do {
+                let cache = try Cache<NSString>(name: CACHE_WEEKLY)
+                if let data = cache[key] as? String {
+                    let nData = data as NSString
+                    observer.on(.next(nData))
+                } else {
+                    observer.on(.next(""))
+                }
+                observer.on(.completed)
+            } catch _ {
+                print("Something went wrong :(")
+            }
+
+            return Disposables.create()
+        }
+    }
+
+    public static func writeDataToWeeklyDisk(key: String, data: NSString)->Observable<NSString> {
+        return Observable.create { subscribe in
+            writeCache(cacheName: CACHE_WEEKLY, interval: STALES_WEEKLY, key:key, data:data)
+            subscribe.on(.next(data))
+            subscribe.on(.completed)
+            return Disposables.create()
+        }
+    }
+
+    public static func writeCache(cacheName: String, interval: TimeInterval, key: String, data: NSString) {
+        do {
+            let cache = try Cache<NSString>(name: CACHE_WEEKLY)
+            cache.setObject(data, forKey: key, expires: .seconds(STALES_WEEKLY))
+        } catch _ {
+            print("Something went wrong :(")
+        }
+
+    }
+
+    public static func clearCacheWeekly()->Observable<NSString> {
         return Observable.create { subscribe in
             do {
-                let cache = try Cache<NSString>(name: CACHE)
+                let cache = try Cache<NSString>(name: CACHE_WEEKLY)
                 cache.removeAllObjects()
                 subscribe.on(.next(""))
                 subscribe.on(.completed)

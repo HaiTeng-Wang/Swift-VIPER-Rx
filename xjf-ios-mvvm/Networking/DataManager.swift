@@ -18,36 +18,53 @@ class DataManager {
     public static func getBanner(path: String) ->Observable<Banner> {
         let banner = XijinfaApi.banner(path:path)
         let key = banner.path
-        let netObservable = Network.request(target: banner)
-            .flatMap { (nstring) -> Observable<NSString> in
-                return CacheManager.writeDataToDisk(key: key, data: nstring)
-            }
+        let netObservable = Network.request(target: banner).writeCache(key: key)
 
         return Observable.concat([CacheManager.readDataFromCache(key: key), netObservable])
-            .filter({ (string) -> Bool in
-                return !string.isEqual(to: "")
-            })
-            .take(1)
-            .flatMap({ (string) -> Observable<Banner> in
-                let data = Mapper<Banner>().map(JSONString: string as String)
-                return Observable.just(data!)
-            })
+            .takeCacheOrNet()
+            .mapObject(Banner.self)
     }
 
     public static func getSecureCode() ->Observable<Secure> {
         return Network.request(target: .secureCode)
-                .flatMap({ (string) -> Observable<Secure> in
-                    let data = Mapper<Secure>().map(JSONString: string as String)
-                    return Observable.just(data!)
-                })
+                .mapObject(Secure.self)
     }
 
     public static func login(userName: String, passwd: String, secureCode: String, secureKey: String) ->Observable<Login> {
         return Network.request(target: .login(userName: userName, passwd: passwd, secureCode: secureCode, secureKey: secureKey))
-                .flatMap({ (string) -> Observable<Login> in
-                    let data = Mapper<Login>().map(JSONString: string as String)
-                    return Observable.just(data!)
-                })
+                .mapObject(Login.self)
     }
 
 }
+
+extension ObservableType where E == NSString {
+
+    public func mapObject<T: BaseMappable>(_ type: T.Type) -> Observable<T> {
+        return self.flatMap { (string) -> Observable<T> in
+            let data = Mapper<T>().map(JSONString: string as String)
+            return Observable.just(data!)
+        }
+    }
+
+    public func takeCacheOrNet() -> Observable<NSString> {
+        return self
+            .filter({ (string) -> Bool in
+                return !string.isEqual(to: "")
+            })
+            .take(1)
+    }
+
+    public func writeCache(key: String) -> Observable<NSString> {
+        return self
+            .flatMap { data -> Observable<NSString> in
+                return CacheManager.writeDataToDisk(key: key, data: data)
+            }
+            .flatMap { data -> Observable<NSString> in
+                return CacheManager.writeDataToWeeklyDisk(key: key, data: data)
+            }
+            .catchError({ (error) -> Observable<NSString> in
+                print("network error: &\(error)")
+                return CacheManager.readDataFromWeeklyCache(key: key)
+            })
+        }
+    }
