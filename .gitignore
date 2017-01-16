@@ -59,3 +59,4 @@ fastlane/test_output
 fastlane/screenshots
 *.mobileprovision
 *.p12
+*.cer
