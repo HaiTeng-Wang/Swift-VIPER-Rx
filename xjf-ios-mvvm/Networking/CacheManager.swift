@@ -69,7 +69,7 @@ class CacheManager {
                     let nData = data as NSString
                     observer.on(.next(nData))
                 } else {
-                    observer.on(.next("{\"errCode\":404,\"errMsg\":\"\"}"))
+                    observer.on(.next("{\"errCode\":404,\"errMsg\":\"Not Found.\"}"))
                 }
                 observer.on(.completed)
             } catch _ {
