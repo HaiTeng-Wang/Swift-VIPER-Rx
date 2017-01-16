@@ -76,6 +76,7 @@ class ViewController: UIViewController {
             DataManager.getBanner(path: "app-home-carousel")
                 .observeOn(MainScheduler.instance)
                 .subscribe(onNext: { (banner) in
+                    print("onNext I found errCode \(banner.errCode)!")
                     print("onNext I found \(banner.result?.data?[0].title)!")
                 }, onError: { (error) in
                     print("onError I found \(error)!")

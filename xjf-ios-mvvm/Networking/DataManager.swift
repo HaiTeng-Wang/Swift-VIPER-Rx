@@ -41,6 +41,7 @@ extension ObservableType where E == NSString {
 
     public func mapObject<T: BaseMappable>(_ type: T.Type) -> Observable<T> {
         return self.flatMap { (string) -> Observable<T> in
+            print("map object")
             let data = Mapper<T>().map(JSONString: string as String)
             return Observable.just(data!)
         }

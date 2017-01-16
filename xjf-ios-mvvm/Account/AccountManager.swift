@@ -61,6 +61,9 @@ class AccountManager {
                 self.user = nil
                 return CacheManager.clearCache()
             })
+            .flatMap({ (_) -> Observable<NSString> in
+                return CacheManager.clearCacheWeekly()
+            })
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { (_) in
             }, onError: { (error) in
