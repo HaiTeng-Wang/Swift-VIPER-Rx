@@ -532,8 +532,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xijinfa.odyssey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4ab6688e-1e8b-4f0e-be15-2d4d68459566";
-				PROVISIONING_PROFILE_SPECIFIER = "xijinfa odyssey appstore";
+				PROVISIONING_PROFILE = "95668cbc-3a5b-46cf-8175-60d613b605f0";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.xijinfa.odyssey";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -550,8 +550,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xijinfa.odyssey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4ab6688e-1e8b-4f0e-be15-2d4d68459566";
-				PROVISIONING_PROFILE_SPECIFIER = "xijinfa odyssey appstore";
+				PROVISIONING_PROFILE = "95668cbc-3a5b-46cf-8175-60d613b605f0";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.xijinfa.odyssey";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
