@@ -40,7 +40,7 @@ platform :ios do
       remote: "origin",         # optional, default: "origin"
       local_branch: "master",  # optional, aliased by "branch", default: "master"
       remote_branch: "master", # optional, default is set to local_branch
-      force: true,    # optional, default: false
+      force: false,    # optional, default: false
       tags: false     # optional, default: true
     )
 
