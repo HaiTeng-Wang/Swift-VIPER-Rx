@@ -1,6 +1,6 @@
 git_url "http://139.196.230.158:10080/xjf_ios/certificates.git"
 
-type "appstore" # The default type, can be: appstore, adhoc or development
+type "appstore","adhoc" # The default type, can be: appstore, adhoc or development
 
 app_identifier "com.xijinfa.odyssey"
 username "liusa@xijinfa.cn" # Your Apple Developer Portal username
