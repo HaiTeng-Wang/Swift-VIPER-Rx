@@ -35,8 +35,8 @@ platform :ios do
     match(type: "appstore")
     ensure_git_status_clean
     update_build_number
-    commit_version_bump message: "Deploying version #{build_number}."
-    push_to_git_remote
+    # commit_version_bump message: "Deploying version #{build_number}."
+    # push_to_git_remote
 
     cert
     sigh
