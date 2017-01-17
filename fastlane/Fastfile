@@ -37,6 +37,12 @@ platform :ios do
     ensure_git_status_clean
     reset_git_repo
     update_build_number
+
+    cert
+    sigh
+    gym(scheme: "xjf-ios-mvvm") # Build your app - more options available
+    pilot
+
     commit_version_bump message: "Deploying version #{build_number}."
     push_to_git_remote(
       remote: "origin",         # optional, default: "origin"
@@ -44,11 +50,6 @@ platform :ios do
       force: false,    # optional, default: false
       tags: false     # optional, default: true
     )
-
-    cert
-    sigh
-    gym(scheme: "xjf-ios-mvvm") # Build your app - more options available
-    pilot
 
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)
@@ -63,6 +64,14 @@ platform :ios do
     sigh
     gym(scheme: "xjf-ios-mvvm") # Build your app - more options available
     deliver(force: true)
+
+    commit_version_bump message: "Deploying version #{build_number}."
+    push_to_git_remote(
+      remote: "origin",         # optional, default: "origin"
+      remote_branch: "master", # optional, default is set to local_branch
+      force: false,    # optional, default: false
+      tags: false     # optional, default: true
+    )
     # frameit
   end
 
