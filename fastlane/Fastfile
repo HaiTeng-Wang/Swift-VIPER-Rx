@@ -37,7 +37,6 @@ platform :ios do
     update_build_number
     commit_version_bump message: "Deploying version #{build_number}."
     add_git_tag
-    git_add
     push_to_git_remote
 
     cert
