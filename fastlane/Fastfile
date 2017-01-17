@@ -33,9 +33,9 @@ platform :ios do
   lane :build do
     match(type: "appstore")
     ensure_git_status_clean
-    add_git_tag
     update_build_number
     commit_version_bump message: "Deploying version #{build_number}."
+    add_git_tag
     push_to_git_remote
 
     cert
