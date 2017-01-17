@@ -33,7 +33,9 @@ platform :ios do
   lane :build do
     match(type: "appstore")
     ensure_git_branch
+    reset_git_repo
     ensure_git_status_clean
+    git_pull
     update_build_number
     commit_version_bump message: "Deploying version #{build_number}."
     push_to_git_remote(
