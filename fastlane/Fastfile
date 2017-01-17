@@ -35,9 +35,6 @@ platform :ios do
   lane :pgyer do
     match(type: "adhoc")
     ensure_git_status_clean
-
-    cert
-    sigh
     gym(scheme: "xjf-ios-mvvm") # Build your app - more options available
 
     # sh "your_script.sh"
