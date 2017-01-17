@@ -29,8 +29,9 @@ platform :ios do
     scan
   end
 
-
-  lane :build do
+  desc "Submit a new Beta Build to Apple TestFlight"
+  desc "This will also make sure the profile is up to date"
+  lane :beta do
     match(type: "appstore")
     ensure_git_branch
     ensure_git_status_clean
@@ -43,23 +44,6 @@ platform :ios do
       force: false,    # optional, default: false
       tags: false     # optional, default: true
     )
-
-    #cert
-    #sigh
-    #gym(scheme: "xjf-ios-mvvm") # Build your app - more options available
-
-    # sh "your_script.sh"
-    # You can also use other beta testing services here (run `fastlane actions`)
-  end
-
-  desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
-  lane :beta do
-    match(type: "appstore")
-    ensure_git_status_clean
-    update_build_number
-    # commit_version_bump message: "Deploying version #{build_number}."
-    # push_to_git_remote
 
     cert
     sigh
