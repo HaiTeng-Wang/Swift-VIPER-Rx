@@ -33,9 +33,7 @@ platform :ios do
   desc "This will also make sure the profile is up to date"
   lane :beta do
     match(type: "appstore")
-    ensure_git_branch
     ensure_git_status_clean
-    reset_git_repo
     update_build_number
 
     cert
