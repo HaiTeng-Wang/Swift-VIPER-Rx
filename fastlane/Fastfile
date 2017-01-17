@@ -35,7 +35,6 @@ platform :ios do
     ensure_git_branch
     ensure_git_status_clean
     reset_git_repo
-    git_pull
     update_build_number
     commit_version_bump message: "Deploying version #{build_number}."
     push_to_git_remote(
