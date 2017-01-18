@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initRealm()
         AccountManager.sharedInstance.loadUserData()
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = ViewController()
+        self.window?.rootViewController = HomeViewController()
         self.window?.makeKeyAndVisible()
         return true
     }

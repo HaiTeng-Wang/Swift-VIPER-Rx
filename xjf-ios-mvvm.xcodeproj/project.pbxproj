@@ -10,18 +10,30 @@
 		0A9750B31456024722C03ADA /* Pods_xjf_ios_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */; };
 		130D259D69130F09A24FA780 /* HomeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F3339AD9220ABED50EDD9 /* HomeInteractorOutput.swift */; };
 		2BAA2A3E3F43F1E8B17EBEC0 /* HomeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F57BD6D94EB9018D8ABDB5 /* HomeRouterInput.swift */; };
+		2C82BDB1EBCFA313BF2FACB6 /* CarouselPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1734B091A5C18BA5EA591033 /* CarouselPresenter.swift */; };
+		38F101755BE3F2E6527517F7 /* CarouselInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967FB91D5526A35447D5953D /* CarouselInteractorOutput.swift */; };
 		390B4F1F1E2CB75400E72F1B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B4F1D1E2CB75400E72F1B /* Logger.swift */; };
 		390B4F201E2CB75400E72F1B /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B4F1E1E2CB75400E72F1B /* LogLevel.swift */; };
+		3A7851DD4138809F84868786 /* CarouselRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE3707079A109FC0D33DFB /* CarouselRouterInput.swift */; };
+		3E2B392928EB0F45CED3A3D2 /* CarouselInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC48839768D872B8CE4091 /* CarouselInteractor.swift */; };
 		56F5AC345D04D7F7B846C063 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B68379BC28811472C0B4 /* HomePresenter.swift */; };
 		61686E6EB440459975E07DE4 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C9B439B7C9E894606713E /* HomeConfigurator.swift */; };
+		6661D6C8D9609C4B7D20D428 /* CarouselRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF5CBE7E7EA78926F3F37EC /* CarouselRouter.swift */; };
+		666E32C53D1A1CD2FCCC273F /* CarouselModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226ED87F3B7F4F74E56D470A /* CarouselModuleInput.swift */; };
 		6A3EF020A5A55EB61C17D70F /* HomeViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537991A03BBF7ACFA42C78C /* HomeViewOutput.swift */; };
 		6C14B3435FCDEABE91F167D9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4835F9BD1068856E56D1D16C /* HomeRouter.swift */; };
 		872590CC85C643D3934BA0F4 /* HomeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A91D4C11CE5DEBAF276E50D /* HomeViewInput.swift */; };
 		904BFAB6509BDEA6DCACBD20 /* HomeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E199C7BF498338854A3155C2 /* HomeModuleInput.swift */; };
 		958884C5B88BE1ACF7376649 /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0764FDFB5199C0558DBFFBB /* HomeInitializer.swift */; };
+		9A4AB332E30DD9D7FB3D3B98 /* CarouselInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B1E82961A514AE9E97333 /* CarouselInitializer.swift */; };
 		A063EB28C5B12094635A393B /* HomeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C617BD540C605DD14CB730 /* HomeInteractorInput.swift */; };
 		CCAB440EF2AF2E92B4F7ED2D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAAE0FDB0CB20A37B8433C7 /* HomeViewController.swift */; };
+		D23D8264E6797AC9CF85E419 /* CarouselViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8087E2F4E1A9F16A44263F /* CarouselViewInput.swift */; };
 		DD85C291AB50F8E2AB1F1AA5 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C28D10803A3A30B4547F30 /* HomeInteractor.swift */; };
+		DDD9432F783255D1AFCD6645 /* CarouselConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0ADB5E63D7D8943F4DA736 /* CarouselConfigurator.swift */; };
+		E33973251278A110D2D8EE5A /* CarouselInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3B7821179EFA3482835AE4 /* CarouselInteractorInput.swift */; };
+		E7A2287CF86AD667D2E08B3F /* CarouselViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92060E2D79D3FFA7638EEA49 /* CarouselViewOutput.swift */; };
+		EADAC0C2EDD8999A9C3D51CE /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4E79A5FC41B6D67700A4D /* CarouselViewController.swift */; };
 		EC29E2761E1F7DE000A9C818 /* AccountRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */; };
 		EC29E2781E1F7E0F00A9C818 /* CredentialRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */; };
 		EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2791E1F7E2400A9C818 /* UserRealm.swift */; };
@@ -32,6 +44,8 @@
 		EC92775A1E1B90A800D12F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9277591E1B90A800D12F0B /* Assets.xcassets */; };
 		ECA1DE471E2F353200E48DFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA1DE461E2F353200E48DFD /* LaunchScreen.storyboard */; };
 		ECA1DE491E2F355B00E48DFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA1DE481E2F355B00E48DFD /* Images.xcassets */; };
+		ECA1DE521E2F440700E48DFD /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA1DE511E2F440700E48DFD /* iCarousel.m */; };
+		ECA1DE541E2F448100E48DFD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA1DE531E2F448100E48DFD /* QuartzCore.framework */; };
 		ECB3BF801E235E72009703DF /* Banner.json in Resources */ = {isa = PBXBuildFile; fileRef = ECB3BF7F1E235E72009703DF /* Banner.json */; };
 		ECB3BF821E236668009703DF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3BF811E236668009703DF /* DataManager.swift */; };
 		ECC704AB1E24A46E00C257D4 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704AA1E24A46E00C257D4 /* CacheManager.swift */; };
@@ -53,19 +67,31 @@
 /* Begin PBXFileReference section */
 		0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xjf_ios_mvvm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103FD5FA7E3467A92CC1C64C /* Pods-xjf-ios-mvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.release.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.release.xcconfig"; sourceTree = "<group>"; };
+		1734B091A5C18BA5EA591033 /* CarouselPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselPresenter.swift; sourceTree = "<group>"; };
+		226ED87F3B7F4F74E56D470A /* CarouselModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselModuleInput.swift; sourceTree = "<group>"; };
 		390B4F1D1E2CB75400E72F1B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		390B4F1E1E2CB75400E72F1B /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		3A91D4C11CE5DEBAF276E50D /* HomeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
+		41D4E79A5FC41B6D67700A4D /* CarouselViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		4835F9BD1068856E56D1D16C /* HomeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		4A0ADB5E63D7D8943F4DA736 /* CarouselConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselConfigurator.swift; sourceTree = "<group>"; };
 		50F57BD6D94EB9018D8ABDB5 /* HomeRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouterInput.swift; sourceTree = "<group>"; };
+		52BC48839768D872B8CE4091 /* CarouselInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselInteractor.swift; sourceTree = "<group>"; };
 		6537991A03BBF7ACFA42C78C /* HomeViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewOutput.swift; sourceTree = "<group>"; };
 		67C28D10803A3A30B4547F30 /* HomeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		6F1F3339AD9220ABED50EDD9 /* HomeInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorOutput.swift; sourceTree = "<group>"; };
 		7EAAE0FDB0CB20A37B8433C7 /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8EEE3707079A109FC0D33DFB /* CarouselRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselRouterInput.swift; sourceTree = "<group>"; };
+		92060E2D79D3FFA7638EEA49 /* CarouselViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselViewOutput.swift; sourceTree = "<group>"; };
+		967FB91D5526A35447D5953D /* CarouselInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselInteractorOutput.swift; sourceTree = "<group>"; };
 		971528448CD937E3281DDC1F /* Pods-xjf-ios-mvvm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.debug.xcconfig"; sourceTree = "<group>"; };
+		9B8087E2F4E1A9F16A44263F /* CarouselViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselViewInput.swift; sourceTree = "<group>"; };
 		BF12B68379BC28811472C0B4 /* HomePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		CCF5CBE7E7EA78926F3F37EC /* CarouselRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselRouter.swift; sourceTree = "<group>"; };
+		D97B1E82961A514AE9E97333 /* CarouselInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselInitializer.swift; sourceTree = "<group>"; };
 		D9C617BD540C605DD14CB730 /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
 		DD3C9B439B7C9E894606713E /* HomeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
+		DF3B7821179EFA3482835AE4 /* CarouselInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselInteractorInput.swift; sourceTree = "<group>"; };
 		E199C7BF498338854A3155C2 /* HomeModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeModuleInput.swift; sourceTree = "<group>"; };
 		EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRealm.swift; sourceTree = "<group>"; };
 		EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialRealm.swift; sourceTree = "<group>"; };
@@ -79,6 +105,10 @@
 		EC92775E1E1B90A800D12F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECA1DE461E2F353200E48DFD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECA1DE481E2F355B00E48DFD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ECA1DE4F1E2F440600E48DFD /* xjf-ios-mvvm-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xjf-ios-mvvm-Bridging-Header.h"; sourceTree = "<group>"; };
+		ECA1DE501E2F440700E48DFD /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		ECA1DE511E2F440700E48DFD /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		ECA1DE531E2F448100E48DFD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ECB3BF7F1E235E72009703DF /* Banner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Banner.json; sourceTree = "<group>"; };
 		ECB3BF811E236668009703DF /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ECC704AA1E24A46E00C257D4 /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
@@ -103,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA1DE541E2F448100E48DFD /* QuartzCore.framework in Frameworks */,
 				0A9750B31456024722C03ADA /* Pods_xjf_ios_mvvm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +141,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16C95DADE9D818DBFBD51B2F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				226ED87F3B7F4F74E56D470A /* CarouselModuleInput.swift */,
+				1734B091A5C18BA5EA591033 /* CarouselPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		1CD17E2D69AFA22F8D5AC1E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +158,16 @@
 				7EAAE0FDB0CB20A37B8433C7 /* HomeViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		22548ADD5C1C97C20D6DC4A1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DF3B7821179EFA3482835AE4 /* CarouselInteractorInput.swift */,
+				967FB91D5526A35447D5953D /* CarouselInteractorOutput.swift */,
+				52BC48839768D872B8CE4091 /* CarouselInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		3654D985A31B04E5313310CF /* Pods */ = {
@@ -146,6 +196,27 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
+		50285ADC8CA0AE968EC09B9F /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				4A0ADB5E63D7D8943F4DA736 /* CarouselConfigurator.swift */,
+				D97B1E82961A514AE9E97333 /* CarouselInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		55039A6DD507AEC995C165F3 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				B4E9A721AE8809F79BB0A56D /* View */,
+				16C95DADE9D818DBFBD51B2F /* Presenter */,
+				22548ADD5C1C97C20D6DC4A1 /* Interactor */,
+				6C4980ACAC3AC535985D264F /* Router */,
+				50285ADC8CA0AE968EC09B9F /* Configurator */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
 		6449B30F71741F449563EBFF /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +227,15 @@
 				B474EE4C5A505322250DD52F /* Configurator */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		6C4980ACAC3AC535985D264F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE3707079A109FC0D33DFB /* CarouselRouterInput.swift */,
+				CCF5CBE7E7EA78926F3F37EC /* CarouselRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		7736F2EC8945ABE299231985 /* Interactor */ = {
@@ -172,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				6449B30F71741F449563EBFF /* Home */,
+				55039A6DD507AEC995C165F3 /* Carousel */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -194,9 +275,20 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		B4E9A721AE8809F79BB0A56D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B8087E2F4E1A9F16A44263F /* CarouselViewInput.swift */,
+				92060E2D79D3FFA7638EEA49 /* CarouselViewOutput.swift */,
+				41D4E79A5FC41B6D67700A4D /* CarouselViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CE06A9BB7222D81AED949303 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ECA1DE531E2F448100E48DFD /* QuartzCore.framework */,
 				0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */,
 			);
 			name = Frameworks;
@@ -264,6 +356,7 @@
 		EC9277511E1B90A800D12F0B /* xjf-ios-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				ECA1DE4C1E2F433600E48DFD /* Common */,
 				ECA1DE451E2F344C00E48DFD /* Resources */,
 				8742B61EA674817F5E9A7887 /* Modules */,
 				ECC704CE1E262D1C00C257D4 /* Account */,
@@ -285,6 +378,32 @@
 				ECA1DE461E2F353200E48DFD /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ECA1DE4C1E2F433600E48DFD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ECA1DE4D1E2F433600E48DFD /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		ECA1DE4D1E2F433600E48DFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECA1DE4E1E2F437900E48DFD /* iCarousel */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECA1DE4E1E2F437900E48DFD /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				ECA1DE501E2F440700E48DFD /* iCarousel.h */,
+				ECA1DE511E2F440700E48DFD /* iCarousel.m */,
+				ECA1DE4F1E2F440600E48DFD /* xjf-ios-mvvm-Bridging-Header.h */,
+			);
+			path = iCarousel;
 			sourceTree = "<group>";
 		};
 		ECB3BF7E1E235E56009703DF /* SampleData */ = {
@@ -414,6 +533,7 @@
 					EC92774E1E1B90A700D12F0B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EAAM7UUL52;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -537,6 +657,7 @@
 				ECC704B21E24AFD000C257D4 /* Banner.swift in Sources */,
 				390B4F201E2CB75400E72F1B /* LogLevel.swift in Sources */,
 				EC9277551E1B90A800D12F0B /* ViewController.swift in Sources */,
+				ECA1DE521E2F440700E48DFD /* iCarousel.m in Sources */,
 				ECC704B41E24AFD000C257D4 /* BannerResult.swift in Sources */,
 				EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */,
 				ECC704C51E25DB7800C257D4 /* LoginResult.swift in Sources */,
@@ -552,6 +673,18 @@
 				6C14B3435FCDEABE91F167D9 /* HomeRouter.swift in Sources */,
 				61686E6EB440459975E07DE4 /* HomeConfigurator.swift in Sources */,
 				958884C5B88BE1ACF7376649 /* HomeInitializer.swift in Sources */,
+				D23D8264E6797AC9CF85E419 /* CarouselViewInput.swift in Sources */,
+				E7A2287CF86AD667D2E08B3F /* CarouselViewOutput.swift in Sources */,
+				EADAC0C2EDD8999A9C3D51CE /* CarouselViewController.swift in Sources */,
+				666E32C53D1A1CD2FCCC273F /* CarouselModuleInput.swift in Sources */,
+				2C82BDB1EBCFA313BF2FACB6 /* CarouselPresenter.swift in Sources */,
+				E33973251278A110D2D8EE5A /* CarouselInteractorInput.swift in Sources */,
+				38F101755BE3F2E6527517F7 /* CarouselInteractorOutput.swift in Sources */,
+				3E2B392928EB0F45CED3A3D2 /* CarouselInteractor.swift in Sources */,
+				3A7851DD4138809F84868786 /* CarouselRouterInput.swift in Sources */,
+				6661D6C8D9609C4B7D20D428 /* CarouselRouter.swift in Sources */,
+				DDD9432F783255D1AFCD6645 /* CarouselConfigurator.swift in Sources */,
+				9A4AB332E30DD9D7FB3D3B98 /* CarouselInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,6 +788,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 170117.0750;
 				DEVELOPMENT_TEAM = EAAM7UUL52;
@@ -664,6 +798,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "95668cbc-3a5b-46cf-8175-60d613b605f0";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.xijinfa.odyssey";
+				SWIFT_OBJC_BRIDGING_HEADER = "xjf-ios-mvvm/Common/Views/iCarousel/xjf-ios-mvvm-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -674,6 +810,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 170117.0750;
 				DEVELOPMENT_TEAM = EAAM7UUL52;
@@ -683,6 +820,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "95668cbc-3a5b-46cf-8175-60d613b605f0";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.xijinfa.odyssey";
+				SWIFT_OBJC_BRIDGING_HEADER = "xjf-ios-mvvm/Common/Views/iCarousel/xjf-ios-mvvm-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

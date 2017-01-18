@@ -1,5 +1,5 @@
 //
-//  HomeHomeInteractorOutput.swift
+//  CarouselCarouselRouterInput.swift
 //  xjf-ios-mvvm
 //
 //  Created by xijinfa on 18/01/2017.
@@ -8,5 +8,6 @@
 
 import Foundation
 
-protocol HomeInteractorOutput: class {
+protocol CarouselRouterInput {
+
 }
