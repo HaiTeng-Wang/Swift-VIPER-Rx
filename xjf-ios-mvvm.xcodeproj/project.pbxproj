@@ -793,6 +793,7 @@
 				CURRENT_PROJECT_VERSION = 170117.0750;
 				DEVELOPMENT_TEAM = EAAM7UUL52;
 				INFOPLIST_FILE = "xjf-ios-mvvm/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xijinfa.odyssey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -815,6 +816,7 @@
 				CURRENT_PROJECT_VERSION = 170117.0750;
 				DEVELOPMENT_TEAM = EAAM7UUL52;
 				INFOPLIST_FILE = "xjf-ios-mvvm/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xijinfa.odyssey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
