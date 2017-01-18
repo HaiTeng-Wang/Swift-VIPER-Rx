@@ -30,7 +30,8 @@
 		EC5B07081E1E258500151690 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B07071E1E258500151690 /* Network.swift */; };
 		EC9277551E1B90A800D12F0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9277541E1B90A800D12F0B /* ViewController.swift */; };
 		EC92775A1E1B90A800D12F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9277591E1B90A800D12F0B /* Assets.xcassets */; };
-		EC92775D1E1B90A800D12F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92775B1E1B90A800D12F0B /* LaunchScreen.storyboard */; };
+		ECA1DE471E2F353200E48DFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA1DE461E2F353200E48DFD /* LaunchScreen.storyboard */; };
+		ECA1DE491E2F355B00E48DFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA1DE481E2F355B00E48DFD /* Images.xcassets */; };
 		ECB3BF801E235E72009703DF /* Banner.json in Resources */ = {isa = PBXBuildFile; fileRef = ECB3BF7F1E235E72009703DF /* Banner.json */; };
 		ECB3BF821E236668009703DF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3BF811E236668009703DF /* DataManager.swift */; };
 		ECC704AB1E24A46E00C257D4 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704AA1E24A46E00C257D4 /* CacheManager.swift */; };
@@ -75,8 +76,9 @@
 		EC92774F1E1B90A800D12F0B /* xjf-ios-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xjf-ios-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9277541E1B90A800D12F0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC9277591E1B90A800D12F0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EC92775C1E1B90A800D12F0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC92775E1E1B90A800D12F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECA1DE461E2F353200E48DFD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECA1DE481E2F355B00E48DFD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ECB3BF7F1E235E72009703DF /* Banner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Banner.json; sourceTree = "<group>"; };
 		ECB3BF811E236668009703DF /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ECC704AA1E24A46E00C257D4 /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
@@ -115,7 +117,6 @@
 				6537991A03BBF7ACFA42C78C /* HomeViewOutput.swift */,
 				7EAAE0FDB0CB20A37B8433C7 /* HomeViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -154,7 +155,6 @@
 				FAE6B052371C4740D3402670 /* Router */,
 				B474EE4C5A505322250DD52F /* Configurator */,
 			);
-			name = Home;
 			path = Home;
 			sourceTree = "<group>";
 		};
@@ -165,7 +165,6 @@
 				6F1F3339AD9220ABED50EDD9 /* HomeInteractorOutput.swift */,
 				67C28D10803A3A30B4547F30 /* HomeInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -183,7 +182,6 @@
 				E199C7BF498338854A3155C2 /* HomeModuleInput.swift */,
 				BF12B68379BC28811472C0B4 /* HomePresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -193,7 +191,6 @@
 				DD3C9B439B7C9E894606713E /* HomeConfigurator.swift */,
 				F0764FDFB5199C0558DBFFBB /* HomeInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -267,6 +264,7 @@
 		EC9277511E1B90A800D12F0B /* xjf-ios-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				ECA1DE451E2F344C00E48DFD /* Resources */,
 				8742B61EA674817F5E9A7887 /* Modules */,
 				ECC704CE1E262D1C00C257D4 /* Account */,
 				EC29E2731E1F7CDF00A9C818 /* Database */,
@@ -274,11 +272,19 @@
 				EC3745331E1BB15C00794A81 /* App */,
 				390B4F1B1E2CB72A00E72F1B /* Helpers */,
 				EC9277541E1B90A800D12F0B /* ViewController.swift */,
-				EC9277591E1B90A800D12F0B /* Assets.xcassets */,
-				EC92775B1E1B90A800D12F0B /* LaunchScreen.storyboard */,
-				EC92775E1E1B90A800D12F0B /* Info.plist */,
 			);
 			path = "xjf-ios-mvvm";
+			sourceTree = "<group>";
+		};
+		ECA1DE451E2F344C00E48DFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ECA1DE481E2F355B00E48DFD /* Images.xcassets */,
+				EC9277591E1B90A800D12F0B /* Assets.xcassets */,
+				EC92775E1E1B90A800D12F0B /* Info.plist */,
+				ECA1DE461E2F353200E48DFD /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		ECB3BF7E1E235E56009703DF /* SampleData */ = {
@@ -368,7 +374,6 @@
 				50F57BD6D94EB9018D8ABDB5 /* HomeRouterInput.swift */,
 				4835F9BD1068856E56D1D16C /* HomeRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -436,8 +441,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA1DE471E2F353200E48DFD /* LaunchScreen.storyboard in Resources */,
+				ECA1DE491E2F355B00E48DFD /* Images.xcassets in Resources */,
 				ECB3BF801E235E72009703DF /* Banner.json in Resources */,
-				EC92775D1E1B90A800D12F0B /* LaunchScreen.storyboard in Resources */,
 				EC92775A1E1B90A800D12F0B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,17 +557,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		EC92775B1E1B90A800D12F0B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC92775C1E1B90A800D12F0B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		EC92775F1E1B90A800D12F0B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -659,10 +654,11 @@
 			baseConfigurationReference = 971528448CD937E3281DDC1F /* Pods-xjf-ios-mvvm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 170117.0750;
 				DEVELOPMENT_TEAM = EAAM7UUL52;
-				INFOPLIST_FILE = "xjf-ios-mvvm/Info.plist";
+				INFOPLIST_FILE = "xjf-ios-mvvm/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xijinfa.odyssey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -677,10 +673,11 @@
 			baseConfigurationReference = 103FD5FA7E3467A92CC1C64C /* Pods-xjf-ios-mvvm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 170117.0750;
 				DEVELOPMENT_TEAM = EAAM7UUL52;
-				INFOPLIST_FILE = "xjf-ios-mvvm/Info.plist";
+				INFOPLIST_FILE = "xjf-ios-mvvm/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xijinfa.odyssey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
