@@ -3,6 +3,7 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
+      "filename" : "启动页面-2.png",
       "extent" : "full-screen",
       "scale" : "1x"
     },
@@ -51,16 +52,18 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
+      "filename" : "启动页面-8.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "2x"
     },
     {
-      "orientation" : "portrait",
-      "idiom" : "iphone",
       "extent" : "full-screen",
-      "minimum-system-version" : "7.0",
+      "idiom" : "iphone",
       "subtype" : "retina4",
+      "filename" : "启动页面-9.png",
+      "minimum-system-version" : "7.0",
+      "orientation" : "portrait",
       "scale" : "2x"
     }
   ],
