@@ -8,8 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		0A9750B31456024722C03ADA /* Pods_xjf_ios_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */; };
+		130D259D69130F09A24FA780 /* HomeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F3339AD9220ABED50EDD9 /* HomeInteractorOutput.swift */; };
+		2BAA2A3E3F43F1E8B17EBEC0 /* HomeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F57BD6D94EB9018D8ABDB5 /* HomeRouterInput.swift */; };
 		390B4F1F1E2CB75400E72F1B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B4F1D1E2CB75400E72F1B /* Logger.swift */; };
 		390B4F201E2CB75400E72F1B /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B4F1E1E2CB75400E72F1B /* LogLevel.swift */; };
+		56F5AC345D04D7F7B846C063 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B68379BC28811472C0B4 /* HomePresenter.swift */; };
+		61686E6EB440459975E07DE4 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C9B439B7C9E894606713E /* HomeConfigurator.swift */; };
+		6A3EF020A5A55EB61C17D70F /* HomeViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537991A03BBF7ACFA42C78C /* HomeViewOutput.swift */; };
+		6C14B3435FCDEABE91F167D9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4835F9BD1068856E56D1D16C /* HomeRouter.swift */; };
+		872590CC85C643D3934BA0F4 /* HomeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A91D4C11CE5DEBAF276E50D /* HomeViewInput.swift */; };
+		904BFAB6509BDEA6DCACBD20 /* HomeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E199C7BF498338854A3155C2 /* HomeModuleInput.swift */; };
+		958884C5B88BE1ACF7376649 /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0764FDFB5199C0558DBFFBB /* HomeInitializer.swift */; };
+		A063EB28C5B12094635A393B /* HomeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C617BD540C605DD14CB730 /* HomeInteractorInput.swift */; };
+		CCAB440EF2AF2E92B4F7ED2D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAAE0FDB0CB20A37B8433C7 /* HomeViewController.swift */; };
+		DD85C291AB50F8E2AB1F1AA5 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C28D10803A3A30B4547F30 /* HomeInteractor.swift */; };
 		EC29E2761E1F7DE000A9C818 /* AccountRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */; };
 		EC29E2781E1F7E0F00A9C818 /* CredentialRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */; };
 		EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2791E1F7E2400A9C818 /* UserRealm.swift */; };
@@ -42,7 +54,18 @@
 		103FD5FA7E3467A92CC1C64C /* Pods-xjf-ios-mvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.release.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.release.xcconfig"; sourceTree = "<group>"; };
 		390B4F1D1E2CB75400E72F1B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		390B4F1E1E2CB75400E72F1B /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
+		3A91D4C11CE5DEBAF276E50D /* HomeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
+		4835F9BD1068856E56D1D16C /* HomeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		50F57BD6D94EB9018D8ABDB5 /* HomeRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouterInput.swift; sourceTree = "<group>"; };
+		6537991A03BBF7ACFA42C78C /* HomeViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewOutput.swift; sourceTree = "<group>"; };
+		67C28D10803A3A30B4547F30 /* HomeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		6F1F3339AD9220ABED50EDD9 /* HomeInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorOutput.swift; sourceTree = "<group>"; };
+		7EAAE0FDB0CB20A37B8433C7 /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		971528448CD937E3281DDC1F /* Pods-xjf-ios-mvvm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.debug.xcconfig"; sourceTree = "<group>"; };
+		BF12B68379BC28811472C0B4 /* HomePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		D9C617BD540C605DD14CB730 /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
+		DD3C9B439B7C9E894606713E /* HomeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
+		E199C7BF498338854A3155C2 /* HomeModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeModuleInput.swift; sourceTree = "<group>"; };
 		EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRealm.swift; sourceTree = "<group>"; };
 		EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialRealm.swift; sourceTree = "<group>"; };
 		EC29E2791E1F7E2400A9C818 /* UserRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
@@ -70,6 +93,7 @@
 		ECC704C61E25F79C00C257D4 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		ECC704C91E25F8E600C257D4 /* AccountDataMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDataMapper.swift; sourceTree = "<group>"; };
 		ECC704CF1E262D2600C257D4 /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		F0764FDFB5199C0558DBFFBB /* HomeInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInitializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +108,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CD17E2D69AFA22F8D5AC1E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A91D4C11CE5DEBAF276E50D /* HomeViewInput.swift */,
+				6537991A03BBF7ACFA42C78C /* HomeViewOutput.swift */,
+				7EAAE0FDB0CB20A37B8433C7 /* HomeViewController.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
 		3654D985A31B04E5313310CF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +143,58 @@
 				390B4F1E1E2CB75400E72F1B /* LogLevel.swift */,
 			);
 			path = Logger;
+			sourceTree = "<group>";
+		};
+		6449B30F71741F449563EBFF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1CD17E2D69AFA22F8D5AC1E7 /* View */,
+				AD75237E12CA6CF6B47AEB50 /* Presenter */,
+				7736F2EC8945ABE299231985 /* Interactor */,
+				FAE6B052371C4740D3402670 /* Router */,
+				B474EE4C5A505322250DD52F /* Configurator */,
+			);
+			name = Home;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7736F2EC8945ABE299231985 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D9C617BD540C605DD14CB730 /* HomeInteractorInput.swift */,
+				6F1F3339AD9220ABED50EDD9 /* HomeInteractorOutput.swift */,
+				67C28D10803A3A30B4547F30 /* HomeInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8742B61EA674817F5E9A7887 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6449B30F71741F449563EBFF /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AD75237E12CA6CF6B47AEB50 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E199C7BF498338854A3155C2 /* HomeModuleInput.swift */,
+				BF12B68379BC28811472C0B4 /* HomePresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B474EE4C5A505322250DD52F /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C9B439B7C9E894606713E /* HomeConfigurator.swift */,
+				F0764FDFB5199C0558DBFFBB /* HomeInitializer.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		CE06A9BB7222D81AED949303 /* Frameworks */ = {
@@ -180,6 +267,7 @@
 		EC9277511E1B90A800D12F0B /* xjf-ios-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				8742B61EA674817F5E9A7887 /* Modules */,
 				ECC704CE1E262D1C00C257D4 /* Account */,
 				EC29E2731E1F7CDF00A9C818 /* Database */,
 				EC5B07031E1E205C00151690 /* Networking */,
@@ -272,6 +360,16 @@
 				ECC704CF1E262D2600C257D4 /* AccountManager.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		FAE6B052371C4740D3402670 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				50F57BD6D94EB9018D8ABDB5 /* HomeRouterInput.swift */,
+				4835F9BD1068856E56D1D16C /* HomeRouter.swift */,
+			);
+			name = Router;
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +534,18 @@
 				ECC704B41E24AFD000C257D4 /* BannerResult.swift in Sources */,
 				EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */,
 				ECC704C51E25DB7800C257D4 /* LoginResult.swift in Sources */,
+				872590CC85C643D3934BA0F4 /* HomeViewInput.swift in Sources */,
+				6A3EF020A5A55EB61C17D70F /* HomeViewOutput.swift in Sources */,
+				CCAB440EF2AF2E92B4F7ED2D /* HomeViewController.swift in Sources */,
+				904BFAB6509BDEA6DCACBD20 /* HomeModuleInput.swift in Sources */,
+				56F5AC345D04D7F7B846C063 /* HomePresenter.swift in Sources */,
+				A063EB28C5B12094635A393B /* HomeInteractorInput.swift in Sources */,
+				130D259D69130F09A24FA780 /* HomeInteractorOutput.swift in Sources */,
+				DD85C291AB50F8E2AB1F1AA5 /* HomeInteractor.swift in Sources */,
+				2BAA2A3E3F43F1E8B17EBEC0 /* HomeRouterInput.swift in Sources */,
+				6C14B3435FCDEABE91F167D9 /* HomeRouter.swift in Sources */,
+				61686E6EB440459975E07DE4 /* HomeConfigurator.swift in Sources */,
+				958884C5B88BE1ACF7376649 /* HomeInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
