@@ -49,6 +49,7 @@ platform :ios do
     cert
     sigh
     gym(scheme: "xjf-ios-mvvm") # Build your app - more options available
+    DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS="-t DAV"
     pilot
 
     commit_version_bump message: "Deploying version #{build_number}."
