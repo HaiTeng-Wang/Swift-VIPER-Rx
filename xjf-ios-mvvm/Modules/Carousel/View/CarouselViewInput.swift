@@ -14,4 +14,6 @@ protocol CarouselViewInput: class {
     */
 
     func setupInitialState()
+
+    func setBanner(banner: Banner)
 }

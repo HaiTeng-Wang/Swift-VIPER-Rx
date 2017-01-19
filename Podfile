@@ -21,7 +21,7 @@ target 'xjf-ios-mvvm' do
     pod 'RxAlamofire', '~> 3.0.2'
     pod 'Kingfisher', '~> 3.2.4'
     pod 'SnapKit', '~> 3.1.2'
-    pod 'RealmSwift'
+    pod 'RealmSwift', '~> 2.2.0'
     pod 'AwesomeCache', '~> 5.0'
     pod 'Fabric'
     pod 'Crashlytics'

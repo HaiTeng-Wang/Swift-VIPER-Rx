@@ -6,8 +6,14 @@
 //  Copyright © 2017 xijinfa. All rights reserved.
 //
 
+import RxSwift
+
 class CarouselInteractor: CarouselInteractorInput {
 
     weak var output: CarouselInteractorOutput!
+
+    func provideBannerData(path: String) {
+        self.output.receiveBannerData(bannerData: DataManager.getBanner(path: path))
+    }
 
 }

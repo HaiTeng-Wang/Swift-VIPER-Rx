@@ -8,10 +8,5 @@
 
 protocol CarouselViewOutput {
 
-    /**
-        @author xijinfa
-        Notify presenter that view is ready
-    */
-
-    func viewIsReady()
+    func loadBannerData(path: String)
 }

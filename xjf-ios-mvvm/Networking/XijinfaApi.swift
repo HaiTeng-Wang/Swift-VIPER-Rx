@@ -69,12 +69,14 @@ extension XijinfaApi: TargetType {
                     "X-XJF-PLATFORM": "ios",
                     "X-XJF-VERSION": bundleVersion,
                     "X-XJF-CLIENT": client,
-                    "X-XJF-PUSH-CHANNEL": "xiaomi"]
+                    "X-XJF-PUSH-CHANNEL": "xiaomi",
+                    "Cache-Control": "no-cache",
+                    "Accept": "application/json"]
         default:
             guard let token = token else {
-                return ["Accept": "application/json", "Cache-Control": "no-cache"]
+                return ["Accept": "application/json"]
             }
-            return ["Authorization": "bearer \(token)", "Accept": "application/json", "Cache-Control": "no-cache"]
+            return ["Authorization": "bearer \(token)", "Accept": "application/json"]
         }
     }
 

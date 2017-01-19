@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CarouselInteractorInput {
-
+    func provideBannerData(path: String)
 }

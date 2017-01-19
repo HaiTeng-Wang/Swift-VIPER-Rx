@@ -25,7 +25,6 @@
 		872590CC85C643D3934BA0F4 /* HomeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A91D4C11CE5DEBAF276E50D /* HomeViewInput.swift */; };
 		904BFAB6509BDEA6DCACBD20 /* HomeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E199C7BF498338854A3155C2 /* HomeModuleInput.swift */; };
 		958884C5B88BE1ACF7376649 /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0764FDFB5199C0558DBFFBB /* HomeInitializer.swift */; };
-		9A4AB332E30DD9D7FB3D3B98 /* CarouselInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97B1E82961A514AE9E97333 /* CarouselInitializer.swift */; };
 		A063EB28C5B12094635A393B /* HomeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C617BD540C605DD14CB730 /* HomeInteractorInput.swift */; };
 		CCAB440EF2AF2E92B4F7ED2D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAAE0FDB0CB20A37B8433C7 /* HomeViewController.swift */; };
 		D23D8264E6797AC9CF85E419 /* CarouselViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8087E2F4E1A9F16A44263F /* CarouselViewInput.swift */; };
@@ -88,7 +87,6 @@
 		9B8087E2F4E1A9F16A44263F /* CarouselViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselViewInput.swift; sourceTree = "<group>"; };
 		BF12B68379BC28811472C0B4 /* HomePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		CCF5CBE7E7EA78926F3F37EC /* CarouselRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselRouter.swift; sourceTree = "<group>"; };
-		D97B1E82961A514AE9E97333 /* CarouselInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselInitializer.swift; sourceTree = "<group>"; };
 		D9C617BD540C605DD14CB730 /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
 		DD3C9B439B7C9E894606713E /* HomeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		DF3B7821179EFA3482835AE4 /* CarouselInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselInteractorInput.swift; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				4A0ADB5E63D7D8943F4DA736 /* CarouselConfigurator.swift */,
-				D97B1E82961A514AE9E97333 /* CarouselInitializer.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -684,7 +681,6 @@
 				3A7851DD4138809F84868786 /* CarouselRouterInput.swift in Sources */,
 				6661D6C8D9609C4B7D20D428 /* CarouselRouter.swift in Sources */,
 				DDD9432F783255D1AFCD6645 /* CarouselConfigurator.swift in Sources */,
-				9A4AB332E30DD9D7FB3D3B98 /* CarouselInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

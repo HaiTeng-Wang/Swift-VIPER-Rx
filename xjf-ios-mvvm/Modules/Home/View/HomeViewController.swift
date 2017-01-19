@@ -13,11 +13,15 @@ class HomeViewController: UIViewController, HomeViewInput {
     var output: HomeViewOutput!
 
     lazy var carsouselView: CarouselViewController = {
-       return CarouselViewController()
+        return CarouselViewController(path: "app-dept3-carousel")
     }()
 
     override func loadView() {
         super.loadView()
+
+        let configurator = CarouselModuleConfigurator()
+        configurator.configureModuleForViewInput(viewInput: carsouselView)
+
         view.addSubview(carsouselView.view)
 
         view.backgroundColor = UIColor.white
