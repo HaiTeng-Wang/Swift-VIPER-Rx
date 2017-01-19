@@ -91,7 +91,7 @@ class CacheManager {
 
     public static func writeCache(cacheName: String, interval: TimeInterval, key: String, data: NSString) {
         do {
-            let cache = try Cache<NSString>(name: CACHE_WEEKLY)
+            let cache = try Cache<NSString>(name: cacheName)
             cache.setObject(data, forKey: key, expires: .seconds(STALES_WEEKLY))
         } catch _ {
             Logger.logError(message: "Cache error")
