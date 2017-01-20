@@ -67,8 +67,6 @@ platform :ios do
     match(type: "appstore")
     ensure_git_status_clean
     update_build_number
-    cert
-    sigh
     gym(scheme: "xjf-ios-mvvm") # Build your app - more options available
     deliver(force: true)
 
