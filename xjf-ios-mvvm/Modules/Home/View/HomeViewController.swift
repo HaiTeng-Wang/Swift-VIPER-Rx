@@ -56,7 +56,7 @@ class HomeViewController: UIViewController, HomeViewInput {
     func setupInitialState() {
 
     }
-    
+
     func reloadData() {
     }
 
