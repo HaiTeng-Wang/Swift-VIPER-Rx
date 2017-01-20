@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>UITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
+		</dict>
 		<key>xjf-ios-mvvm.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>EC92774E1E1B90A700D12F0B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECA1DE6A1E31C33300E48DFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

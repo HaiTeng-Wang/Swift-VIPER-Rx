@@ -32,6 +32,11 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
 
+  lane :screenshots do
+    snapshot
+    frameit(white: true, path: './fastlane/screenshots')
+  end
+
   lane :pgyer do
     match(type: "adhoc")
     ensure_git_status_clean

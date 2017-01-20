@@ -26,6 +26,8 @@ target 'xjf-ios-mvvm' do
     pod 'Fabric'
     pod 'Crashlytics'
     
+    pod 'SimulatorStatusMagic', :configurations => ['Debug']
+    
     post_install do |installer|
         installer.pods_project.targets.each do |target|
             target.build_configurations.each do |config|
