@@ -7,37 +7,57 @@
 //
 
 import UIKit
+import PullToRefresh
 
 class HomeViewController: UIViewController, HomeViewInput {
 
     var output: HomeViewOutput!
 
+    let refresher = PullToRefresh()
+
     lazy var carsouselView: CarouselViewController = {
         return CarouselViewController(path: "app-dept3-carousel")
+    }()
+
+    lazy var scrollView: UIScrollView = {
+        return UIScrollView()
     }()
 
     override func loadView() {
         super.loadView()
 
+        view.backgroundColor = UIColor.white
+
+        view.addSubview(scrollView)
+
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+
+        scrollView.frame = CGRect(x: 0, y: statusBarHeight, width: screenWidth, height: screenHeight)
+        scrollView.contentSize = CGSize(width: 0, height: screenHeight + 1)
+
         let configurator = CarouselModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: carsouselView)
 
-        view.addSubview(carsouselView.view)
-
-        view.backgroundColor = UIColor.white
-
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        scrollView.addSubview(carsouselView.view)
 
         carsouselView.view.snp.makeConstraints { make in
-            make.width.equalTo(view.snp.width)
+            make.width.equalTo(scrollView.snp.width)
             make.height.equalTo(160)
-            make.top.equalTo(view).offset(statusBarHeight)
+            make.top.equalTo(scrollView)
         }
+
+        setupPullToRefresh()
+        scrollView.endRefreshing(at: Position.top)
     }
 
     // MARK: HomeViewInput
     func setupInitialState() {
 
+    }
+    
+    func reloadData() {
     }
 
     // MARK: Life cycle
@@ -45,4 +65,16 @@ class HomeViewController: UIViewController, HomeViewInput {
         super.viewDidLoad()
     }
 
+    deinit {
+        scrollView.removePullToRefresh(scrollView.topPullToRefresh!)
+    }
+
+}
+
+private extension HomeViewController {
+    func setupPullToRefresh() {
+        scrollView.addPullToRefresh(refresher) { [weak self] in
+            print("PullToRefresh")
+        }
+    }
 }

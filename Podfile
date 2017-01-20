@@ -23,6 +23,7 @@ target 'xjf-ios-mvvm' do
     pod 'SnapKit', '~> 3.1.2'
     pod 'RealmSwift', '~> 2.2.0'
     pod 'AwesomeCache', '~> 5.0'
+    pod 'PullToRefresher', '~> 2.0'
     pod 'Fabric'
     pod 'Crashlytics'
     

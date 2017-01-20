@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.2.0)
+  - Alamofire (4.3.0)
   - AwesomeCache (5.0)
   - Cell+Rx (1.2.1):
     - RxSwift (~> 3.0.0)
@@ -21,6 +21,7 @@ PODS:
     - Moya/Core
     - RxSwift (~> 3.0)
   - ObjectMapper (2.2.1)
+  - PullToRefresher (2.0.2)
   - Realm (2.2.0):
     - Realm/Headers (= 2.2.0)
   - Realm/Headers (2.2.0)
@@ -43,7 +44,7 @@ PODS:
   - RxSwift (3.0.0)
   - SimulatorStatusMagic (1.9.2)
   - SnapKit (3.1.2)
-  - SwiftLint (0.15.0)
+  - SwiftLint (0.16.0)
 
 DEPENDENCIES:
   - AwesomeCache (~> 5.0)
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - Kingfisher (~> 3.2.4)
   - Moya-ObjectMapper (~> 2.2.1)
   - Moya/RxSwift (~> 8.0.0-beta.1)
+  - PullToRefresher (~> 2.0)
   - RealmSwift (~> 2.2.0)
   - Result (~> 3.1.0)
   - RxAlamofire (~> 3.0.2)
@@ -65,7 +67,7 @@ DEPENDENCIES:
   - SwiftLint
 
 SPEC CHECKSUMS:
-  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AwesomeCache: d8906955242173357caa0be0214d5e77dec32cc5
   Cell+Rx: 76da8ebbbeb3553ce18b9e1d550447d999b9cac8
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
@@ -74,6 +76,7 @@ SPEC CHECKSUMS:
   Moya: a29e2503a0c5067d462ba2f07cc6b6b1f3fc172d
   Moya-ObjectMapper: b0d3d84d5f771044cc592af02b04a7bb2839b878
   ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
+  PullToRefresher: 5e101a8c3523e67ee0291375ba932ef59e0853c2
   Realm: d95b8fb34c83f1e764b66d319277a62c2b6e4bf5
   RealmSwift: a4fa52d06e946a32ec746b3388374f742e6b8731
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
@@ -84,8 +87,8 @@ SPEC CHECKSUMS:
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   SimulatorStatusMagic: f6cf062b0e5a2df6f000bb0f98d1ae6977c8dbc1
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
-  SwiftLint: d73999f81682ab8114d6408c89f83177b2c197d7
+  SwiftLint: 90665265ae50b58167c674a11c680bbabe9d6513
 
-PODFILE CHECKSUM: 59394f38b5b7eb24835728af29ad6c10ae2e4314
+PODFILE CHECKSUM: 93cb0c0c5972e426b1c1ad5f69469a31153f52d4
 
 COCOAPODS: 1.1.1
