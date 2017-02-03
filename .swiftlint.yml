@@ -3,6 +3,8 @@ disabled_rules: # rule identifiers to exclude from running
   - line_length
   - force_try
   - variable_name
+  - function_body_length
+  - type_body_length
 excluded:
   - xjf-ios-mvvm/Resources
   - Pods

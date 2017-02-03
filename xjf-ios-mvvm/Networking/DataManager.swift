@@ -35,6 +35,10 @@ class DataManager {
                 .mapObject(Login.self)
     }
 
+    public static func getCourses(department: Int, params: Dictionary<String, String>) -> Observable<NSString> {
+        return Network.request(target: .courses(departmentNumber: department, params: params))
+    }
+
 }
 
 extension ObservableType where E == NSString {

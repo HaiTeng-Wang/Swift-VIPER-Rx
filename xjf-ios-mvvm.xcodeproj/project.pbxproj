@@ -33,6 +33,15 @@
 		E33973251278A110D2D8EE5A /* CarouselInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3B7821179EFA3482835AE4 /* CarouselInteractorInput.swift */; };
 		E7A2287CF86AD667D2E08B3F /* CarouselViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92060E2D79D3FFA7638EEA49 /* CarouselViewOutput.swift */; };
 		EADAC0C2EDD8999A9C3D51CE /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4E79A5FC41B6D67700A4D /* CarouselViewController.swift */; };
+		EC1808191E447339006342AF /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC18080F1E447339006342AF /* Courses.swift */; };
+		EC18081F1E447339006342AF /* CoursesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808151E447339006342AF /* CoursesResult.swift */; };
+		EC18082A1E4475BA006342AF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808241E4475BA006342AF /* Category.swift */; };
+		EC18082D1E4475BA006342AF /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808271E4475BA006342AF /* CategoryData.swift */; };
+		EC18082F1E4475BA006342AF /* CategoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808291E4475BA006342AF /* CategoryResult.swift */; };
+		EC1808311E4479E4006342AF /* CourseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808301E4479E4006342AF /* CourseData.swift */; };
+		EC1808331E447A05006342AF /* CoursePriceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808321E447A05006342AF /* CoursePriceList.swift */; };
+		EC1808361E447A0A006342AF /* CourseTaxonomyDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808341E447A0A006342AF /* CourseTaxonomyDifficulty.swift */; };
+		EC1808371E447A0A006342AF /* CourseTaxonomyGuru.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808351E447A0A006342AF /* CourseTaxonomyGuru.swift */; };
 		EC29E2761E1F7DE000A9C818 /* AccountRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */; };
 		EC29E2781E1F7E0F00A9C818 /* CredentialRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */; };
 		EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2791E1F7E2400A9C818 /* UserRealm.swift */; };
@@ -49,6 +58,7 @@
 		ECA1DE761E31C3E000E48DFD /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA1DE751E31C3E000E48DFD /* SnapshotHelper.swift */; };
 		ECB3BF801E235E72009703DF /* Banner.json in Resources */ = {isa = PBXBuildFile; fileRef = ECB3BF7F1E235E72009703DF /* Banner.json */; };
 		ECB3BF821E236668009703DF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3BF811E236668009703DF /* DataManager.swift */; };
+		ECC2263C1E442D5800E9BA3A /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC2263B1E442D5800E9BA3A /* Dictionary.swift */; };
 		ECC704AB1E24A46E00C257D4 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704AA1E24A46E00C257D4 /* CacheManager.swift */; };
 		ECC704B21E24AFD000C257D4 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704AF1E24AFD000C257D4 /* Banner.swift */; };
 		ECC704B31E24AFD000C257D4 /* BannerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704B01E24AFD000C257D4 /* BannerData.swift */; };
@@ -103,6 +113,15 @@
 		DD3C9B439B7C9E894606713E /* HomeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		DF3B7821179EFA3482835AE4 /* CarouselInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselInteractorInput.swift; sourceTree = "<group>"; };
 		E199C7BF498338854A3155C2 /* HomeModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeModuleInput.swift; sourceTree = "<group>"; };
+		EC18080F1E447339006342AF /* Courses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
+		EC1808151E447339006342AF /* CoursesResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesResult.swift; sourceTree = "<group>"; };
+		EC1808241E4475BA006342AF /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		EC1808271E4475BA006342AF /* CategoryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
+		EC1808291E4475BA006342AF /* CategoryResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryResult.swift; sourceTree = "<group>"; };
+		EC1808301E4479E4006342AF /* CourseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseData.swift; sourceTree = "<group>"; };
+		EC1808321E447A05006342AF /* CoursePriceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursePriceList.swift; sourceTree = "<group>"; };
+		EC1808341E447A0A006342AF /* CourseTaxonomyDifficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTaxonomyDifficulty.swift; sourceTree = "<group>"; };
+		EC1808351E447A0A006342AF /* CourseTaxonomyGuru.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTaxonomyGuru.swift; sourceTree = "<group>"; };
 		EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRealm.swift; sourceTree = "<group>"; };
 		EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialRealm.swift; sourceTree = "<group>"; };
 		EC29E2791E1F7E2400A9C818 /* UserRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
@@ -125,6 +144,7 @@
 		ECA1DE751E31C3E000E48DFD /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = UITests/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		ECB3BF7F1E235E72009703DF /* Banner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Banner.json; sourceTree = "<group>"; };
 		ECB3BF811E236668009703DF /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		ECC2263B1E442D5800E9BA3A /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		ECC704AA1E24A46E00C257D4 /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		ECC704AF1E24AFD000C257D4 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		ECC704B01E24AFD000C257D4 /* BannerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerData.swift; sourceTree = "<group>"; };
@@ -314,6 +334,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EC18080E1E44725E006342AF /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				EC1808301E4479E4006342AF /* CourseData.swift */,
+				EC1808321E447A05006342AF /* CoursePriceList.swift */,
+				EC1808341E447A0A006342AF /* CourseTaxonomyDifficulty.swift */,
+				EC1808351E447A0A006342AF /* CourseTaxonomyGuru.swift */,
+				EC18080F1E447339006342AF /* Courses.swift */,
+				EC1808151E447339006342AF /* CoursesResult.swift */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
+		EC1808231E4475BA006342AF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EC1808241E4475BA006342AF /* Category.swift */,
+				EC1808271E4475BA006342AF /* CategoryData.swift */,
+				EC1808291E4475BA006342AF /* CategoryResult.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		EC29E2731E1F7CDF00A9C818 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +421,7 @@
 		EC9277511E1B90A800D12F0B /* xjf-ios-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				ECC2263A1E442D3800E9BA3A /* Extensions */,
 				ECA1DE4C1E2F433600E48DFD /* Common */,
 				ECA1DE451E2F344C00E48DFD /* Resources */,
 				8742B61EA674817F5E9A7887 /* Modules */,
@@ -446,9 +490,19 @@
 			path = SampleData;
 			sourceTree = "<group>";
 		};
+		ECC2263A1E442D3800E9BA3A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ECC2263B1E442D5800E9BA3A /* Dictionary.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		ECC704AC1E24AF4500C257D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EC1808231E4475BA006342AF /* Category */,
+				EC18080E1E44725E006342AF /* Course */,
 				ECC704BF1E25DB7800C257D4 /* Login */,
 				ECC704BC1E25DB7100C257D4 /* User */,
 				ECC704B71E24E47B00C257D4 /* Secure */,
@@ -699,15 +753,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1808371E447A0A006342AF /* CourseTaxonomyGuru.swift in Sources */,
 				ECC704C41E25DB7800C257D4 /* LoginCredential.swift in Sources */,
+				EC18082D1E4475BA006342AF /* CategoryData.swift in Sources */,
+				EC1808311E4479E4006342AF /* CourseData.swift in Sources */,
 				ECC704D01E262D2600C257D4 /* AccountManager.swift in Sources */,
 				EC29E2761E1F7DE000A9C818 /* AccountRealm.swift in Sources */,
 				ECC704C31E25DB7800C257D4 /* Login.swift in Sources */,
+				ECC2263C1E442D5800E9BA3A /* Dictionary.swift in Sources */,
 				ECC704B31E24AFD000C257D4 /* BannerData.swift in Sources */,
 				ECC704AB1E24A46E00C257D4 /* CacheManager.swift in Sources */,
 				ECB3BF821E236668009703DF /* DataManager.swift in Sources */,
+				EC18082A1E4475BA006342AF /* Category.swift in Sources */,
 				ECC704BE1E25DB7100C257D4 /* User.swift in Sources */,
 				ECC704BA1E24E47B00C257D4 /* Secure.swift in Sources */,
+				EC1808191E447339006342AF /* Courses.swift in Sources */,
 				390B4F1F1E2CB75400E72F1B /* Logger.swift in Sources */,
 				ECC704BB1E24E47B00C257D4 /* SecureResult.swift in Sources */,
 				EC3745351E1BB15C00794A81 /* AppDelegate.swift in Sources */,
@@ -721,21 +781,25 @@
 				390B4F201E2CB75400E72F1B /* LogLevel.swift in Sources */,
 				EC9277551E1B90A800D12F0B /* ViewController.swift in Sources */,
 				ECA1DE521E2F440700E48DFD /* iCarousel.m in Sources */,
+				EC18082F1E4475BA006342AF /* CategoryResult.swift in Sources */,
 				ECC704B41E24AFD000C257D4 /* BannerResult.swift in Sources */,
 				EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */,
 				ECC704C51E25DB7800C257D4 /* LoginResult.swift in Sources */,
 				872590CC85C643D3934BA0F4 /* HomeViewInput.swift in Sources */,
 				6A3EF020A5A55EB61C17D70F /* HomeViewOutput.swift in Sources */,
 				CCAB440EF2AF2E92B4F7ED2D /* HomeViewController.swift in Sources */,
+				EC18081F1E447339006342AF /* CoursesResult.swift in Sources */,
 				904BFAB6509BDEA6DCACBD20 /* HomeModuleInput.swift in Sources */,
 				56F5AC345D04D7F7B846C063 /* HomePresenter.swift in Sources */,
 				A063EB28C5B12094635A393B /* HomeInteractorInput.swift in Sources */,
 				130D259D69130F09A24FA780 /* HomeInteractorOutput.swift in Sources */,
 				DD85C291AB50F8E2AB1F1AA5 /* HomeInteractor.swift in Sources */,
+				EC1808331E447A05006342AF /* CoursePriceList.swift in Sources */,
 				2BAA2A3E3F43F1E8B17EBEC0 /* HomeRouterInput.swift in Sources */,
 				6C14B3435FCDEABE91F167D9 /* HomeRouter.swift in Sources */,
 				61686E6EB440459975E07DE4 /* HomeConfigurator.swift in Sources */,
 				958884C5B88BE1ACF7376649 /* HomeInitializer.swift in Sources */,
+				EC1808361E447A0A006342AF /* CourseTaxonomyDifficulty.swift in Sources */,
 				D23D8264E6797AC9CF85E419 /* CarouselViewInput.swift in Sources */,
 				E7A2287CF86AD667D2E08B3F /* CarouselViewOutput.swift in Sources */,
 				EADAC0C2EDD8999A9C3D51CE /* CarouselViewController.swift in Sources */,

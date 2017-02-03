@@ -26,7 +26,7 @@ extension XijinfaApi: TargetType {
         switch self {
         case .banner(let path):
             return "banner/\(path)"
-        case .courses(let departmentNumber):
+        case .courses(let departmentNumber, _):
             return "courses\(departmentNumber)"
         case .secureCode:
             return "auth/get-secure-code"

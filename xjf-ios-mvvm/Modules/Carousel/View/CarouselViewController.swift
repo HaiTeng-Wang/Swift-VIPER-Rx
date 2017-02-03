@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import RxSwift
 
 class CarouselViewController: UIViewController, CarouselViewInput, iCarouselDataSource, iCarouselDelegate {
 
@@ -16,6 +17,8 @@ class CarouselViewController: UIViewController, CarouselViewInput, iCarouselData
     var bannerData: [BannerData]?
 
     var path: String?
+
+    let disposebag = DisposeBag()
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -62,6 +65,24 @@ class CarouselViewController: UIViewController, CarouselViewInput, iCarouselData
         return bannerData?.count ?? 0
     }
 
+    func imageTapped() {
+        let position = carsouselView.currentItemIndex
+        Logger.logInfo(message: "imageTapped \(bannerData?[position].link)!")
+        var params = Dictionary<String, String>()
+        params.updateValue("51215", forKey:"category_id")
+
+        DataManager.getCourses(department: 4, params: params)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { (result) in
+                print("onNext I found result \(result)!")
+            }, onError: { (error) in
+                print("onError I found \(error)!")
+            }, onCompleted: {
+                print("onCompleted")
+            }).addDisposableTo(disposebag)
+
+    }
+
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
 
         let screenWidth = UIScreen.main.bounds.width
@@ -73,6 +94,10 @@ class CarouselViewController: UIViewController, CarouselViewInput, iCarouselData
         imageView.frame = frame
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CarouselViewController.imageTapped))
+        imageView.addGestureRecognizer(tap)
+        imageView.isUserInteractionEnabled = true
 
         if let banners = bannerData {
             if let cover = banners[index].cover {
