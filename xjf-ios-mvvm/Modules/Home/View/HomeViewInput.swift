@@ -14,4 +14,10 @@ protocol HomeViewInput: class {
     */
 
     func setupInitialState()
+
+    func refreshBanner(banner: Banner)
+
+    func refreshWiki(courses: Courses)
+
+    func loadDataSuccess()
 }

@@ -37,9 +37,6 @@ class HomeViewController: UIViewController, HomeViewInput {
         scrollView.frame = CGRect(x: 0, y: statusBarHeight, width: screenWidth, height: screenHeight)
         scrollView.contentSize = CGSize(width: 0, height: screenHeight + 1)
 
-        let configurator = CarouselModuleConfigurator()
-        configurator.configureModuleForViewInput(viewInput: carsouselView)
-
         scrollView.addSubview(carsouselView.view)
 
         carsouselView.view.snp.makeConstraints { make in
@@ -48,8 +45,27 @@ class HomeViewController: UIViewController, HomeViewInput {
             make.top.equalTo(scrollView)
         }
 
+        configViews()
+
         setupPullToRefresh()
         scrollView.endRefreshing(at: Position.top)
+
+        output.viewIsReady()
+    }
+
+    func configViews() {
+        let homeConfigurator = HomeModuleConfigurator()
+        homeConfigurator.configureModuleForViewInput(viewInput: self)
+
+        let carsouselConfigurator = CarouselModuleConfigurator()
+        carsouselConfigurator.configureModuleForViewInput(viewInput: carsouselView)
+    }
+
+    func setupPullToRefresh() {
+        scrollView.addPullToRefresh(refresher) { [weak self] in
+            print("PullToRefresh")
+            self!.reloadData()
+        }
     }
 
     // MARK: HomeViewInput
@@ -57,7 +73,22 @@ class HomeViewController: UIViewController, HomeViewInput {
 
     }
 
+    func refreshBanner(banner: Banner) {
+        Logger.logInfo(message: "refresh banner")
+        carsouselView.setBanner(banner: banner)
+    }
+
+    func refreshWiki(courses: Courses) {
+        Logger.logInfo(message: "refresh wiki")
+    }
+
+    func loadDataSuccess() {
+        Logger.logInfo(message: "load data success")
+        scrollView.endRefreshing(at: Position.top)
+    }
+
     func reloadData() {
+        output.reloadData()
     }
 
     // MARK: Life cycle
@@ -69,12 +100,4 @@ class HomeViewController: UIViewController, HomeViewInput {
         scrollView.removePullToRefresh(scrollView.topPullToRefresh!)
     }
 
-}
-
-private extension HomeViewController {
-    func setupPullToRefresh() {
-        scrollView.addPullToRefresh(refresher) { [weak self] in
-            print("PullToRefresh")
-        }
-    }
 }

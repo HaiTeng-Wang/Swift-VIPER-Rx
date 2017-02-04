@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol HomeInteractorOutput: class {
+        func receiveBannerData(bannerObservable: Observable<Banner>)
+        func receiveWikiData(coursesObservable: Observable<Courses>)
 }

@@ -46,8 +46,6 @@ class CarouselViewController: UIViewController, CarouselViewInput, iCarouselData
         carsouselView.bounces = false
         carsouselView.delegate = self
         carsouselView.dataSource = self
-
-        output.loadBannerData(path: path ?? "")
     }
 
     // MARK: CarouselViewInput
@@ -59,6 +57,10 @@ class CarouselViewController: UIViewController, CarouselViewInput, iCarouselData
         print("onNext I found \(banner.result?.data?[0].title)!")
         self.bannerData = banner.result?.data
         self.carsouselView.reloadData()
+    }
+
+    func loadBannerData() {
+        output.loadBannerData(path: path ?? "")
     }
 
     func numberOfItems(in carousel: iCarousel) -> Int {

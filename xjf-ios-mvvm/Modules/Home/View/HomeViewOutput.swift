@@ -14,4 +14,6 @@ protocol HomeViewOutput {
     */
 
     func viewIsReady()
+
+    func reloadData()
 }

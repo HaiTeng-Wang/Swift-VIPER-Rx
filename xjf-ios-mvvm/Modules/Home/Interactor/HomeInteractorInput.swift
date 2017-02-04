@@ -9,5 +9,6 @@
 import Foundation
 
 protocol HomeInteractorInput {
-
+    func provideBannerData(path: String)
+    func provideWikiData(department: Int, categoryId: String)
 }
