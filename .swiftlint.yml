@@ -5,6 +5,7 @@ disabled_rules: # rule identifiers to exclude from running
   - variable_name
   - function_body_length
   - type_body_length
+  - syntactic_sugar
 excluded:
   - xjf-ios-mvvm/Resources
   - Pods

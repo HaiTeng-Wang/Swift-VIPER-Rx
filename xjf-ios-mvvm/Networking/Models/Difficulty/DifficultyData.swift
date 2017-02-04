@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-class CourseTaxonomyDifficulty: NSObject, NSCoding, Mappable {
+class DifficultyData: NSObject, NSCoding, Mappable {
 
 	var allowPreview: Int?
 	var content: String?
@@ -37,7 +37,7 @@ class CourseTaxonomyDifficulty: NSObject, NSCoding, Mappable {
 	var viewCount: Int?
 
 	class func newInstance(map: Map) -> Mappable? {
-		return CourseTaxonomyDifficulty()
+		return DifficultyData()
 	}
 	required init?(map: Map) {}
 	private override init() {}

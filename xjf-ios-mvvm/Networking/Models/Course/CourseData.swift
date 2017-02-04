@@ -40,9 +40,9 @@ class CourseData: NSObject, NSCoding, Mappable {
 	var subtitle: String?
 	var summary: String?
 	var taxonomyCategories: [CategoryData]?
-	var taxonomyDifficulties: [CourseTaxonomyDifficulty]?
+	var taxonomyDifficulties: [DifficultyData]?
 	var taxonomyGurus: [GuruData]?
-	var taxonomyTags: [CourseTaxonomyDifficulty]?
+	var taxonomyTags: [DifficultyData]?
 	var title: String?
 	var type: String?
 	var updatedAt: String?
@@ -172,9 +172,9 @@ class CourseData: NSObject, NSCoding, Mappable {
          subtitle = aDecoder.decodeObject(forKey: "subtitle") as? String
          summary = aDecoder.decodeObject(forKey: "summary") as? String
          taxonomyCategories = aDecoder.decodeObject(forKey: "taxonomy_categories") as? [CategoryData]
-         taxonomyDifficulties = aDecoder.decodeObject(forKey: "taxonomy_difficulties") as? [CourseTaxonomyDifficulty]
+         taxonomyDifficulties = aDecoder.decodeObject(forKey: "taxonomy_difficulties") as? [DifficultyData]
          taxonomyGurus = aDecoder.decodeObject(forKey: "taxonomy_gurus") as? [GuruData]
-         taxonomyTags = aDecoder.decodeObject(forKey: "taxonomy_tags") as? [CourseTaxonomyDifficulty]
+         taxonomyTags = aDecoder.decodeObject(forKey: "taxonomy_tags") as? [DifficultyData]
          title = aDecoder.decodeObject(forKey: "title") as? String
          type = aDecoder.decodeObject(forKey: "type") as? String
          updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String
