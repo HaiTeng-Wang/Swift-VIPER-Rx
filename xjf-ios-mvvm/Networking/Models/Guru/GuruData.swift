@@ -1,14 +1,14 @@
 //
-//	CoursesTaxonomyGuru.swift
+//	GuruData.swift
 //
-//	Create by xijinfa on 3/2/2017
+//	Create by xijinfa on 4/2/2017
 //	Copyright © 2017. All rights reserved.
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
 import ObjectMapper
 
-class CourseTaxonomyGuru: NSObject, NSCoding, Mappable {
+class GuruData: NSObject, NSCoding, Mappable {
 
 	var allowPreview: Int?
 	var commentCount: Int?
@@ -43,7 +43,7 @@ class CourseTaxonomyGuru: NSObject, NSCoding, Mappable {
 	var viewCount: Int?
 
 	class func newInstance(map: Map) -> Mappable? {
-		return CourseTaxonomyGuru()
+		return GuruData()
 	}
 	required init?(map: Map) {}
 	private override init() {}

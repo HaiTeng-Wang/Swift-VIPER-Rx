@@ -41,7 +41,7 @@ class CourseData: NSObject, NSCoding, Mappable {
 	var summary: String?
 	var taxonomyCategories: [CategoryData]?
 	var taxonomyDifficulties: [CourseTaxonomyDifficulty]?
-	var taxonomyGurus: [CourseTaxonomyGuru]?
+	var taxonomyGurus: [GuruData]?
 	var taxonomyTags: [CourseTaxonomyDifficulty]?
 	var title: String?
 	var type: String?
@@ -173,7 +173,7 @@ class CourseData: NSObject, NSCoding, Mappable {
          summary = aDecoder.decodeObject(forKey: "summary") as? String
          taxonomyCategories = aDecoder.decodeObject(forKey: "taxonomy_categories") as? [CategoryData]
          taxonomyDifficulties = aDecoder.decodeObject(forKey: "taxonomy_difficulties") as? [CourseTaxonomyDifficulty]
-         taxonomyGurus = aDecoder.decodeObject(forKey: "taxonomy_gurus") as? [CourseTaxonomyGuru]
+         taxonomyGurus = aDecoder.decodeObject(forKey: "taxonomy_gurus") as? [GuruData]
          taxonomyTags = aDecoder.decodeObject(forKey: "taxonomy_tags") as? [CourseTaxonomyDifficulty]
          title = aDecoder.decodeObject(forKey: "title") as? String
          type = aDecoder.decodeObject(forKey: "type") as? String

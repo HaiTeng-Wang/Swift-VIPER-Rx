@@ -41,7 +41,6 @@
 		EC1808311E4479E4006342AF /* CourseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808301E4479E4006342AF /* CourseData.swift */; };
 		EC1808331E447A05006342AF /* CoursePriceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808321E447A05006342AF /* CoursePriceList.swift */; };
 		EC1808361E447A0A006342AF /* CourseTaxonomyDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808341E447A0A006342AF /* CourseTaxonomyDifficulty.swift */; };
-		EC1808371E447A0A006342AF /* CourseTaxonomyGuru.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808351E447A0A006342AF /* CourseTaxonomyGuru.swift */; };
 		EC29E2761E1F7DE000A9C818 /* AccountRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */; };
 		EC29E2781E1F7E0F00A9C818 /* CredentialRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */; };
 		EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2791E1F7E2400A9C818 /* UserRealm.swift */; };
@@ -73,6 +72,9 @@
 		ECC704C71E25F79C00C257D4 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704C61E25F79C00C257D4 /* DatabaseManager.swift */; };
 		ECC704CA1E25F8E600C257D4 /* AccountDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704C91E25F8E600C257D4 /* AccountDataMapper.swift */; };
 		ECC704D01E262D2600C257D4 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC704CF1E262D2600C257D4 /* AccountManager.swift */; };
+		ECD076171E4583060087605E /* GuruData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD076131E4583060087605E /* GuruData.swift */; };
+		ECD0761B1E4583920087605E /* Gurus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD076191E4583920087605E /* Gurus.swift */; };
+		ECD0761C1E4583920087605E /* GurusResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD0761A1E4583920087605E /* GurusResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,7 +123,6 @@
 		EC1808301E4479E4006342AF /* CourseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseData.swift; sourceTree = "<group>"; };
 		EC1808321E447A05006342AF /* CoursePriceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursePriceList.swift; sourceTree = "<group>"; };
 		EC1808341E447A0A006342AF /* CourseTaxonomyDifficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTaxonomyDifficulty.swift; sourceTree = "<group>"; };
-		EC1808351E447A0A006342AF /* CourseTaxonomyGuru.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTaxonomyGuru.swift; sourceTree = "<group>"; };
 		EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRealm.swift; sourceTree = "<group>"; };
 		EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialRealm.swift; sourceTree = "<group>"; };
 		EC29E2791E1F7E2400A9C818 /* UserRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
@@ -159,6 +160,9 @@
 		ECC704C61E25F79C00C257D4 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		ECC704C91E25F8E600C257D4 /* AccountDataMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDataMapper.swift; sourceTree = "<group>"; };
 		ECC704CF1E262D2600C257D4 /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		ECD076131E4583060087605E /* GuruData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuruData.swift; sourceTree = "<group>"; };
+		ECD076191E4583920087605E /* Gurus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gurus.swift; sourceTree = "<group>"; };
+		ECD0761A1E4583920087605E /* GurusResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GurusResult.swift; sourceTree = "<group>"; };
 		F0764FDFB5199C0558DBFFBB /* HomeInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInitializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -340,7 +344,6 @@
 				EC1808301E4479E4006342AF /* CourseData.swift */,
 				EC1808321E447A05006342AF /* CoursePriceList.swift */,
 				EC1808341E447A0A006342AF /* CourseTaxonomyDifficulty.swift */,
-				EC1808351E447A0A006342AF /* CourseTaxonomyGuru.swift */,
 				EC18080F1E447339006342AF /* Courses.swift */,
 				EC1808151E447339006342AF /* CoursesResult.swift */,
 			);
@@ -501,6 +504,7 @@
 		ECC704AC1E24AF4500C257D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ECD076101E4583060087605E /* Guru */,
 				EC1808231E4475BA006342AF /* Category */,
 				EC18080E1E44725E006342AF /* Course */,
 				ECC704BF1E25DB7800C257D4 /* Login */,
@@ -572,6 +576,17 @@
 			);
 			path = Account;
 			sourceTree = "<group>";
+		};
+		ECD076101E4583060087605E /* Guru */ = {
+			isa = PBXGroup;
+			children = (
+				ECD076191E4583920087605E /* Gurus.swift */,
+				ECD0761A1E4583920087605E /* GurusResult.swift */,
+				ECD076131E4583060087605E /* GuruData.swift */,
+			);
+			name = Guru;
+			path = "xjf-ios-mvvm/Networking/Models/Guru";
+			sourceTree = SOURCE_ROOT;
 		};
 		FAE6B052371C4740D3402670 /* Router */ = {
 			isa = PBXGroup;
@@ -753,7 +768,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC1808371E447A0A006342AF /* CourseTaxonomyGuru.swift in Sources */,
 				ECC704C41E25DB7800C257D4 /* LoginCredential.swift in Sources */,
 				EC18082D1E4475BA006342AF /* CategoryData.swift in Sources */,
 				EC1808311E4479E4006342AF /* CourseData.swift in Sources */,
@@ -770,6 +784,7 @@
 				EC1808191E447339006342AF /* Courses.swift in Sources */,
 				390B4F1F1E2CB75400E72F1B /* Logger.swift in Sources */,
 				ECC704BB1E24E47B00C257D4 /* SecureResult.swift in Sources */,
+				ECD0761C1E4583920087605E /* GurusResult.swift in Sources */,
 				EC3745351E1BB15C00794A81 /* AppDelegate.swift in Sources */,
 				EC5B07061E1E209200151690 /* XijinfaApi.swift in Sources */,
 				ECC704B61E24AFD900C257D4 /* Cover.swift in Sources */,
@@ -777,6 +792,8 @@
 				EC5B07081E1E258500151690 /* Network.swift in Sources */,
 				ECC704CA1E25F8E600C257D4 /* AccountDataMapper.swift in Sources */,
 				EC29E2781E1F7E0F00A9C818 /* CredentialRealm.swift in Sources */,
+				ECD0761B1E4583920087605E /* Gurus.swift in Sources */,
+				ECD076171E4583060087605E /* GuruData.swift in Sources */,
 				ECC704B21E24AFD000C257D4 /* Banner.swift in Sources */,
 				390B4F201E2CB75400E72F1B /* LogLevel.swift in Sources */,
 				EC9277551E1B90A800D12F0B /* ViewController.swift in Sources */,
