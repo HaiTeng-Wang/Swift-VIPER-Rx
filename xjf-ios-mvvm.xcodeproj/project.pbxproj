@@ -40,6 +40,9 @@
 		EC18082F1E4475BA006342AF /* CategoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808291E4475BA006342AF /* CategoryResult.swift */; };
 		EC1808311E4479E4006342AF /* CourseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808301E4479E4006342AF /* CourseData.swift */; };
 		EC1808331E447A05006342AF /* CoursePriceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808321E447A05006342AF /* CoursePriceList.swift */; };
+		EC2696BE1E4828710067EBEC /* WikiCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2696BD1E4828710067EBEC /* WikiCardView.swift */; };
+		EC2696C01E482AAA0067EBEC /* CommonCardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2696BF1E482AAA0067EBEC /* CommonCardHeaderView.swift */; };
+		EC2696C71E4847D20067EBEC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2696C61E4847D20067EBEC /* UIColor.swift */; };
 		EC29E2761E1F7DE000A9C818 /* AccountRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */; };
 		EC29E2781E1F7E0F00A9C818 /* CredentialRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */; };
 		EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29E2791E1F7E2400A9C818 /* UserRealm.swift */; };
@@ -122,6 +125,9 @@
 		EC1808291E4475BA006342AF /* CategoryResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryResult.swift; sourceTree = "<group>"; };
 		EC1808301E4479E4006342AF /* CourseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseData.swift; sourceTree = "<group>"; };
 		EC1808321E447A05006342AF /* CoursePriceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursePriceList.swift; sourceTree = "<group>"; };
+		EC2696BD1E4828710067EBEC /* WikiCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiCardView.swift; sourceTree = "<group>"; };
+		EC2696BF1E482AAA0067EBEC /* CommonCardHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonCardHeaderView.swift; sourceTree = "<group>"; };
+		EC2696C61E4847D20067EBEC /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		EC29E2751E1F7DE000A9C818 /* AccountRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRealm.swift; sourceTree = "<group>"; };
 		EC29E2771E1F7E0F00A9C818 /* CredentialRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialRealm.swift; sourceTree = "<group>"; };
 		EC29E2791E1F7E2400A9C818 /* UserRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
@@ -359,6 +365,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		EC2696BA1E48281C0067EBEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC2696BD1E4828710067EBEC /* WikiCardView.swift */,
+				EC2696BF1E482AAA0067EBEC /* CommonCardHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EC29E2731E1F7CDF00A9C818 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +438,7 @@
 		EC9277511E1B90A800D12F0B /* xjf-ios-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				EC2696BA1E48281C0067EBEC /* Views */,
 				ECC2263A1E442D3800E9BA3A /* Extensions */,
 				ECA1DE4C1E2F433600E48DFD /* Common */,
 				ECA1DE451E2F344C00E48DFD /* Resources */,
@@ -496,6 +512,7 @@
 			isa = PBXGroup;
 			children = (
 				ECC2263B1E442D5800E9BA3A /* Dictionary.swift */,
+				EC2696C61E4847D20067EBEC /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -799,6 +816,7 @@
 				ECC704B61E24AFD900C257D4 /* Cover.swift in Sources */,
 				ECC704C71E25F79C00C257D4 /* DatabaseManager.swift in Sources */,
 				EC5B07081E1E258500151690 /* Network.swift in Sources */,
+				EC2696C71E4847D20067EBEC /* UIColor.swift in Sources */,
 				ECC704CA1E25F8E600C257D4 /* AccountDataMapper.swift in Sources */,
 				EC29E2781E1F7E0F00A9C818 /* CredentialRealm.swift in Sources */,
 				ECD0761B1E4583920087605E /* Gurus.swift in Sources */,
@@ -807,6 +825,7 @@
 				390B4F201E2CB75400E72F1B /* LogLevel.swift in Sources */,
 				EC9277551E1B90A800D12F0B /* ViewController.swift in Sources */,
 				ECA1DE521E2F440700E48DFD /* iCarousel.m in Sources */,
+				EC2696BE1E4828710067EBEC /* WikiCardView.swift in Sources */,
 				EC18082F1E4475BA006342AF /* CategoryResult.swift in Sources */,
 				ECC704B41E24AFD000C257D4 /* BannerResult.swift in Sources */,
 				EC29E27A1E1F7E2400A9C818 /* UserRealm.swift in Sources */,
@@ -816,6 +835,7 @@
 				CCAB440EF2AF2E92B4F7ED2D /* HomeViewController.swift in Sources */,
 				EC18081F1E447339006342AF /* CoursesResult.swift in Sources */,
 				904BFAB6509BDEA6DCACBD20 /* HomeModuleInput.swift in Sources */,
+				EC2696C01E482AAA0067EBEC /* CommonCardHeaderView.swift in Sources */,
 				56F5AC345D04D7F7B846C063 /* HomePresenter.swift in Sources */,
 				A063EB28C5B12094635A393B /* HomeInteractorInput.swift in Sources */,
 				130D259D69130F09A24FA780 /* HomeInteractorOutput.swift in Sources */,

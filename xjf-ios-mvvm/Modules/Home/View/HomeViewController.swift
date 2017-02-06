@@ -19,6 +19,10 @@ class HomeViewController: UIViewController, HomeViewInput {
         return CarouselViewController(path: "app-dept3-carousel")
     }()
 
+    lazy var wikiCardView: WikiCardView = {
+        return WikiCardView()
+    }()
+
     lazy var scrollView: UIScrollView = {
         return UIScrollView()
     }()
@@ -26,7 +30,7 @@ class HomeViewController: UIViewController, HomeViewInput {
     override func loadView() {
         super.loadView()
 
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.HexRGB(rgbValue: 0xf5f5f5)
 
         view.addSubview(scrollView)
 
@@ -43,6 +47,14 @@ class HomeViewController: UIViewController, HomeViewInput {
             make.width.equalTo(scrollView.snp.width)
             make.height.equalTo(160)
             make.top.equalTo(scrollView)
+        }
+
+        scrollView.addSubview(wikiCardView)
+
+        wikiCardView.snp.makeConstraints { make in
+            make.width.equalTo(scrollView.snp.width)
+            make.height.equalTo(333)
+            make.top.equalTo(carsouselView.view.snp.bottom).offset(10)
         }
 
         configViews()
@@ -78,8 +90,9 @@ class HomeViewController: UIViewController, HomeViewInput {
         carsouselView.setBanner(banner: banner)
     }
 
-    func refreshWiki(courses: Courses) {
+    func refreshWiki(course: CourseData) {
         Logger.logInfo(message: "refresh wiki")
+        wikiCardView.setData(courseData: course)
     }
 
     func loadDataSuccess() {

@@ -31,7 +31,13 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
                 return self.coursesObservable
             }
             .subscribe(onNext: { (wiki) in
-                self.view.refreshWiki(courses: wiki)
+                if let wikiResult = wiki.result {
+                    if let wikiData = wikiResult.data {
+                        if let wikiItem = wikiData.first {
+                            self.view.refreshWiki(course: wikiItem)
+                        }
+                    }
+                }
             }, onError: { (error) in
                 self.view.loadDataSuccess()
                 print("onError I found \(error)!")

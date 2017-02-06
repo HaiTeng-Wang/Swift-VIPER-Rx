@@ -17,7 +17,7 @@ protocol HomeViewInput: class {
 
     func refreshBanner(banner: Banner)
 
-    func refreshWiki(courses: Courses)
+    func refreshWiki(course: CourseData)
 
     func loadDataSuccess()
 }
