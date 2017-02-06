@@ -61,7 +61,6 @@ class WikiCardView: UIView {
 
         wikiTitle.snp.makeConstraints { (make) in
             make.top.equalTo(wikiCover.snp.bottom).offset(12)
-            make.width.equalToSuperview()
             make.height.equalTo(30)
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
@@ -70,7 +69,6 @@ class WikiCardView: UIView {
 
         wikiContent.snp.makeConstraints { (make) in
             make.top.equalTo(wikiTitle.snp.bottom).offset(8)
-            make.width.equalToSuperview()
             make.height.lessThanOrEqualTo(60)
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
