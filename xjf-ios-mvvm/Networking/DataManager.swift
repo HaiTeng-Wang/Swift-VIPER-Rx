@@ -40,8 +40,9 @@ class DataManager {
                 .mapObject(Courses.self)
     }
 
-    public static func getCourse(department: Int, courseId: Int, params: Dictionary<String, String>?) -> Observable<NSString> {
+    public static func getCourse(department: Int, courseId: Int, params: Dictionary<String, String>?) -> Observable<Course> {
         return Network.request(target: .course(departmentNumber: department, courseId: courseId, params: params))
+                .mapObject(Course.self)
     }
 
 }
