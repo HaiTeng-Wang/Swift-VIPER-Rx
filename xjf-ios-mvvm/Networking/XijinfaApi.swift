@@ -11,7 +11,8 @@ import Moya
 
 enum XijinfaApi {
     case banner(path:String)
-    case courses(departmentNumber:Int, params:Dictionary<String, String>)
+    case course(departmentNumber:Int, courseId:Int, params:Dictionary<String, String>?)
+    case courses(departmentNumber:Int, params:Dictionary<String, String>?)
     case secureCode
     case login(userName:String, passwd:String, secureCode:String, secureKey:String)
 }
@@ -26,6 +27,8 @@ extension XijinfaApi: TargetType {
         switch self {
         case .banner(let path):
             return "banner/\(path)"
+        case .course(let departmentNumber, let courseId, _):
+            return "courses\(departmentNumber)/\(courseId)"
         case .courses(let departmentNumber, _):
             return "courses\(departmentNumber)"
         case .secureCode:
@@ -52,6 +55,8 @@ extension XijinfaApi: TargetType {
                 "password": passwd,
                 "secure_key": secureKey,
                 "secure_code": secureCode]
+        case .course(_, _, let params):
+            return params
         case .courses(_, let params):
             return params
         default:
