@@ -60,7 +60,6 @@ class HomeViewController: UIViewController, HomeViewInput {
         configViews()
 
         setupPullToRefresh()
-        scrollView.endRefreshing(at: Position.top)
 
         output.viewIsReady()
     }
@@ -110,7 +109,9 @@ class HomeViewController: UIViewController, HomeViewInput {
     }
 
     deinit {
-        scrollView.removePullToRefresh(scrollView.topPullToRefresh!)
+        if let topPullToRefresh = scrollView.topPullToRefresh {
+            scrollView.removePullToRefresh(topPullToRefresh)
+        }
     }
 
 }
