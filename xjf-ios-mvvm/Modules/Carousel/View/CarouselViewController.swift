@@ -73,15 +73,7 @@ class CarouselViewController: UIViewController, CarouselViewInput, iCarouselData
         var params = Dictionary<String, String>()
         params.updateValue("51215", forKey:"category_id")
 
-        DataManager.getCourses(department: 4, params: params)
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { (result) in
-                print("onNext I found result \(result)!")
-            }, onError: { (error) in
-                print("onError I found \(error)!")
-            }, onCompleted: {
-                print("onCompleted")
-            }).addDisposableTo(disposebag)
+        self.view.superview?.viewController?.navigationController?.pushViewController(WebViewController(), animated: true)
 
     }
 

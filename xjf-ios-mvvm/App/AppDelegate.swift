@@ -21,8 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         initRealm()
         AccountManager.sharedInstance.loadUserData()
+
+        UINavigationBar.appearance().isTranslucent = false
+
+        let homeVC = HomeViewController()
+        let naviVC = UINavigationController(rootViewController: homeVC)
+
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = HomeViewController()
+        self.window?.rootViewController = naviVC
         self.window?.makeKeyAndVisible()
         return true
     }

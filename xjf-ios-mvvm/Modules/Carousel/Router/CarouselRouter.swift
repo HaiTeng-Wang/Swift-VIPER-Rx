@@ -8,4 +8,7 @@
 
 class CarouselRouter: CarouselRouterInput {
 
+    func openWebView(url: String) {
+    
+    }
 }

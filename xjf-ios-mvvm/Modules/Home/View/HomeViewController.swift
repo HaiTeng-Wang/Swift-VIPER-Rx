@@ -103,6 +103,17 @@ class HomeViewController: UIViewController, HomeViewInput {
         output.reloadData()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initNaviBar()
+    }
+
+    func initNaviBar() {
+        if let naviVC = self.navigationController {
+            naviVC.setNavigationBarHidden(true, animated: false)
+        }
+    }
+
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()

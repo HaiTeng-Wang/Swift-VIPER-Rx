@@ -9,5 +9,7 @@
 import Foundation
 
 protocol CarouselRouterInput {
-
+    
+    func openWebView(url: String)
+    
 }
