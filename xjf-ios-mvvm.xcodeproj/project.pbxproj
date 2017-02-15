@@ -16,6 +16,7 @@
 		390B4F1F1E2CB75400E72F1B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B4F1D1E2CB75400E72F1B /* Logger.swift */; };
 		390B4F201E2CB75400E72F1B /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B4F1E1E2CB75400E72F1B /* LogLevel.swift */; };
 		3989BC4E1E4DAE8E0087306C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989BC4C1E4DAE8E0087306C /* Course.swift */; };
+		39CFA6861E543B0300D1B46B /* UIViewController+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CFA6851E543B0300D1B46B /* UIViewController+Extra.swift */; };
 		3E2B392928EB0F45CED3A3D2 /* CarouselInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC48839768D872B8CE4091 /* CarouselInteractor.swift */; };
 		56F5AC345D04D7F7B846C063 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B68379BC28811472C0B4 /* HomePresenter.swift */; };
 		61686E6EB440459975E07DE4 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C9B439B7C9E894606713E /* HomeConfigurator.swift */; };
@@ -101,6 +102,7 @@
 		390B4F1D1E2CB75400E72F1B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		390B4F1E1E2CB75400E72F1B /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		3989BC4C1E4DAE8E0087306C /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		39CFA6851E543B0300D1B46B /* UIViewController+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extra.swift"; sourceTree = "<group>"; };
 		3A91D4C11CE5DEBAF276E50D /* HomeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
 		41D4E79A5FC41B6D67700A4D /* CarouselViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		4835F9BD1068856E56D1D16C /* HomeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -547,6 +549,7 @@
 				ECC2263B1E442D5800E9BA3A /* Dictionary.swift */,
 				EC2696C61E4847D20067EBEC /* UIColor.swift */,
 				ECD729A21E52E76E0068DD2E /* UIView.swift */,
+				39CFA6851E543B0300D1B46B /* UIViewController+Extra.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -892,6 +895,7 @@
 				E33973251278A110D2D8EE5A /* CarouselInteractorInput.swift in Sources */,
 				38F101755BE3F2E6527517F7 /* CarouselInteractorOutput.swift in Sources */,
 				3E2B392928EB0F45CED3A3D2 /* CarouselInteractor.swift in Sources */,
+				39CFA6861E543B0300D1B46B /* UIViewController+Extra.swift in Sources */,
 				DDD9432F783255D1AFCD6645 /* CarouselConfigurator.swift in Sources */,
 				33AB4F5013A8E832F2B60E18 /* WebViewController.swift in Sources */,
 			);

@@ -75,7 +75,7 @@ class CarouselViewController: UIViewController, CarouselViewInput, iCarouselData
 
         if let bannerItem = bannerData?[position] {
             let link = bannerItem.link
-            MainRouter.jumpByType(naviVC: self.view.superview?.viewController?.navigationController, link: "https://m.baidu.com")
+            MainRouter.jumpByType(naviVC: self.topNavigationController, link: "https://m.baidu.com")
         }
     }
 
