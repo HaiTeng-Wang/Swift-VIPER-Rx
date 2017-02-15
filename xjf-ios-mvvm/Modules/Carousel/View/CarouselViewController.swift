@@ -73,8 +73,10 @@ class CarouselViewController: UIViewController, CarouselViewInput, iCarouselData
         var params = Dictionary<String, String>()
         params.updateValue("51215", forKey:"category_id")
 
-        self.view.superview?.viewController?.navigationController?.pushViewController(WebViewController(), animated: true)
-
+        if let bannerItem = bannerData?[position] {
+            let link = bannerItem.link
+            MainRouter.jumpByType(naviVC: self.view.superview?.viewController?.navigationController, link: "https://m.baidu.com")
+        }
     }
 
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {

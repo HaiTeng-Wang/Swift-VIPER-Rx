@@ -19,11 +19,8 @@ class CarouselModuleConfigurator {
 
     private func configure(viewController: CarouselViewController) {
 
-        let router = CarouselRouter()
-
         let presenter = CarouselPresenter()
         presenter.view = viewController
-        presenter.router = router
 
         let interactor = CarouselInteractor()
         interactor.output = presenter

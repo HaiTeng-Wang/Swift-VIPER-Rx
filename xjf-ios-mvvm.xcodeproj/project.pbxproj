@@ -16,11 +16,9 @@
 		390B4F1F1E2CB75400E72F1B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B4F1D1E2CB75400E72F1B /* Logger.swift */; };
 		390B4F201E2CB75400E72F1B /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B4F1E1E2CB75400E72F1B /* LogLevel.swift */; };
 		3989BC4E1E4DAE8E0087306C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989BC4C1E4DAE8E0087306C /* Course.swift */; };
-		3A7851DD4138809F84868786 /* CarouselRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE3707079A109FC0D33DFB /* CarouselRouterInput.swift */; };
 		3E2B392928EB0F45CED3A3D2 /* CarouselInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC48839768D872B8CE4091 /* CarouselInteractor.swift */; };
 		56F5AC345D04D7F7B846C063 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF12B68379BC28811472C0B4 /* HomePresenter.swift */; };
 		61686E6EB440459975E07DE4 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C9B439B7C9E894606713E /* HomeConfigurator.swift */; };
-		6661D6C8D9609C4B7D20D428 /* CarouselRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF5CBE7E7EA78926F3F37EC /* CarouselRouter.swift */; };
 		666E32C53D1A1CD2FCCC273F /* CarouselModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226ED87F3B7F4F74E56D470A /* CarouselModuleInput.swift */; };
 		6A3EF020A5A55EB61C17D70F /* HomeViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537991A03BBF7ACFA42C78C /* HomeViewOutput.swift */; };
 		6C14B3435FCDEABE91F167D9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4835F9BD1068856E56D1D16C /* HomeRouter.swift */; };
@@ -42,6 +40,8 @@
 		EC18082F1E4475BA006342AF /* CategoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808291E4475BA006342AF /* CategoryResult.swift */; };
 		EC1808311E4479E4006342AF /* CourseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808301E4479E4006342AF /* CourseData.swift */; };
 		EC1808331E447A05006342AF /* CoursePriceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1808321E447A05006342AF /* CoursePriceList.swift */; };
+		EC1BF2711E53F07B0032765D /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1BF2701E53F07B0032765D /* MainRouter.swift */; };
+		EC1BF2781E53F60F0032765D /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1BF2771E53F60F0032765D /* StringHelper.swift */; };
 		EC2696BE1E4828710067EBEC /* WikiCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2696BD1E4828710067EBEC /* WikiCardView.swift */; };
 		EC2696C01E482AAA0067EBEC /* CommonCardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2696BF1E482AAA0067EBEC /* CommonCardHeaderView.swift */; };
 		EC2696C71E4847D20067EBEC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2696C61E4847D20067EBEC /* UIColor.swift */; };
@@ -111,14 +111,12 @@
 		67C28D10803A3A30B4547F30 /* HomeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		6F1F3339AD9220ABED50EDD9 /* HomeInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorOutput.swift; sourceTree = "<group>"; };
 		7EAAE0FDB0CB20A37B8433C7 /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		8EEE3707079A109FC0D33DFB /* CarouselRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselRouterInput.swift; sourceTree = "<group>"; };
 		92060E2D79D3FFA7638EEA49 /* CarouselViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselViewOutput.swift; sourceTree = "<group>"; };
 		967FB91D5526A35447D5953D /* CarouselInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselInteractorOutput.swift; sourceTree = "<group>"; };
 		971528448CD937E3281DDC1F /* Pods-xjf-ios-mvvm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xjf-ios-mvvm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xjf-ios-mvvm/Pods-xjf-ios-mvvm.debug.xcconfig"; sourceTree = "<group>"; };
 		9B8087E2F4E1A9F16A44263F /* CarouselViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselViewInput.swift; sourceTree = "<group>"; };
 		ADA1A8CD3DC065BB2653FE43 /* WebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		BF12B68379BC28811472C0B4 /* HomePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		CCF5CBE7E7EA78926F3F37EC /* CarouselRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselRouter.swift; sourceTree = "<group>"; };
 		D9C617BD540C605DD14CB730 /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
 		DD3C9B439B7C9E894606713E /* HomeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		DF3B7821179EFA3482835AE4 /* CarouselInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CarouselInteractorInput.swift; sourceTree = "<group>"; };
@@ -130,6 +128,8 @@
 		EC1808291E4475BA006342AF /* CategoryResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryResult.swift; sourceTree = "<group>"; };
 		EC1808301E4479E4006342AF /* CourseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseData.swift; sourceTree = "<group>"; };
 		EC1808321E447A05006342AF /* CoursePriceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursePriceList.swift; sourceTree = "<group>"; };
+		EC1BF2701E53F07B0032765D /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		EC1BF2771E53F60F0032765D /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		EC2696BD1E4828710067EBEC /* WikiCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiCardView.swift; sourceTree = "<group>"; };
 		EC2696BF1E482AAA0067EBEC /* CommonCardHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonCardHeaderView.swift; sourceTree = "<group>"; };
 		EC2696C61E4847D20067EBEC /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -239,6 +239,7 @@
 		390B4F1B1E2CB72A00E72F1B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EC1BF2741E53F5CC0032765D /* String */,
 				390B4F1C1E2CB73F00E72F1B /* Logger */,
 			);
 			path = Helpers;
@@ -267,7 +268,6 @@
 				B4E9A721AE8809F79BB0A56D /* View */,
 				16C95DADE9D818DBFBD51B2F /* Presenter */,
 				22548ADD5C1C97C20D6DC4A1 /* Interactor */,
-				6C4980ACAC3AC535985D264F /* Router */,
 				50285ADC8CA0AE968EC09B9F /* Configurator */,
 			);
 			path = Carousel;
@@ -283,15 +283,6 @@
 				B474EE4C5A505322250DD52F /* Configurator */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		6C4980ACAC3AC535985D264F /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				8EEE3707079A109FC0D33DFB /* CarouselRouterInput.swift */,
-				CCF5CBE7E7EA78926F3F37EC /* CarouselRouter.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		7736F2EC8945ABE299231985 /* Interactor */ = {
@@ -389,6 +380,23 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		EC1BF26F1E53F0120032765D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EC1BF2701E53F07B0032765D /* MainRouter.swift */,
+			);
+			name = Router;
+			path = "xjf-ios-mvvm/Router";
+			sourceTree = SOURCE_ROOT;
+		};
+		EC1BF2741E53F5CC0032765D /* String */ = {
+			isa = PBXGroup;
+			children = (
+				EC1BF2771E53F60F0032765D /* StringHelper.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 		EC2696BA1E48281C0067EBEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +470,7 @@
 		EC9277511E1B90A800D12F0B /* xjf-ios-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				EC1BF26F1E53F0120032765D /* Router */,
 				EC2696BA1E48281C0067EBEC /* Views */,
 				ECC2263A1E442D3800E9BA3A /* Extensions */,
 				ECA1DE4C1E2F433600E48DFD /* Common */,
@@ -824,6 +833,7 @@
 				EC1808311E4479E4006342AF /* CourseData.swift in Sources */,
 				ECC704D01E262D2600C257D4 /* AccountManager.swift in Sources */,
 				EC29E2761E1F7DE000A9C818 /* AccountRealm.swift in Sources */,
+				EC1BF2711E53F07B0032765D /* MainRouter.swift in Sources */,
 				ECC704C31E25DB7800C257D4 /* Login.swift in Sources */,
 				ECC2263C1E442D5800E9BA3A /* Dictionary.swift in Sources */,
 				ECC704B31E24AFD000C257D4 /* BannerData.swift in Sources */,
@@ -842,6 +852,7 @@
 				ECC704C71E25F79C00C257D4 /* DatabaseManager.swift in Sources */,
 				EC5B07081E1E258500151690 /* Network.swift in Sources */,
 				EC2696C71E4847D20067EBEC /* UIColor.swift in Sources */,
+				EC1BF2781E53F60F0032765D /* StringHelper.swift in Sources */,
 				ECC704CA1E25F8E600C257D4 /* AccountDataMapper.swift in Sources */,
 				3989BC4E1E4DAE8E0087306C /* Course.swift in Sources */,
 				EC29E2781E1F7E0F00A9C818 /* CredentialRealm.swift in Sources */,
@@ -881,8 +892,6 @@
 				E33973251278A110D2D8EE5A /* CarouselInteractorInput.swift in Sources */,
 				38F101755BE3F2E6527517F7 /* CarouselInteractorOutput.swift in Sources */,
 				3E2B392928EB0F45CED3A3D2 /* CarouselInteractor.swift in Sources */,
-				3A7851DD4138809F84868786 /* CarouselRouterInput.swift in Sources */,
-				6661D6C8D9609C4B7D20D428 /* CarouselRouter.swift in Sources */,
 				DDD9432F783255D1AFCD6645 /* CarouselConfigurator.swift in Sources */,
 				33AB4F5013A8E832F2B60E18 /* WebViewController.swift in Sources */,
 			);

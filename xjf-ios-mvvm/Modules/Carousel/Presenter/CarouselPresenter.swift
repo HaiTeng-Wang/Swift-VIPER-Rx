@@ -11,7 +11,6 @@ class CarouselPresenter: CarouselModuleInput, CarouselViewOutput, CarouselIntera
 
     weak var view: CarouselViewInput!
     var interactor: CarouselInteractorInput!
-    var router: CarouselRouterInput!
     let disposebag = DisposeBag()
 
     func loadBannerData(path: String) {
