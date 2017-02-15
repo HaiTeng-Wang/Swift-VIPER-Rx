@@ -112,7 +112,8 @@ class WebViewController: UIViewController {
 }
 
 extension WebViewController:WKNavigationDelegate {
-    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         Logger.logInfo(message: "setNaviTitle A \(title)")
         self.setNaviTitle(title: webView.title)
     }
