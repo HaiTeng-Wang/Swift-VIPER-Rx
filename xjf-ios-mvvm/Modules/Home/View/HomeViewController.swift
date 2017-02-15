@@ -9,53 +9,82 @@
 import UIKit
 import PullToRefresh
 
-class HomeViewController: UIViewController, HomeViewInput {
+final class HomeViewController: UIViewController {
+
+    // MARK: Properties
 
     var output: HomeViewOutput!
 
-    let refresher = PullToRefresh()
+    private let refresher = PullToRefresh()
 
-    lazy var carsouselView: CarouselViewController = {
+    fileprivate lazy var carsouselView: CarouselViewController = {
         return CarouselViewController(path: "app-dept3-carousel")
     }()
 
-    lazy var wikiCardView: WikiCardView = {
+    fileprivate lazy var wikiCardView: WikiCardView = {
         return WikiCardView()
     }()
 
-    lazy var scrollView: UIScrollView = {
+    fileprivate lazy var scrollView: UIScrollView = {
         return UIScrollView()
     }()
+
+
+    // MARK: Life cycle
 
     override func loadView() {
         super.loadView()
 
-        view.backgroundColor = UIColor.HexRGB(rgbValue: 0xf5f5f5)
+        view.backgroundColor = UIColor().backGroudColor_grad
 
-        view.addSubview(scrollView)
-
-        let screenWidth = UIScreen.main.bounds.width
-        let screenHeight = UIScreen.main.bounds.height
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-
-        scrollView.frame = CGRect(x: 0, y: statusBarHeight, width: screenWidth, height: screenHeight)
-        scrollView.contentSize = CGSize(width: 0, height: screenHeight + 1)
-
-        scrollView.addSubview(carsouselView.view)
-
-        carsouselView.view.snp.makeConstraints { make in
-            make.width.equalTo(scrollView.snp.width)
-            make.height.equalTo(160)
-            make.top.equalTo(scrollView)
+        func addSubviews() {
+            view.addSubview(scrollView)
+            scrollView.addSubview(carsouselView.view)
+            scrollView.addSubview(wikiCardView)
         }
 
-        scrollView.addSubview(wikiCardView)
+        func configViews() {
+            let homeConfigurator = HomeModuleConfigurator()
+            homeConfigurator.configureModuleForViewInput(viewInput: self)
 
-        wikiCardView.snp.makeConstraints { make in
-            make.width.equalTo(scrollView.snp.width)
-            make.height.equalTo(333)
-            make.top.equalTo(carsouselView.view.snp.bottom).offset(10)
+            let carsouselConfigurator = CarouselModuleConfigurator()
+            carsouselConfigurator.configureModuleForViewInput(viewInput: carsouselView)
         }
+
+        func layoutSubViews() {
+            let screenWidth = UIScreen.main.bounds.width
+            let screenHeight = UIScreen.main.bounds.height
+            let statusBarHeight = UIApplication.shared.statusBarFrame.height
+
+            scrollView.frame = CGRect(x: 0, y: statusBarHeight, width: screenWidth, height: screenHeight)
+            scrollView.contentSize = CGSize(width: 0, height: screenHeight + 1)
+
+            carsouselView.view.snp.makeConstraints { make in
+                make.width.equalTo(scrollView.snp.width)
+                make.height.equalTo(160)
+                make.top.equalTo(scrollView)
+            }
+
+            wikiCardView.snp.makeConstraints { make in
+                make.width.equalTo(scrollView.snp.width)
+                make.height.equalTo(333)
+                make.top.equalTo(carsouselView.view.snp.bottom).offset(10)
+            }
+        }
+
+        func setupPullToRefresh() {
+            scrollView.addPullToRefresh(refresher) { [weak self] in
+                print("PullToRefresh")
+                func reloadData() {
+                    self?.output.reloadData()
+                }
+                reloadData()
+            }
+        }
+
+        addSubviews()
+
+        layoutSubViews()
 
         configViews()
 
@@ -64,22 +93,28 @@ class HomeViewController: UIViewController, HomeViewInput {
         output.viewIsReady()
     }
 
-    func configViews() {
-        let homeConfigurator = HomeModuleConfigurator()
-        homeConfigurator.configureModuleForViewInput(viewInput: self)
-
-        let carsouselConfigurator = CarouselModuleConfigurator()
-        carsouselConfigurator.configureModuleForViewInput(viewInput: carsouselView)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        func initNaviBar() {
+            if let naviVC = self.navigationController {
+                naviVC.setNavigationBarHidden(true, animated: false)
+            }
+        }
+        initNaviBar()
     }
 
-    func setupPullToRefresh() {
-        scrollView.addPullToRefresh(refresher) { [weak self] in
-            print("PullToRefresh")
-            self!.reloadData()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    deinit {
+        if let topPullToRefresh = scrollView.topPullToRefresh {
+            scrollView.removePullToRefresh(topPullToRefresh)
         }
     }
+}
 
-    // MARK: HomeViewInput
+extension HomeViewController: HomeViewInput {
     func setupInitialState() {
 
     }
@@ -98,31 +133,5 @@ class HomeViewController: UIViewController, HomeViewInput {
         Logger.logInfo(message: "load data success")
         scrollView.endRefreshing(at: Position.top)
     }
-
-    func reloadData() {
-        output.reloadData()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        initNaviBar()
-    }
-
-    func initNaviBar() {
-        if let naviVC = self.navigationController {
-            naviVC.setNavigationBarHidden(true, animated: false)
-        }
-    }
-
-    // MARK: Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    deinit {
-        if let topPullToRefresh = scrollView.topPullToRefresh {
-            scrollView.removePullToRefresh(topPullToRefresh)
-        }
-    }
-
 }
+
