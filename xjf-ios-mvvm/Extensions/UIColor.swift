@@ -17,8 +17,4 @@ internal extension UIColor {
             alpha: CGFloat(1.0)
         )
     }
-
-    var backGroudColor_grad: UIColor {
-        return UIColor.HexRGB(rgbValue: 0xf5f5f5)
-    }
 }

@@ -35,7 +35,7 @@ final class HomeViewController: UIViewController {
     override func loadView() {
         super.loadView()
 
-        view.backgroundColor = UIColor().backGroudColor_grad
+        view.backgroundColor = UIColor.HexRGB(rgbValue: 0xf5f5f5)
 
         func addSubviews() {
             view.addSubview(scrollView)
