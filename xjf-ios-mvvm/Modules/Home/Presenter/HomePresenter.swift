@@ -8,15 +8,26 @@
 
 import RxSwift
 
-class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
+/**
+ Presenter: 包含用于准备显示内容（如从Interactor接收的）和用于对用户输入做出反应（通过从Interactor请求新数据）的视图逻辑。
+ */
+class HomePresenter {
 
+    // V、I、R
     weak var view: HomeViewInput!
     var interactor: HomeInteractorInput!
     var router: HomeRouterInput!
+
+    // data
     var bannerObservable: Observable<Banner>!
     var coursesObservable: Observable<Courses>!
-    let disposebag = DisposeBag()
 
+    // disposebag
+    let disposebag = DisposeBag()
+}
+
+
+extension HomePresenter: HomeViewOutput {
     func viewIsReady() {
         reloadData()
     }
@@ -46,7 +57,9 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
                 print("onCompleted")
             }).addDisposableTo(disposebag)
     }
+}
 
+extension HomePresenter: HomeInteractorOutput {
     func receiveBannerData(bannerObservable: Observable<Banner>) {
         self.bannerObservable = bannerObservable
     }
@@ -54,5 +67,4 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
     func receiveWikiData(coursesObservable: Observable<Courses>) {
         self.coursesObservable = coursesObservable
     }
-
 }

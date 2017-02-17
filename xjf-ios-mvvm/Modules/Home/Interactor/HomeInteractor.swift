@@ -6,10 +6,14 @@
 //  Copyright © 2017 xijinfa. All rights reserved.
 //
 
-class HomeInteractor: HomeInteractorInput {
-
+/**
+ Interactor: 包含了操作模型对象（Entities）来执行特定任务的业务逻辑。
+ */
+class HomeInteractor {
     weak var output: HomeInteractorOutput!
+}
 
+extension HomeInteractor: HomeInteractorInput {
     func provideBannerData(path: String) {
         self.output.receiveBannerData(bannerObservable: DataManager.getBanner(path: path))
     }
@@ -19,5 +23,4 @@ class HomeInteractor: HomeInteractorInput {
         params.updateValue(categoryId, forKey:"category_id")
         self.output.receiveWikiData(coursesObservable: DataManager.getCourses(department: department, params: params))
     }
-
 }

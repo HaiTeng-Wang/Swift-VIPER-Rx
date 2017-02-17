@@ -19,17 +19,15 @@ class HomeModuleConfigurator {
 
     private func configure(viewController: HomeViewController) {
 
-        let router = HomeRouter()
-
         let presenter = HomePresenter()
+        let router = HomeRouter()
+        let interactor = HomeInteractor()
+
         presenter.view = viewController
         presenter.router = router
-
-        let interactor = HomeInteractor()
-        interactor.output = presenter
-
         presenter.interactor = interactor
+
+        interactor.output = presenter
         viewController.output = presenter
     }
-
 }

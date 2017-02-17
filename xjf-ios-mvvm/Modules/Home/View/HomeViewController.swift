@@ -8,7 +8,9 @@
 
 import UIKit
 import PullToRefresh
-
+/** 
+ View: 显示Presenter告知的内容，并将用户输入中继回Presenter
+ */
 final class HomeViewController: UIViewController {
 
     // MARK: Properties
