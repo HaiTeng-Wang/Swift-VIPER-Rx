@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 import RxSwift
+import AppData
 
 class CarouselViewController: UIViewController, CarouselViewInput, iCarouselDataSource, iCarouselDelegate {
 
@@ -75,7 +76,7 @@ class CarouselViewController: UIViewController, CarouselViewInput, iCarouselData
 
         if let bannerItem = bannerData?[position] {
             let link = bannerItem.link
-            MainRouter.jumpByType(naviVC: self.topNavigationController, link: "https://m.baidu.com")
+            MainRouter.jumpByType(naviVC: self.topNavigationController, link: link)
         }
     }
 

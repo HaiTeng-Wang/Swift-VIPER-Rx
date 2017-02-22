@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import AppData
 
 /**
  Presenter: 包含用于准备显示内容（如从Interactor接收的）和用于对用户输入做出反应（通过从Interactor请求新数据）的视图逻辑。

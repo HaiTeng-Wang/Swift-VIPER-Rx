@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import AppData
 
 protocol HomeInteractorOutput: class {
         func receiveBannerData(bannerObservable: Observable<Banner>)

@@ -8,6 +8,7 @@
 
 import UIKit
 import PullToRefresh
+import AppData
 /** 
  View: 显示Presenter告知的内容，并将用户输入中继回Presenter
  */

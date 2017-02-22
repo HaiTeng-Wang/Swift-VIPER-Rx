@@ -5,6 +5,7 @@
 //  Created by xijinfa on 18/01/2017.
 //  Copyright © 2017 xijinfa. All rights reserved.
 //
+import AppData
 
 /**
  Interactor: 包含了操作模型对象（Entities）来执行特定任务的业务逻辑。

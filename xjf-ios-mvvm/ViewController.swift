@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import RxCocoa
 import RxSwift
+import AppData
 
 class ViewController: UIViewController {
 

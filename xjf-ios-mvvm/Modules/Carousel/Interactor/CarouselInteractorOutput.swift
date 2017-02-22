@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import AppData
 
 protocol CarouselInteractorOutput: class {
     func receiveBannerData(bannerData: Observable<Banner>)

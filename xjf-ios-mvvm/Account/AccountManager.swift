@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import AppData
 
 extension String {
     var length: Int { return self.characters.count  }

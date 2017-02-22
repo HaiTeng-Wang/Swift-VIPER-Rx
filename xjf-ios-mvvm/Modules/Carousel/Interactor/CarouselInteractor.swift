@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import AppData
 
 class CarouselInteractor: CarouselInteractorInput {
 

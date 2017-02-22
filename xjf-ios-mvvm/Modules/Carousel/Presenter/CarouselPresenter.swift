@@ -6,6 +6,7 @@
 //  Copyright © 2017 xijinfa. All rights reserved.
 //
 import RxSwift
+import AppData
 
 class CarouselPresenter: CarouselModuleInput, CarouselViewOutput, CarouselInteractorOutput {
 

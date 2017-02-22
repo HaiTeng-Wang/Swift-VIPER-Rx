@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import AppData
 
 class WebViewController: UIViewController {
 
