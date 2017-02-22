@@ -2,9 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     CFPropertyList (2.3.5)
-    activesupport (4.2.7.1)
+    activesupport (4.2.8)
       i18n (~> 0.7)
-      json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
@@ -61,7 +60,7 @@ GEM
       faraday (>= 0.7.4, < 1.0)
     fastimage (2.0.1)
       addressable (~> 2)
-    fastlane (2.14.2)
+    fastlane (2.18.1)
       activesupport (< 5)
       addressable (>= 2.3, < 3.0.0)
       babosa (>= 1.0.2, < 2.0.0)
@@ -88,6 +87,7 @@ GEM
       slack-notifier (>= 1.3, < 2.0.0)
       terminal-notifier (>= 1.6.2, < 2.0.0)
       terminal-table (>= 1.4.5, < 2.0.0)
+      tty-screen (~> 0.5.0)
       word_wrap (~> 1.0.0)
       xcodeproj (>= 0.20, < 2.0.0)
       xcpretty (>= 0.2.4, < 1.0.0)
@@ -117,8 +117,8 @@ GEM
       domain_name (~> 0.5)
     httpclient (2.8.3)
     hurley (0.2)
-    i18n (0.8.0)
-    json (1.8.6)
+    i18n (0.8.1)
+    json (2.0.3)
     jwt (1.5.6)
     little-plugger (1.1.4)
     logging (2.1.0)
@@ -156,6 +156,7 @@ GEM
     terminal-table (1.7.3)
       unicode-display_width (~> 1.1.1)
     thread_safe (0.3.5)
+    tty-screen (0.5.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uber (0.0.15)
@@ -183,4 +184,4 @@ DEPENDENCIES
   fastlane
 
 BUNDLED WITH
-   1.14.3
+   1.14.4
