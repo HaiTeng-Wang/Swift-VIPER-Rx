@@ -130,9 +130,9 @@
 		0D26D3B71E5D76600016A2E5 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				0D26D3B81E5D76600016A2E5 /* DatabaseManager.swift */,
 				0D26D3B91E5D76600016A2E5 /* Mapper */,
 				0D26D3BB1E5D76600016A2E5 /* Models */,
+				0D26D3B81E5D76600016A2E5 /* DatabaseManager.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -158,11 +158,11 @@
 		0D26D3BF1E5D76600016A2E5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				0D26D3E31E5D76600016A2E5 /* SampleData */,
+				0D26D3C21E5D76600016A2E5 /* Models */,
 				0D26D3C01E5D76600016A2E5 /* CacheManager.swift */,
 				0D26D3C11E5D76600016A2E5 /* DataManager.swift */,
-				0D26D3C21E5D76600016A2E5 /* Models */,
 				0D26D3E21E5D76600016A2E5 /* Network.swift */,
-				0D26D3E31E5D76600016A2E5 /* SampleData */,
 				0D26D3E51E5D76600016A2E5 /* XijinfaApi.swift */,
 			);
 			path = Networking;
