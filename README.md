@@ -16,6 +16,14 @@ Requirements
 * iOS 8+
 * Swift 3.0+
 * CocoaPods
+* **View request**
+```
+$ git clone remoteUrl
+
+Then
+
+$ git checkout hunter
+```
 
 Contribution
 ------------
