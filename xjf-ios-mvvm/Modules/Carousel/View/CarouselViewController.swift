@@ -54,8 +54,8 @@ class CarouselViewController: UIViewController, CarouselViewInput, iCarouselData
     }
 
     func setBanner(banner: Banner) {
-        print("onNext I found errCode \(banner.errCode)!")
-        print("onNext I found \(banner.result?.data?[0].title)!")
+        print("onNext I found errCode \(String(describing: banner.errCode))!")
+        print("onNext I found \(String(describing: banner.result?.data?[0].title))!")
         self.bannerData = banner.result?.data
         self.carsouselView.reloadData()
     }
@@ -70,7 +70,7 @@ class CarouselViewController: UIViewController, CarouselViewInput, iCarouselData
 
     func imageTapped() {
         let position = carsouselView.currentItemIndex
-        Logger.logInfo(message: "imageTapped \(bannerData?[position].link)!")
+        Logger.logInfo(message: "imageTapped \(String(describing: bannerData?[position].link))!")
         var params = Dictionary<String, String>()
         params.updateValue("51215", forKey:"category_id")
 

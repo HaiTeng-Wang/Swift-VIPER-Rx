@@ -76,7 +76,7 @@ class WebViewController: UIViewController {
     }
 
     func setNaviTitle(title: String?) {
-        Logger.logInfo(message: "setNaviTitle \(title)")
+        Logger.logInfo(message: "setNaviTitle \(String(describing: title))")
         self.title = title
     }
 
@@ -115,7 +115,7 @@ class WebViewController: UIViewController {
 extension WebViewController:WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        Logger.logInfo(message: "setNaviTitle A \(title)")
+        Logger.logInfo(message: "setNaviTitle A \(String(describing: title))")
         self.setNaviTitle(title: webView.title)
     }
 }

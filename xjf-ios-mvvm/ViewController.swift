@@ -77,8 +77,8 @@ class ViewController: UIViewController {
             DataManager.getBanner(path: "app-home-carousel")
                 .observeOn(MainScheduler.instance)
                 .subscribe(onNext: { (banner) in
-                    print("onNext I found errCode \(banner.errCode)!")
-                    print("onNext I found \(banner.result?.data?[0].title)!")
+                    print("onNext I found errCode \(String(describing: banner.errCode))!")
+                    print("onNext I found \(String(describing: banner.result?.data?[0].title))!")
                 }, onError: { (error) in
                     print("onError I found \(error)!")
                 }, onCompleted: {
@@ -103,7 +103,7 @@ class ViewController: UIViewController {
             .subscribe(onNext: { (account) in
                 AccountManager.sharedInstance.setUser(user: account.user!)
                 AccountManager.sharedInstance.setCredential(credential: account.credential!)
-                print("onNext I found credential \(account.credential?.bearer)!")
+                print("onNext I found credential \(String(describing: account.credential?.bearer))!")
             }, onError: { (error) in
                 print("onError I found \(error)!")
             }, onCompleted: {

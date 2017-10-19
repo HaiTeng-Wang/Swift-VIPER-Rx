@@ -57,7 +57,7 @@ class AccountManager {
     public func logout() {
         DatabaseManager.deleteAccountFromRealm()
             .flatMap({ (account) -> Observable<NSString> in
-                Logger.logInfo(message: "\(account.user?.id) logout")
+                Logger.logInfo(message: "\(String(describing: account.user?.id)) logout")
                 self.credential = nil
                 self.user = nil
                 return CacheManager.clearCache()
