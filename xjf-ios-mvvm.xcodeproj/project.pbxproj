@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A9750B31456024722C03ADA /* Pods_xjf_ios_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0620EFEFEDB8E1C13923E1D9 /* Pods_xjf_ios_mvvm.framework */; };
 		0D4959961E5D7C9F00311057 /* AppData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D4959951E5D7C9F00311057 /* AppData.framework */; };
 		130D259D69130F09A24FA780 /* HomeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1F3339AD9220ABED50EDD9 /* HomeInteractorOutput.swift */; };
 		2BAA2A3E3F43F1E8B17EBEC0 /* HomeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F57BD6D94EB9018D8ABDB5 /* HomeRouterInput.swift */; };
@@ -24,8 +23,8 @@
 		872590CC85C643D3934BA0F4 /* HomeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A91D4C11CE5DEBAF276E50D /* HomeViewInput.swift */; };
 		904BFAB6509BDEA6DCACBD20 /* HomeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E199C7BF498338854A3155C2 /* HomeModuleInput.swift */; };
 		958884C5B88BE1ACF7376649 /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0764FDFB5199C0558DBFFBB /* HomeInitializer.swift */; };
+		97BDDB59AE6EED4D0F5B4469 /* Pods_Dependency_xjf_ios_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A47A7FF3C36D8E0B3AE68F2 /* Pods_Dependency_xjf_ios_mvvm.framework */; };
 		A063EB28C5B12094635A393B /* HomeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C617BD540C605DD14CB730 /* HomeInteractorInput.swift */; };
-		B3DFEA614C3095C477EBC8E7 /* Pods_Dependency_xjf_ios_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A47A7FF3C36D8E0B3AE68F2 /* Pods_Dependency_xjf_ios_mvvm.framework */; };
 		CCAB440EF2AF2E92B4F7ED2D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAAE0FDB0CB20A37B8433C7 /* HomeViewController.swift */; };
 		D23D8264E6797AC9CF85E419 /* CarouselViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8087E2F4E1A9F16A44263F /* CarouselViewInput.swift */; };
 		DD85C291AB50F8E2AB1F1AA5 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C28D10803A3A30B4547F30 /* HomeInteractor.swift */; };
@@ -125,8 +124,7 @@
 			files = (
 				0D4959961E5D7C9F00311057 /* AppData.framework in Frameworks */,
 				ECA1DE541E2F448100E48DFD /* QuartzCore.framework in Frameworks */,
-				0A9750B31456024722C03ADA /* Pods_xjf_ios_mvvm.framework in Frameworks */,
-				B3DFEA614C3095C477EBC8E7 /* Pods_Dependency_xjf_ios_mvvm.framework in Frameworks */,
+				97BDDB59AE6EED4D0F5B4469 /* Pods_Dependency_xjf_ios_mvvm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,13 +549,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dependency-xjf-ios-mvvm-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A28543F29B5CBE6C9E1D5AB1 /* [CP] Copy Pods Resources */ = {
@@ -581,9 +582,44 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Dependency-xjf-ios-mvvm/Pods-Dependency-xjf-ios-mvvm-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AwesomeCache/AwesomeCache.framework",
+				"${BUILT_PRODUCTS_DIR}/Cell+Rx/Cell_Rx.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PullToRefresher/PullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxResult/RxResult.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AwesomeCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cell_Rx.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxResult.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
